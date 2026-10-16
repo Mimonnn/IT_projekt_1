@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{% load static %}
+{% block title %}{{ product.name }} — Szron{% endblock %}
+{% block content %}
+<section class="wrap section">
+  <a class="text-link" href="{% url 'catalog:list' %}">← Wróć do katalogu</a>
+  <div class="detail-grid">
+    <div class="product-art detail-art art-{{ product.category }}"><img src="{% static 'img/' %}{{ product.category }}.svg" alt="Ilustracja kategorii: {{ product.get_category_display }}" width="500" height="450"><span class="art-tag">Ilustracja kategorii</span></div>
+    <div class="detail-info"><p class="eyebrow">{{ product.get_category_display }}</p><h1 class="page-title">{{ product.name }}</h1><p class="detail-price">{{ product.price|floatformat:2 }} zł</p>
+      {% if product.sale_stock %}<p class="stock">Na sprzedaż: {{ product.sale_stock }} szt.</p>{% else %}<p>Aktualnie brak w magazynie</p>{% endif %}
+      <div class="description">{{ product.description|linebreaks }}</div>
+      <div class="notice">Przeglądasz pierwszą wersję katalogu. Składanie zamówień i rezerwacje udostępnimy w kolejnych etapach.</div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

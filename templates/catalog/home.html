@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-content">
+    <p class="eyebrow">SKLEP NARCIARSKI / SPRZĘT ZIMOWY</p>
+    <h1>Twój kierunek.<br>Więcej zimy.</h1>
+    <p class="hero-description">Od pierwszego zjazdu po ostatni wyciąg.<br>Znajdź sprzęt na swój kolejny wyjazd.</p>
+    <a class="button" href="{% url 'catalog:list' %}">Odkryj sprzęt <span aria-hidden="true">↗</span></a>
+    <span class="hero-note">Narty · Snowboard · Buty · Akcesoria</span>
+  </div>
+  <div class="altitude" aria-hidden="true">POWYŻEJ CODZIENNOŚCI<br>2 400 m n.p.m.</div>
+</section>
+<section class="wrap section">
+  <div class="section-heading"><div><p class="eyebrow">ZNAJDŹ SWÓJ RYTM</p><h2>Wybierz swoją trasę</h2></div><p>Na stok przygotuj się po swojemu.</p></div>
+  <div class="category-grid">
+    <a href="{% url 'catalog:list' %}?category=skis"><span>01 / NARTY</span><strong>Precyzja w każdym skręcie</strong><span aria-hidden="true">↗</span></a>
+    <a href="{% url 'catalog:list' %}?category=snowboards"><span>02 / SNOWBOARDY</span><strong>Swoboda na całym stoku</strong><span aria-hidden="true">↗</span></a>
+    <a href="{% url 'catalog:list' %}?category=boots"><span>03 / BUTY</span><strong>Komfort od pierwszego zjazdu</strong><span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="section-heading"><div><p class="eyebrow">NA DOBRY POCZĄTEK</p><h2>Sprzęt na Twoją zimę</h2></div><a class="text-link" href="{% url 'catalog:list' %}">Cały katalog ↗</a></div>
+  <div class="product-grid">{% for product in products %}{% include 'catalog/product_card.html' %}{% empty %}<p class="empty">Przygotowujemy katalog. Zajrzyj ponownie wkrótce.</p>{% endfor %}</div>
+</section>
+<section class="rental-banner wrap"><div><p class="eyebrow">JESZCZE WIĘCEJ MOŻLIWOŚCI</p><h2>Własny sprzęt czy wypożyczenie?</h2><p>Rozwijamy także wypożyczalnię. Rezerwacje terminowe udostępnimy w kolejnym etapie.</p></div><span class="coming-soon">W przygotowaniu</span></section>
+{% endblock %}
+

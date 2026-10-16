@@ -1,0 +1,8 @@
+{% load static %}
+<article class="product-card">
+  <a href="{{ product.get_absolute_url }}" class="product-art art-{{ product.category }}" aria-label="Zobacz {{ product.name }}"><img src="{% static 'img/' %}{{ product.category }}.svg" alt="" width="320" height="260" loading="lazy"><span class="art-tag">{{ product.get_category_display }}</span></a>
+  <div class="product-meta"><span>{{ product.get_category_display }}</span>{% if product.sale_stock %}<span class="stock">Dostępne: {{ product.sale_stock }} szt.</span>{% else %}<span>Brak w magazynie</span>{% endif %}</div>
+  <div class="product-title"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3><strong>{{ product.price|floatformat:2 }} zł</strong></div>
+  <a class="product-link" href="{{ product.get_absolute_url }}">Zobacz szczegóły <span aria-hidden="true">↗</span></a>
+</article>
+

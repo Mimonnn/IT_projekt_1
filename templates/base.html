@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Szron — sprzęt zimowy. Znajdź narty, buty i snowboard na swój kolejny wyjazd.">
+  <title>{% block title %}Szron — bliżej gór{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="topbar">Zima zaczyna się od dobrego sprzętu.</div>
+  <header class="header wrap">
+    <a class="logo" href="{% url 'catalog:home' %}" aria-label="Szron — strona główna"><span aria-hidden="true">△</span> SZRON<span class="logo-dot">.</span></a>
+    <nav aria-label="Menu główne">
+      <a href="{% url 'catalog:home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Strona główna</a>
+      <a href="{% url 'catalog:list' %}" {% if request.resolver_match.url_name == 'list' or request.resolver_match.url_name == 'detail' %}aria-current="page"{% endif %}>Sprzęt</a>
+      <a class="admin-link" href="{% url 'admin:index' %}">Panel administratora <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>Dobry sprzęt. Twoje tempo. Twoja zima.</p><span>Projekt demonstracyjny · {% now 'Y' %}</span></div></footer>
+</body>
+</html>
+

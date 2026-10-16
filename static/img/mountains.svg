@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="sky" y2="1" x2=".4"><stop stop-color="#dce4da"/><stop offset="1" stop-color="#8faeac"/></linearGradient><linearGradient id="haze"><stop stop-color="#e0e6db" stop-opacity=".98"/><stop offset=".42" stop-color="#dfe5d9" stop-opacity=".83"/><stop offset=".8" stop-color="#dfe5d9" stop-opacity="0"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h1600v650H0z"/><circle cx="1270" cy="110" r="55" fill="#edf0d8" opacity=".65"/>
+<path d="m430 480 180-220 100 115 180-290 220 270 130-170 360 310v155H430z" fill="#859d9c"/>
+<path d="m710 375 180-290 220 270-120-74-58 25-51-79-54 70-27-7z" fill="#eef1e7"/>
+<path d="m1030 530 210-345 360 310v155h-570z" fill="#658886"/>
+<path d="m1240 185 190 164-106-36-38 25-56-70-60 74-41-2-39 57z" fill="#e3ebe3"/>
+<path d="m600 650 415-268 245 155 140-74 200 187z" fill="#456e6e"/>
+<path d="m1015 382 145 92-85-21-39 25-47-27-100 43z" fill="#bed2ca"/>
+<path d="m0 570 350-105 270 130 315-65 370 120H0z" fill="#9db5ab"/>
+<path d="M0 0h1600v650H0z" fill="url(#haze)"/>
+</svg>
