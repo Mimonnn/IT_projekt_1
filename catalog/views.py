@@ -5,8 +5,20 @@ from .models import Product
 
 
 def home(request):
-    products = Product.objects.filter(is_active=True)[:3]
-    return render(request, "catalog/home.html", {"products": products})
+    featured_products = Product.objects.filter(
+        is_active=True, featured_order__isnull=False,
+    ).exclude(image_path="").order_by("featured_order", "pk")[:3]
+    return render(request, "catalog/home.html", {
+        "featured_products": featured_products,
+        "hero_categories": [(value, label) for value, label in Product.Category.choices
+                            if value != Product.Category.ACCESSORIES],
+        "hero_slides": [
+            ("img/hero/panorama1.jpg", "Ośnieżony stok i wyciągi wśród zimowego lasu"),
+            ("img/hero/panorama2.jpg", "Narciarki podziwiające zimową panoramę gór"),
+            ("img/hero/panorama3.jpg", "Narciarz w skoku na tle alpejskich szczytów"),
+            ("img/hero/panorama4.jpg", "Ośnieżona grań i trasa narciarska pośród chmur"),
+        ],
+    })
 
 
 def product_list(request):

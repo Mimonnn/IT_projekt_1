@@ -21,6 +21,7 @@
   </header>
   <main id="main">{% block content %}{% endblock %}</main>
   <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>Dobry sprzęt. Twoje tempo. Twoja zima.</p><span>Projekt demonstracyjny · {% now 'Y' %}</span></div></footer>
+  {% block scripts %}{% endblock %}
 </body>
 </html>
 

@@ -24,12 +24,16 @@ class CatalogTests(TestCase):
         )
 
     def test_home_and_catalog_read_database(self):
+        self.product.image_path = "img/narty.jpg"
+        self.product.featured_order = 1
+        self.product.save()
         for url in (reverse("catalog:home"), reverse("catalog:list")):
             with self.subTest(url=url):
                 response = self.client.get(url)
                 self.assertContains(response, self.product.name)
-                self.assertContains(response, "Dostępne: 4 szt.")
+                self.assertContains(response, "1250,00 zł")
                 self.assertNotContains(response, self.hidden.name)
+        self.assertContains(self.client.get(reverse("catalog:list")), "Dostępne: 4 szt.")
 
     def test_detail_has_current_price_and_stock(self):
         self.product.price = Decimal("999.99")
@@ -38,6 +42,65 @@ class CatalogTests(TestCase):
         response = self.client.get(self.product.get_absolute_url())
         self.assertContains(response, "999,99 zł")
         self.assertContains(response, "Na sprzedaż: 2 szt.")
+
+    def test_showcase_is_selected_ordered_and_links_to_current_offers(self):
+        self.product.image_path = "img/narty.jpg"
+        self.product.featured_order = 2
+        self.product.save()
+        first = Product.objects.create(
+            name="Wyróżniony snowboard", slug="wyrozniony", category="snowboards",
+            description="Test", price="555.00", image_path="img/snowboard1.jpg", featured_order=1,
+        )
+        Product.objects.create(name="Bez zdjęcia", slug="bez-zdjecia", category="skis",
+                               price="10", featured_order=0)
+        self.hidden.image_path = "img/narty.jpg"
+        self.hidden.featured_order = 0
+        self.hidden.save()
+        response = self.client.get(reverse("catalog:home"))
+        self.assertEqual(list(response.context["featured_products"]), [first, self.product])
+        self.assertContains(response, 'href="' + first.get_absolute_url() + '"')
+        self.assertContains(response, "/static/img/snowboard1.jpg")
+        self.assertContains(response, "555,00 zł")
+        self.assertNotContains(response, "Bez zdjęcia")
+
+    def test_showcase_limit_and_empty_fallback(self):
+        response = self.client.get(reverse("catalog:home"))
+        self.assertNotContains(response, 'class="showcase-grid"')
+        self.assertContains(response, "Wszystko zaczyna się")
+        for index in range(4):
+            Product.objects.create(name=f"Wybrany {index}", slug=f"wybrany-{index}",
+                                   category="skis", price="10", image_path="img/narty.jpg",
+                                   featured_order=index)
+        response = self.client.get(reverse("catalog:home"))
+        self.assertEqual(len(response.context["featured_products"]), 3)
+
+    def test_product_photo_is_shared_by_catalog_and_detail(self):
+        self.product.image_path = "img/narty.jpg"
+        self.product.save()
+        for url in (reverse("catalog:list"), self.product.get_absolute_url()):
+            self.assertContains(self.client.get(url), "/static/img/narty.jpg")
+        for path in ("../secret.jpg", "https://example.com/photo.jpg", "img/../photo.jpg"):
+            self.product.image_path = path
+            with self.assertRaises(ValidationError):
+                self.product.full_clean()
+
+    def test_panorama_and_category_links_work_without_featured_products(self):
+        response = self.client.get(reverse("catalog:home"))
+        for index in range(1, 5):
+            self.assertContains(response, f"/static/img/hero/panorama{index}.jpg")
+        categories = [category for category in Product.Category if category != Product.Category.ACCESSORIES]
+        self.assertEqual(len(response.context["hero_categories"]), 7)
+        for category in categories:
+            with self.subTest(category=category):
+                product = Product.objects.create(name=f"Sprzęt {category}", slug=f"sprzet-{category}",
+                                                 category=category, price="100")
+                self.assertContains(response, f'?category={category}')
+                filtered = self.client.get(reverse("catalog:list"), {"category": category})
+                self.assertIn(product, filtered.context["products"])
+                self.assertTrue(all(item.category == category for item in filtered.context["products"]))
+                detail = self.client.get(product.get_absolute_url())
+                self.assertContains(detail, f'/static/{product.illustration_path}')
+        self.assertContains(response, "Wstrzymaj pokaz")
 
     def test_category_and_search_can_be_combined(self):
         response = self.client.get(reverse("catalog:list"), {"category": "skis", "q": "TESTOWE"})

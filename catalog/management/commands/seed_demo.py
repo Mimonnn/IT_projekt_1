@@ -15,14 +15,19 @@ class Command(BaseCommand):
              "Buty narciarskie w rozmiarze mondo 27. Wygodna konstrukcja i cztery klamry. Fikcyjny produkt przygotowany na potrzeby projektu."),
             ("snowboard-drift-156", "Drift 156", "snowboards", "1099.00", 3,
              "Snowboard all-mountain o długości 156 cm. Uniwersalny model demonstracyjny do odkrywania nowych tras."),
-            ("kask-ridge-m", "Ridge M", "accessories", "249.00", 0,
+            ("kask-ridge-m", "Ridge M", "helmets", "249.00", 0,
              "Lekki kask zimowy w rozmiarze M, z regulacją dopasowania. Fikcyjny model; aktualnie brak sztuk na sprzedaż."),
         ]
         created_count = 0
+        featured = {
+            "snowboard-drift-156": {"image_path": "img/snowboard1.jpg", "featured_order": 1},
+            "narty-alpine-172": {"image_path": "img/narty.jpg", "featured_order": 2},
+        }
         for slug, name, category, price, stock, description in samples:
             _, created = Product.objects.get_or_create(slug=slug, defaults={
                 "name": name, "category": category, "price": price,
                 "sale_stock": stock, "description": description,
+                **featured.get(slug, {}),
             })
             created_count += created
         self.stdout.write(self.style.SUCCESS(
