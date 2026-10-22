@@ -1,0 +1,79 @@
+/* Panel jest poza układem paska; jego otwarcie nie zmienia położenia kategorii. */
+.ski-menu {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+  width: max-content;
+  height: 65px;
+  min-width: 0;
+}
+.ski-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 65px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  width: 100%;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  font-family: inherit;
+}
+.ski-menu-arrow { display: inline-block; flex: none; font-size: 15px; line-height: 1; }
+.ski-menu-trigger:focus-visible { outline: 3px solid var(--accent); outline-offset: -4px; }
+.ski-submenu[hidden] { display: none; }
+.ski-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  padding: 12px;
+  background: rgba(15, 34, 39, .94);
+  color: var(--paper);
+  border: 1px solid #ffffff26;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 18px 40px #081d2866;
+}
+.ski-menu:nth-last-child(-n+3) .ski-submenu { left: auto; right: 0; }
+@supports ((backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px))) {
+  .ski-submenu {
+    background: rgba(15, 34, 39, .68);
+    -webkit-backdrop-filter: blur(18px) saturate(.85);
+    backdrop-filter: blur(18px) saturate(.85);
+  }
+}
+.panorama-nav .ski-submenu a {
+  min-height: 42px;
+  padding: 10px 13px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px #0005;
+  border: 0;
+  border-radius: 5px;
+}
+.panorama-nav .ski-submenu a:hover,
+.panorama-nav .ski-submenu a:focus-visible { background: #ffffff14; color: var(--accent); }
+.panorama-nav .ski-submenu a:first-child {
+  border-bottom: 1px solid #ffffff26;
+  border-radius: 0;
+  margin-bottom: 5px;
+  padding-bottom: 14px;
+}
+@media (max-width: 1050px) {
+  .ski-menu-trigger { padding: 12px 13px; }
+}
+@media (max-width: 650px) {
+  .ski-menu { width: 100%; height: 44px; }
+  .ski-menu-trigger { height: 44px; padding: 10px 8px; font-size: 12px; }
+  .ski-submenu { width: 310px; }
+  .ski-menu:nth-child(odd) .ski-submenu { left: 0; right: auto; }
+  .ski-menu:nth-child(even) .ski-submenu { left: auto; right: 0; }
+  .ski-menu:last-child { grid-column: 1 / -1; }
+}

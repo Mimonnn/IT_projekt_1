@@ -181,6 +181,7 @@ class AdminTests(TestCase):
         self.client.force_login(user)
         response = self.client.post(self.edit_url, {
             "name": self.product.name, "slug": self.product.slug, "category": "skis",
+            "subcategory": "downhill",
             "description": "Zmieniono w panelu", "price": "789.50", "sale_stock": 6,
             "is_active": "on", "_save": "Zapisz",
         })
@@ -189,3 +190,98 @@ class AdminTests(TestCase):
         response = self.client.get(reverse("catalog:list"))
         self.assertContains(response, "789,50 zł")
         self.assertContains(response, "Dostępne: 6 szt.")
+
+
+class SkiSubcategoryTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        cls.downhill = Product.objects.create(
+            name="Narty trasowe", slug="trasowe", category="skis", subcategory="downhill",
+            description="Testowe narty", price="100",
+        )
+        cls.freeride = Product.objects.create(
+            name="Narty terenowe", slug="terenowe", category="skis", subcategory="freeride",
+            description="Testowe narty", price="200",
+        )
+        cls.legacy = Product.objects.create(name="Nieustalony typ", slug="nieustalony", category="skis", price="50")
+        cls.board = Product.objects.create(name="Deska", slug="deska", category="snowboards", price="300")
+
+    def test_all_seven_subcategory_links_are_available_on_home(self):
+        response = self.client.get(reverse("catalog:home"))
+        self.assertEqual(len(Product.SkiSubcategory.choices), 7)
+        for code, label in Product.SkiSubcategory.choices:
+            self.assertContains(response, label)
+            self.assertContains(response, f"?category=skis&amp;subcategory={code}")
+        self.assertContains(response, "data-ski-menu")
+
+    def test_subcategory_filter_combines_with_category_and_search(self):
+        response = self.client.get(reverse("catalog:list"), {
+            "category": "skis", "subcategory": "freeride", "q": "terenowe",
+        })
+        self.assertEqual(list(response.context["products"]), [self.freeride])
+        self.assertContains(response, '<option value="freeride" selected>')
+        self.assertNotContains(response, 'id="subcategory" disabled')
+        response = self.client.get(reverse("catalog:list"), {
+            "category": "skis", "subcategory": "freeride", "q": "trasowe",
+        })
+        self.assertContains(response, "Nie znaleźliśmy sprzętu")
+
+    def test_all_skis_includes_unclassified_legacy_products(self):
+        response = self.client.get(reverse("catalog:list"), {"category": "skis"})
+        self.assertEqual(set(response.context["products"]), {self.downhill, self.freeride, self.legacy})
+
+    def test_stale_subcategory_is_ignored_for_other_categories(self):
+        response = self.client.get(reverse("catalog:list"), {
+            "category": "snowboards", "ski_subcategory": "downhill",
+        })
+        self.assertEqual(list(response.context["products"]), [self.board])
+        self.assertEqual(response.context["selected_subcategory"], "")
+        self.assertNotContains(response, 'id="subcategory" disabled')
+
+    def test_unknown_subcategory_does_not_return_other_products(self):
+        response = self.client.get(reverse("catalog:list"), {
+            "category": "skis", "subcategory": "unknown",
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Nie znaleźliśmy sprzętu")
+
+    def test_model_validation_requires_valid_subcategory_for_skis_only(self):
+        self.downhill.full_clean()
+        for product, value in ((self.downhill, ""), (self.downhill, "unknown"), (self.board, "downhill")):
+            with self.subTest(category=product.category, subcategory=value):
+                product.subcategory = value
+                with self.assertRaises(ValidationError) as error:
+                    product.full_clean()
+                self.assertIn("subcategory", error.exception.message_dict)
+
+    def test_database_rejects_subcategory_for_other_products_and_unknown_values(self):
+        for product, value in ((self.board, "downhill"), (self.downhill, "unknown")):
+            with self.subTest(value=value), self.assertRaises(IntegrityError), transaction.atomic():
+                Product.objects.filter(pk=product.pk).update(subcategory=value)
+
+    def test_detail_displays_ski_type(self):
+        self.assertContains(self.client.get(self.downhill.get_absolute_url()), "Narty zjazdowe (trasowe)")
+
+    def test_demo_preserves_subcategory_edits(self):
+        call_command("seed_demo", stdout=StringIO())
+        product = Product.objects.get(slug="narty-alpine-172")
+        self.assertEqual(product.subcategory, "downhill")
+        product.subcategory = "all_mountain"
+        product.save()
+        call_command("seed_demo", stdout=StringIO())
+        product.refresh_from_db()
+        self.assertEqual(product.subcategory, "all_mountain")
+
+    def test_admin_requires_subcategory_and_persists_selection(self):
+        user = get_user_model().objects.create_superuser(username="ski-admin")
+        self.client.force_login(user)
+        url = reverse("admin:catalog_product_change", args=[self.downhill.pk])
+        data = {"name": "Narty trasowe", "slug": "trasowe", "category": "skis",
+                "description": "Test", "price": "100", "sale_stock": 3, "is_active": "on"}
+        response = self.client.post(url, data)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Wybierz podkategorię nart.")
+        response = self.client.post(url, {**data, "subcategory": "race"})
+        self.assertEqual(response.status_code, 302)
+        self.downhill.refresh_from_db()
+        self.assertEqual(self.downhill.subcategory, "race")

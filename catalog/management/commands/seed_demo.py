@@ -27,6 +27,7 @@ class Command(BaseCommand):
             _, created = Product.objects.get_or_create(slug=slug, defaults={
                 "name": name, "category": category, "price": price,
                 "sale_stock": stock, "description": description,
+                "subcategory": {"skis": "downhill", "snowboards": "all_mountain"}.get(category, ""),
                 **featured.get(slug, {}),
             })
             created_count += created

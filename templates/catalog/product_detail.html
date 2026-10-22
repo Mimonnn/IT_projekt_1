@@ -6,6 +6,7 @@
   <div class="detail-grid">
     <div class="product-art detail-art art-{{ product.category }}{% if product.image_path %} product-photo{% endif %}"><img src="{% if product.image_path %}{% static product.image_path %}{% else %}{% static product.illustration_path %}{% endif %}" alt="{% if product.image_path %}{{ product.name }}{% else %}Ilustracja kategorii: {{ product.get_category_display }}{% endif %}" width="500" height="450">{% if not product.image_path %}<span class="art-tag">Ilustracja kategorii</span>{% endif %}</div>
     <div class="detail-info"><p class="eyebrow">{{ product.get_category_display }}</p><h1 class="page-title">{{ product.name }}</h1><p class="detail-price">{{ product.price|floatformat:2 }} zł</p>
+      {% if product.subcategory %}<p class="product-subcategory">{{ product.get_subcategory_display }}</p>{% endif %}
       {% if product.sale_stock %}<p class="stock">Na sprzedaż: {{ product.sale_stock }} szt.</p>{% else %}<p>Aktualnie brak w magazynie</p>{% endif %}
       <div class="description">{{ product.description|linebreaks }}</div>
       <div class="notice">Przeglądasz pierwszą wersję katalogu. Składanie zamówień i rezerwacje udostępnimy w kolejnych etapach.</div>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}{% load static %}
+{% block extra_styles %}<link rel="stylesheet" href="{% static 'css/ski-menu.css' %}?v=4">{% endblock %}
 {% block content %}
 <section class="panorama" data-slideshow aria-label="Zimowe krajobrazy" aria-roledescription="karuzela">
   <div class="panorama-slides">
@@ -9,7 +10,16 @@
     {% endfor %}
   </div>
   <nav class="panorama-nav" aria-label="Kategorie sprzętu">
-    {% for value, label in hero_categories %}<a href="{% url 'catalog:list' %}?category={{ value }}">{% if value == 'snowboards' %}Snowboard{% else %}{{ label }}{% endif %}</a>{% endfor %}
+    {% for menu in category_menus %}
+      <div class="ski-menu" data-ski-menu>
+        <button class="ski-menu-trigger" type="button" aria-expanded="false" aria-controls="submenu-{{ menu.value }}"><span class="ski-menu-arrow" aria-hidden="true">▸</span> {{ menu.label }}</button>
+        <noscript><a href="{% url 'catalog:list' %}?category={{ menu.value }}">{{ menu.all_label }}</a></noscript>
+        <div class="ski-submenu" id="submenu-{{ menu.value }}" hidden style="position:absolute;top:100%">
+          <a href="{% url 'catalog:list' %}?category={{ menu.value }}">{{ menu.all_label }}</a>
+          {% for code, name in menu.subcategories %}<a href="{% url 'catalog:list' %}?category={{ menu.value }}&amp;subcategory={{ code }}">{{ name }}</a>{% endfor %}
+        </div>
+      </div>
+    {% endfor %}
   </nav>
   <div class="panorama-copy wrap"><p class="eyebrow">TWOJE TEMPO. TWOJA ZIMA.</p><h1>Wszystko zaczyna się<br>od gór.</h1><a class="button" href="{% url 'catalog:list' %}">Znajdź swój sprzęt <span aria-hidden="true">↗</span></a></div>
   <div class="panorama-controls wrap" data-controls hidden>
@@ -45,5 +55,5 @@
 </section>
 <section class="rental-banner wrap"><div><p class="eyebrow">JESZCZE WIĘCEJ MOŻLIWOŚCI</p><h2>Własny sprzęt czy wypożyczenie?</h2><p>Rozwijamy także wypożyczalnię. Rezerwacje terminowe udostępnimy w kolejnym etapie.</p></div><span class="coming-soon">W przygotowaniu</span></section>
 {% endblock %}
-{% block scripts %}<script src="{% static 'js/slideshow.js' %}" defer></script>{% endblock %}
+{% block scripts %}<script src="{% static 'js/slideshow.js' %}" defer></script><script src="{% static 'js/ski-menu.js' %}?v=3" defer></script>{% endblock %}
 

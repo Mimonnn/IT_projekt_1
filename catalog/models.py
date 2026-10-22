@@ -1,9 +1,13 @@
 from django.db import models
 from django.core.validators import MinValueValidator, RegexValidator
 from django.urls import reverse
+from django.core.exceptions import ValidationError
+from .taxonomy import SUBCATEGORIES, SkiSubcategory, subcategory_constraint
 
 
 class Product(models.Model):
+    SkiSubcategory = SkiSubcategory
+
     class Category(models.TextChoices):
         SKIS = "skis", "Narty"
         SNOWBOARDS = "snowboards", "Snowboardy"
@@ -17,6 +21,10 @@ class Product(models.Model):
     name = models.CharField("nazwa", max_length=160)
     slug = models.SlugField("adres produktu", unique=True, max_length=180)
     category = models.CharField("kategoria", max_length=20, choices=Category.choices)
+    subcategory = models.CharField(
+        "podkategoria", max_length=32, blank=True,
+        help_text="Typ sprzętu właściwy dla wybranej kategorii.",
+    )
     description = models.TextField("opis")
     price = models.DecimalField("cena sprzedaży (zł)", max_digits=10, decimal_places=2,
                                 validators=[MinValueValidator(0)])
@@ -42,10 +50,34 @@ class Product(models.Model):
         verbose_name_plural = "produkty"
         constraints = [
             models.CheckConstraint(condition=models.Q(price__gte=0), name="product_price_nonnegative"),
+            models.CheckConstraint(
+                condition=subcategory_constraint(), name="product_subcategory_valid",
+            ),
         ]
 
     def __str__(self):
         return self.name
+
+    def clean_fields(self, exclude=None):
+        errors = {}
+        try:
+            super().clean_fields(exclude=exclude)
+        except ValidationError as error:
+            errors.update(error.message_dict)
+        # Edycja samego wyróżnienia na liście nie zawiera pola podkategorii.
+        # Respektujemy wyłączenia formularza; pełna edycja nadal wymaga typu.
+        if "subcategory" not in (exclude or ()):
+            choices = dict(SUBCATEGORIES.get(self.category, []))
+            if choices and not self.subcategory:
+                message = "Wybierz podkategorię nart." if self.category == self.Category.SKIS else "Wybierz podkategorię produktu."
+                errors.setdefault("subcategory", []).append(message)
+            if self.subcategory and self.subcategory not in choices:
+                errors.setdefault("subcategory", []).append("Ta podkategoria nie pasuje do wybranej kategorii.")
+        if errors:
+            raise ValidationError(errors)
+
+    def get_subcategory_display(self):
+        return dict(SUBCATEGORIES.get(self.category, [])).get(self.subcategory, self.subcategory)
 
     def get_absolute_url(self):
         return reverse("catalog:detail", kwargs={"slug": self.slug})

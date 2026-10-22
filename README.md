@@ -202,6 +202,42 @@ Ceny są przechowywane jako liczby dziesiętne, a `sale_stock` opisuje wyłączn
 na sprzedaż. Przyszłe egzemplarze wypożyczalni będą miały osobną ewidencję.
 Produkty można ukryć bez usuwania ich z bazy. Uprawnienia panelu sprawdza backend Django.
 
+## Podkategorie sprzętu
+
+Wszystkie siedem kategorii głównych ma podmenu z półprzezroczystym, rozmytym tłem.
+Narty mają 7 typów, deski snowboardowe 4, wiązania 4, kaski 3, gogle 4,
+buty snowboardowe 3, a buty narciarskie 4. Definicje są wspólne dla interfejsu,
+modelu i formularzy w `catalog/taxonomy.py`. Akcesoria pozostają bez podkategorii.
+
+Panele otwierają się po najechaniu, kliknięciu albo Enter/Spacji. Escape zamyka panel,
+a strzałka w dół przenosi fokus na pierwszy odnośnik. Jednocześnie otwarty jest tylko
+jeden panel. Panel nakłada się na zdjęcie bez zmiany położenia kategorii, a przy
+prawej krawędzi ekranu jest wyrównany do prawej. Bez JavaScript pozostają odnośniki
+do katalogów poszczególnych kategorii.
+
+W katalogu lista „Podkategoria” zawiera typy właściwe dla wybranej kategorii.
+Zmiana kategorii czyści poprzedni wybór; dla Akcesoriów i wszystkich kategorii
+pole jest ukryte. Filtr łączy się z wyszukiwaniem. „Wszystkie podkategorie” pokazuje
+również wcześniejsze produkty bez ustalonego typu. Bez JavaScript zatwierdź kategorię
+przyciskiem „Pokaż sprzęt”, aby odświeżyć opcje.
+
+W panelu administratora podkategoria jest wymagana przy dodawaniu lub edycji
+produktów z siedmiu kategorii głównych. Lista opcji zmienia się po wyborze kategorii.
+Baza i formularze blokują nieznane lub niedopasowane typy. Dla Akcesoriów pole musi
+być puste. Typ jest wyświetlany również w szczegółach produktu.
+
+Po pobraniu zmian na drugim komputerze wykonaj:
+
+```powershell
+./.venv/Scripts/python manage.py migrate
+```
+
+Migracja zmienia nazwę pola `ski_subcategory` na wspólne `subcategory`, zachowując
+dotychczasowe przypisania nart. Dotychczasowe odnośniki z parametrem `ski_subcategory`
+nadal działają dla nart; nowe korzystają z `subcategory`. Alpine 172 i Drift 156 są
+klasyfikowane tylko wtedy, gdy mają zachowane, jednoznaczne opisy demo. Innym produktom
+nie zgadujemy typu — należy go uzupełnić w panelu. `seed_demo` zachowuje późniejsze edycje.
+
 ## Kontekst i bezpieczeństwo konfiguracji
 
 Przed pracą przeczytaj `AGENTS.md`, `PROJECT_CONTEXT.md` i `TODO.md`.
