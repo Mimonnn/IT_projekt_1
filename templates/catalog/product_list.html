@@ -13,6 +13,8 @@
         {% for value, label in subcategories %}<option value="{{ value }}" {% if selected_subcategory == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
       </select>
     </div>
+    <div><label for="size">Rozmiar</label><select id="size" name="size"><option value="">Wszystkie rozmiary</option>{% for size in sizes %}<option value="{{ size }}" {% if selected_size == size %}selected{% endif %}>{{ size }}</option>{% endfor %}{% if selected_size and selected_size not in sizes %}<option value="{{ selected_size }}" selected>{{ selected_size }} — brak w tej grupie</option>{% endif %}</select></div>
+    <div><label for="material">Materiał</label><select id="material" name="material"><option value="">Wszystkie materiały</option>{% for material in materials %}<option value="{{ material.code }}" {% if selected_material == material.code %}selected{% endif %}>{{ material.name }}</option>{% endfor %}{% if selected_material and selected_material not in material_codes %}<option value="{{ selected_material }}" selected>{{ selected_material }} — brak w tej grupie</option>{% endif %}</select></div>
     <button class="button" type="submit">Pokaż sprzęt ↗</button><a class="text-link" href="{% url 'catalog:list' %}">Wyczyść</a>
   </form>
   <noscript><p>Po zmianie kategorii wybierz „Pokaż sprzęt”, aby odświeżyć dostępne filtry.</p></noscript>
@@ -20,5 +22,5 @@
   <div class="product-grid">{% for product in products %}{% include 'catalog/product_card.html' %}{% empty %}<div class="empty"><h2>Nie znaleźliśmy sprzętu.</h2><p>Spróbuj zmienić kategorię lub wyszukiwaną nazwę.</p><a class="text-link" href="{% url 'catalog:list' %}">Zobacz cały katalog ↗</a></div>{% endfor %}</div>
 </section>
 {% endblock %}
-{% block scripts %}{{ subcategory_options|json_script:'subcategory-options' }}<script src="{% static 'js/catalog-filters.js' %}?v=2" defer></script>{% endblock %}
+{% block scripts %}{{ subcategory_options|json_script:'subcategory-options' }}{{ specification_options|json_script:'specification-options' }}<script src="{% static 'js/catalog-filters.js' %}?v=4" defer></script>{% endblock %}
 

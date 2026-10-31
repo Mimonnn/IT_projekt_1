@@ -1,0 +1,18 @@
+{% load static %}
+{% if promotion_products %}
+<section class="promotions wrap" aria-labelledby="promotions-title">
+  <div class="promotion-heading"><div><p class="eyebrow">SZRON / PROMOCJE</p><h2 id="promotions-title">Złap zimę<br>w lepszej cenie.</h2></div><p>Trzy okazje na dobry początek sezonu.<br>Wybierz sprzęt i ruszaj po swoje.</p></div>
+  <div class="promotion-grid">{% for product in promotion_products %}
+    <article class="promotion-card">
+      <a class="promotion-image" href="{{ product.get_absolute_url }}" aria-label="Zobacz promocję: {{ product.name }}">
+        <span class="promotion-badge">−{{ product.discount_percent }}%</span>
+        <img src="{% if product.image_path %}{% static product.image_path %}{% else %}{% static product.illustration_path %}{% endif %}" alt="{{ product.name }}" width="350" height="260" loading="lazy">
+      </a>
+      <div class="promotion-info"><p class="eyebrow">{{ product.get_category_display }}</p><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
+        <p class="product-prices">{% include 'catalog/price.html' %}</p><p class="promotion-saving">Oszczędzasz {{ product.savings|floatformat:2 }} zł</p>
+        <a class="promotion-link" href="{{ product.get_absolute_url }}">Zobacz ofertę <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  {% endfor %}</div>
+</section>
+{% endif %}

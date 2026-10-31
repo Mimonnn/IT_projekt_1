@@ -1,0 +1,9 @@
+.information-section{padding-bottom:30px}.information-section>.intro{max-width:760px}
+.information-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:30px}
+.information-card{padding:30px;border:1px solid var(--line);background:white;border-radius:6px;overflow-wrap:anywhere}
+.information-card h2{font-size:25px}.information-card .eyebrow{color:var(--green)}
+.information-card address{font-style:normal;margin-top:20px}.information-card p{font-size:15px}
+.information-card .info-muted{font-size:12px;color:var(--muted)}.information-card .contact-number{font-size:24px;font-weight:700}
+.information-links{display:flex;align-items:center;flex-wrap:wrap;gap:25px;margin-top:32px}
+.terms-content{max-width:850px;margin-top:35px}.terms-content section{margin:30px 0}.terms-content h2{font-size:24px}.terms-content p{color:var(--muted)}
+@media(max-width:650px){.information-grid{grid-template-columns:1fr}.information-card{padding:22px}}

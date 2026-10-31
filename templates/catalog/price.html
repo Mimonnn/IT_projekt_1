@@ -1,0 +1,2 @@
+{% if product.discount_percent %}<span class="regular-price"><span class="visually-hidden">Cena regularna: </span><del>{{ product.price|floatformat:2 }} zł</del></span>{% endif %}
+<strong class="selling-price">{{ product.selling_price|floatformat:2 }} zł</strong>

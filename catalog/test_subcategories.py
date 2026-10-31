@@ -130,6 +130,7 @@ class SubcategoryMigrationTests(TransactionTestCase):
         old_target = [("catalog", "0007_categorize_demo_skis")]
         new_target = [("catalog", "0009_categorize_demo_snowboard")]
         executor = MigrationExecutor(connection)
+        restore_targets = executor.loader.graph.leaf_nodes()
         try:
             executor.migrate(old_target)
             old_model = executor.loader.project_state(old_target).apps.get_model("catalog", "Product")
@@ -150,4 +151,5 @@ class SubcategoryMigrationTests(TransactionTestCase):
             self.assertEqual(new_model.objects.get(slug="inna-deska").subcategory, "")
             self.assertEqual(new_model.objects.get(slug="snowboard-drift-156").subcategory, "all_mountain")
         finally:
-            MigrationExecutor(connection).migrate(new_target)
+            # Cofanie katalogu cofa też migracje zależne, np. tabelę koszyka.
+            MigrationExecutor(connection).migrate(restore_targets)

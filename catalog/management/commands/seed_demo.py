@@ -1,36 +1,62 @@
+from decimal import Decimal
+
 from django.core.management.base import BaseCommand
 from django.db import transaction
-from catalog.models import Product
+
+from catalog.demo_data import load_demo_catalogue
+from catalog.models import Material, Product
+
+SPECIFICATION_FIELDS = ("size", "construction", "dimensions", "weight_g", "weight_scope", "specifications_are_demo")
 
 
 class Command(BaseCommand):
-    help = "Dodaje fikcyjne produkty demonstracyjne; nie nadpisuje istniejących produktów."
+    help = "Uzupełnia katalog fikcyjnymi ofertami ze zdjęciami i cenami z ofert referencyjnych."
+
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--refresh-specs", action="store_true",
+            help="Odświeża tylko opisy, parametry i materiały ofert demo; zachowuje ceny, zdjęcia, stany i nazwy.",
+        )
+        parser.add_argument(
+            "--refresh-demo", action="store_true",
+            help="Odświeża ceny, zdjęcia, opisy, podkategorie, parametry i materiały ofert demo. Zachowuje nazwy, stany i wyróżnienia.",
+        )
 
     @transaction.atomic
     def handle(self, *args, **options):
-        samples = [
-            ("narty-alpine-172", "Alpine 172", "skis", "1299.00", 5,
-             "Wszechstronne narty trasowe o długości 172 cm. Model demonstracyjny dla miłośników spokojnych skrętów i całodziennych wypadów na stok."),
-            ("buty-summit-27", "Summit 27", "boots", "749.00", 8,
-             "Buty narciarskie w rozmiarze mondo 27. Wygodna konstrukcja i cztery klamry. Fikcyjny produkt przygotowany na potrzeby projektu."),
-            ("snowboard-drift-156", "Drift 156", "snowboards", "1099.00", 3,
-             "Snowboard all-mountain o długości 156 cm. Uniwersalny model demonstracyjny do odkrywania nowych tras."),
-            ("kask-ridge-m", "Ridge M", "helmets", "249.00", 0,
-             "Lekki kask zimowy w rozmiarze M, z regulacją dopasowania. Fikcyjny model; aktualnie brak sztuk na sprzedaż."),
-        ]
-        created_count = 0
-        featured = {
-            "snowboard-drift-156": {"image_path": "img/snowboard1.jpg", "featured_order": 1},
-            "narty-alpine-172": {"image_path": "img/narty.jpg", "featured_order": 2},
-        }
-        for slug, name, category, price, stock, description in samples:
-            _, created = Product.objects.get_or_create(slug=slug, defaults={
-                "name": name, "category": category, "price": price,
-                "sale_stock": stock, "description": description,
-                "subcategory": {"skis": "downhill", "snowboards": "all_mountain"}.get(category, ""),
-                **featured.get(slug, {}),
-            })
-            created_count += created
+        created_count = updated_count = 0
+        refresh_fields = ("price", "discount_percent", "image_path", "description", "subcategory", *SPECIFICATION_FIELDS)
+        data = load_demo_catalogue()
+        materials = {item["code"]: Material.objects.get_or_create(code=item["code"], defaults={"name": item["name"]})[0] for item in data.get("materials", [])}
+        for entry in data["products"]:
+            values = entry["product"].copy()
+            values["price"] = Decimal(values["price"])
+            slug = values.pop("slug")
+            product, created = Product.objects.get_or_create(slug=slug, defaults=values)
+            if created:
+                product.full_clean()
+                product.materials.set([materials[code] for code in entry.get("materials", [])])
+                created_count += 1
+                continue
+            if not (options["refresh_demo"] or options["refresh_specs"]):
+                continue
+            if product.category != values["category"]:
+                self.stdout.write(self.style.WARNING(f"Pominięto ofertę ze zmienioną kategorią: {slug}"))
+                continue
+            fields = refresh_fields if options["refresh_demo"] else ("description", *SPECIFICATION_FIELDS)
+            changed = [field for field in fields if getattr(product, field) != values[field]]
+            selected_materials = [materials[code] for code in entry.get("materials", [])]
+            materials_changed = set(product.materials.values_list("pk", flat=True)) != {item.pk for item in selected_materials}
+            if changed:
+                for field in changed:
+                    setattr(product, field, values[field])
+                product.full_clean()
+                product.save(update_fields=changed)
+            if materials_changed:
+                product.materials.set(selected_materials)
+            if changed or materials_changed:
+                updated_count += 1
         self.stdout.write(self.style.SUCCESS(
-            f"Dodano produktów: {created_count}. Istniejące pozostawiono bez zmian."))
-
+            f"Dodano produktów: {created_count}. Odświeżono: {updated_count}. "
+            "Nazwy, własne stany i ustawienia widoczności istniejących ofert zachowano."
+        ))

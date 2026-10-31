@@ -1,0 +1,11 @@
+{% extends 'accounts/profile_base.html' %}
+{% block account_content %}
+<h2>Ulubione produkty</h2>
+{% if products %}
+<p class="cart-note">Twoja lista jest zapisana na koncie. Zapisanie produktu nie rezerwuje go i nie dodaje do koszyka. Ukryte oferty nie są wyświetlane.</p>
+<div class="product-grid favorites-grid">{% for product in products %}<div>
+  {% include 'catalog/product_card.html' with hide_favorite_action=True %}
+  <form method="post" action="{% url 'accounts:favorite_remove' product.slug %}">{% csrf_token %}<button class="text-button" type="submit" aria-label="Usuń {{ product.name }} z ulubionych">Usuń z ulubionych</button></form>
+</div>{% endfor %}</div>
+{% else %}<div class="account-empty"><p class="empty-title">Nie masz jeszcze ulubionych produktów.</p><p>Na stronie produktu wybierz „Dodaj do ulubionych”, aby wrócić do niego później.</p><a class="button" href="{% url 'catalog:list' %}">Przeglądaj sprzęt <span aria-hidden="true">→</span></a></div>{% endif %}
+{% endblock %}

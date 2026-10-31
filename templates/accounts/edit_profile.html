@@ -1,0 +1,9 @@
+{% extends 'accounts/profile_base.html' %}
+{% block account_content %}
+<h2>Dane profilu</h2><p class="cart-note">Uzupełnij swoje dane kontaktowe. Możesz je później zmienić lub wyczyścić.</p>
+<p>Twój login: <strong>{{ user.username }}</strong></p>
+<form method="post" class="account-form profile-form">{% csrf_token %}
+  {% include 'accounts/form_fields.html' %}
+  <button class="button" type="submit">Zapisz zmiany <span aria-hidden="true">→</span></button>
+</form>
+{% endblock %}

@@ -1,10 +1,10 @@
 # Szron — sklep narciarski z wypożyczalnią
 
 Pierwszy etap: lokalna aplikacja Django z PostgreSQL, stroną główną, katalogiem,
-szczegółami produktu oraz panelem administratora. „Szron” jest nazwą roboczą.
-Zakupy, konta klientów i rezerwacje będą rozwijane w kolejnych etapach.
+szczegółami produktu, kontami klientów, koszykiem oraz panelem administratora.
+„Szron” jest nazwą roboczą. Składanie zamówień i rezerwacje będą rozwijane w kolejnych etapach.
 
-## Pobranie obecnej wersji przed prezentacją (22.10.2026)
+## Pobranie obecnej wersji na drugim komputerze
 
 Jeśli masz już działającą kopię projektu, otwórz PowerShell w swoim folderze
 z `manage.py`. Sprawdź `git status --short`: jeśli są lokalne zmiany, najpierw
@@ -25,17 +25,19 @@ ustawienia portu i bazę zachowaj lokalnie. Jeśli środowiska jeszcze nie ma,
 wykonaj sekcję „Pierwsze uruchomienie na drugim komputerze” poniżej.
 
 Repozytorium zawiera wszystkie zdjęcia, CSS, JavaScript, migracje i definicje
-czterech produktów demonstracyjnych. Migracje przypisują istniejącym ofertom demo
+61 produktów demonstracyjnych. Migracje przypisują istniejącym ofertom demo
 zdjęcia i wyróżnienie oraz kategorię Kaski; `seed_demo` tworzy brakujące produkty.
 Na komputerze autora katalog nadal odpowiada tym danym: Drift 156 i Alpine 172
-są wyróżnione, a Summit 27 i Ridge M pozostają w katalogu. Odtworzenie tego zestawu
+są wyróżnione. Każda z 29 podkategorii ma po 2 oferty; Akcesoria mają 3 pozycje. Odtworzenie tego zestawu
 zapewnia ten sam układ i oferty. `seed_demo` nie nadpisuje własnych zmian produktów
 ani nie usuwa dodatkowych ofert na drugim komputerze; takie różnice w bazie trzeba
 uzgodnić oddzielnie. Nie przenosimy kont, haseł ani całych plików bazy przez GitHub.
 
 Przed prezentacją sprawdź pokaz czterech panoram, wyróżnione narty i snowboard,
-przejście do szczegółów oraz filtr Kaski (Ridge M). Puste kategorie są prawidłowe:
-nie dodano jeszcze ofert wiązań, gogli ani butów snowboardowych.
+przejście do szczegółów oraz po 2 produkty w każdej z 29 podkategorii.
+Kategorie główne zawierają sumę ofert swoich podkategorii, a Akcesoria mają 3 pozycje.
+Jeśli masz wcześniejsze oferty demo i chcesz wczytać ich nowe ceny oraz zdjęcia,
+wykonaj jednorazowo `manage.py seed_demo --refresh-demo` (szczegóły poniżej).
 
 ## Uruchomienie na obecnym komputerze
 
@@ -129,9 +131,23 @@ z pierwszego komputera, jeżeli Twój serwer działa na 5432.
 ./start.ps1
 ```
 
-`seed_demo` dodaje cztery fikcyjne produkty. Można uruchamiać je wielokrotnie:
+`seed_demo` dodaje 61 fikcyjnych produktów: po 2 w każdej z 29 podkategorii i 3 akcesoria. Można uruchamiać je wielokrotnie:
 nie duplikuje produktów ani nie nadpisuje późniejszych zmian ich ceny i stanu.
-Ilustracje w katalogu są własnymi grafikami kategorii, nie zdjęciami konkretnych modeli.
+Każda oferta demo ma lokalne zdjęcie produktu referencyjnego. Nazwy są wymyślone,
+a ceny pochodzą z ofert sprawdzonych 31.10.2026. Zestawienie znajduje się w
+[CATALOG_SOURCES.md](CATALOG_SOURCES.md), a dane w `catalog/data/demo_products.json`.
+Zdjęcia nie potwierdzają istnienia rzeczywistych modeli pod fikcyjnymi nazwami.
+
+Jawne odświeżenie istniejących ofert demonstracyjnych:
+
+```powershell
+./.venv/Scripts/python manage.py seed_demo --refresh-demo
+```
+
+Ta opcja zmienia cenę, zdjęcie, opis, podkategorię, parametry i materiały znanych ofert demo, zachowując
+nazwę, stan magazynowy, widoczność i kolejność wyróżnienia. Pomija oferty ze zmienioną
+kategorią i nie rusza własnych produktów administratora. W zwykłej codziennej pracy
+korzystaj z `seed_demo` bez tej opcji, aby zachować własne edycje cen i opisów.
 
 ## Codzienna praca i sprawdzanie
 
@@ -150,6 +166,114 @@ Testy korzystają z PostgreSQL i tworzą oraz usuwają osobną bazę `test_szron
 nie uruchamiaj ich na bazie produkcyjnej ani na bazie z taką nazwą zawierającej ważne dane.
 Przy zmianie modeli twórz migracje przez `manage.py makemigrations` i dodawaj je do commita.
 
+## Logowanie, konto klienta i koszyk
+
+- Przycisk „Zaloguj się” prowadzi do `/zaloguj/`. Formularz służy klientom i administratorom: konto z `is_staff=True` po zwykłym logowaniu przechodzi do panelu administratora, a klient do swoich aktualnych zamówień. Powrót po logowaniu z karty produktu prowadzi z powrotem do produktu. Django sprawdza uprawnienia panelu niezależnie od nawigacji.
+- „Utwórz konto” (`/zarejestruj/`) rejestruje zwykłego klienta i automatycznie go loguje. Nie umożliwia nadania sobie uprawnień administratora. Używa walidacji i haszowania haseł Django. Istniejące konta i ich hasła pozostają bez zmian; administratora nadal tworzy się przez `manage.py createsuperuser`.
+- „Moje konto” ma zakładki Aktualne zamówienia, Historia zakupów i Koszyk. Dwie pierwsze pokazują obecnie puste stany. Ich dane i statusy realizacji zostaną podłączone wraz z przyszłym systemem zamówień; nie tworzymy fikcyjnych zakupów.
+- Zalogowany użytkownik dodaje produkt z jego strony szczegółów. Koszyk pozwala zmienić ilość, usunąć pozycję i zobaczyć sumę aktualnych cen. Dane należą do konta w PostgreSQL i pozostają po wylogowaniu. Każdy klient ma dostęp wyłącznie do własnego koszyka.
+- Koszyk nie rezerwuje sztuk ani nie zmniejsza magazynu. Dodawanie i zmiany ilości sprawdzają stan w backendzie. Zmiana ceny lub dostępności w katalogu jest widoczna w koszyku; pozycja niedostępna zostaje oznaczona i można ją usunąć. Składanie zamówień nie jest jeszcze dostępne.
+- Wylogowanie i zmiany koszyka wymagają formularza POST z ochroną CSRF. Także `/admin/login/` wyświetla wspólny formularz logowania.
+
+Na drugim komputerze po pobraniu tej zmiany wykonaj `manage.py migrate`:
+migracja `accounts/0002_cartitem.py` tworzy tabelę koszyka. Konta i koszyki nie są
+przesyłane przez GitHub; pozostają w lokalnej bazie danego komputera.
+
+## Dane profilu, ulubione i zwroty
+
+„Moje konto” zawiera dodatkowe zakładki: Dane profilu, Ulubione i Zwroty.
+W danych profilu zalogowana osoba może zmienić lub wyczyścić imię, nazwisko,
+adres e-mail i numer telefonu. Formularz sprawdza format e-maila i telefonu;
+zapisuje wyłącznie te cztery pola na bieżącym koncie. Login, hasło i uprawnienia
+nie są zmieniane przez ten formularz. E-mail jest obecnie danymi kontaktowymi,
+nie loginem; serwis nie wysyła wiadomości weryfikacyjnych.
+
+Produkty można zapisać w ulubionych z katalogu lub strony szczegółów. Lista
+jest prywatna i pozostaje zapisana w bazie po wylogowaniu. Ten sam produkt
+pojawia się na niej tylko raz. Ukryte oferty nie są wyświetlane; brak stanu
+magazynowego nie blokuje zapisania ulubionego produktu. Zapisanie nie dodaje
+produktu do koszyka i nie rezerwuje go. Usuwanie działa z własnej listy.
+
+Zwroty mają obecnie zakładkę z pustym stanem i informacją o przyszłej obsłudze.
+Zgłaszanie zwrotów i ich statusy zostaną powiązane z zamówieniami po wdrożeniu
+systemu zakupów. Nie utworzono fikcyjnych zgłoszeń ani formularza wysyłającego
+zwroty bez istniejącego zakupu.
+
+Po pobraniu zmian na drugim komputerze wykonaj `manage.py migrate`.
+Migracja `accounts/0003_user_phone_favorite.py` dodaje telefon i tabelę ulubionych.
+Dane osobowe i ulubione pozostają wyłącznie w lokalnej bazie i nie trafiają do Git.
+
+## Informacje o sklepie
+
+Stopka każdej strony prowadzi do `/regulamin/`, `/kontakt/` i `/sklepy/`.
+Regulamin opisuje wersję demonstracyjną bez rzeczywistych zamówień i płatności.
+Dane pomocy klienta i czterech sklepów są wspólne w `catalog/store_info.py`:
+Gliwice, Katowice, Szczyrk oraz Białka Tatrzańska, z dwoma fikcyjnymi punktami
+przy stokach. Adresy, godziny i kontakt oznaczono jako wymyślone. Adres pomocy
+używa domeny `.example`, a telefon jest niedziałającym numerem demonstracyjnym.
+Strona nie wysyła zgłoszeń ani wiadomości do obsługi.
+
+## Promocje na stronie głównej
+
+Pod panoramą, nad dotychczasową sekcją wyróżnionych ofert, znajdują się trzy karty
+promocyjne: Alpine 172 (narty, −10%), Halo S3 (gogle, −15%) i Roam 500 (buty
+snowboardowe, −20%). Przy cenach regularnych z zestawu demo ceny po obniżce wynoszą
+odpowiednio 1529,10 zł, 212,49 zł i 471,99 zł. Karty pokazują rabat, przekreśloną
+cenę regularną, nową cenę i oszczędność oraz prowadzą do produktu.
+
+`Product.price` pozostaje ceną regularną, a `discount_percent` rabatem (0–99%;
+0 wyłącza promocję). `selling_price` oblicza cenę po rabacie z zaokrągleniem do
+groszy, a koszyk mnoży tak obliczoną cenę jednostkową przez ilość. Katalog,
+ulubione, wyróżnione oferty, szczegóły i koszyk korzystają z tej samej ceny.
+Zmiana lub wyłączenie rabatu jest widoczna także w już istniejącym koszyku.
+
+Administrator może zmieniać rabat na formularzu produktu. Strona główna pokazuje
+maksymalnie trzy aktywne, przecenione oferty z dodatnim stanem, w kolejności rabatu
+rosnąco, następnie identyfikatora. Sekcja działa niezależnie od wyróżnienia ofert;
+znika, jeżeli brak dostępnych promocji. Nowe rabaty są przykładem promocji Szron,
+nie rabatami ze sklepów źródłowych ani historią najniższych cen.
+
+Na drugim komputerze wykonaj `manage.py migrate`: migracja
+`catalog/0011_product_discount_percent_and_more.py` doda rabat i ustawi trzy
+promocje dla istniejących ofert demo o zgodnych kategoriach. Na pustej bazie
+`seed_demo` odtwarza te rabaty z JSON. Zwykły seed i `--refresh-specs` zachowują
+własne zmiany rabatów; jawne `--refresh-demo` odświeża również rabaty demo.
+
+## Opisy, parametry i filtry produktów
+
+Każda z 61 ofert demonstracyjnych ma rozbudowany opis, rozmiar, materiały,
+opis konstrukcji, wymiary z jednostkami oraz masę w gramach. Pole „masa dotyczy”
+wyjaśnia, czy chodzi np. o parę butów, deskę bez wiązań czy komplet śrub.
+Parametry to przykładowe dane fikcyjnych modeli Szron i są tak oznaczone na stronie.
+Źródła rzeczywistych cen i zdjęć nie potwierdzają tych wymyślonych specyfikacji.
+
+W katalogu można jednocześnie wybrać kategorię, podkategorię, rozmiar i materiał
+oraz wpisać wyszukiwaną frazę. Produkt może mieć kilka materiałów, np. drewno
+i włókno szklane; pasuje do filtra każdego z nich. Rozmiary i materiały pochodzą
+z aktywnych produktów danej grupy. JavaScript aktualizuje opcje po zmianie kategorii
+lub typu i czyści poprzedni wybór; „Pokaż sprzęt” zatwierdza filtry. Bez JavaScript
+najpierw zatwierdź kategorię, aby załadować właściwe opcje. „Wyczyść” usuwa filtry.
+
+W panelu administratora edytuj pola parametrów produktu i przypisuj wiele materiałów.
+Lista materiałów ma osobny ekran administracji. Masa jest opcjonalna dla nowych
+własnych ofert, ale podana wartość musi być dodatnia. Oznaczenie „parametry
+demonstracyjne” można wyłączyć po zastąpieniu przykładowych danych zweryfikowanymi.
+
+Na istniejącej bazie, również na drugim komputerze, wczytaj nowe opisy i parametry:
+
+```powershell
+./.venv/Scripts/python manage.py migrate
+./.venv/Scripts/python manage.py seed_demo --refresh-specs
+```
+
+Migracja `catalog/0010_material_product_construction_product_dimensions_and_more.py`
+dodaje strukturę parametrów i tabelę materiałów. `--refresh-specs` odświeża opisy,
+parametry i przypisania materiałów znanych ofert demo. Zachowuje ceny, zdjęcia,
+nazwy, stany magazynowe, widoczność, wyróżnienia i podkategorie. Pomija oferty
+przeniesione do innych kategorii oraz własne produkty administratora.
+Zwykłe `seed_demo` nadal zachowuje istniejące edycje; na pustej bazie tworzy oferty
+od razu z parametrami. `--refresh-demo` odświeża także parametry i materiały.
+
 ## Organizacja kodu
 
 ### Zdjęcia i wybór ofert na stronie głównej
@@ -166,10 +290,10 @@ produkty ze zdjęciem, według tej kolejności. Cena i odnośnik pochodzą z tej
 oferty co w katalogu. Jeśli nie wybrano ofert, sekcja wybranych produktów jest pomijana.
 Zdjęcie produktu jest wspólne dla strony głównej, katalogu i szczegółów.
 
-Na start zdjęcia `snowboard1.jpg` i `narty.jpg` przypisano do fikcyjnych ofert
-Drift 156 i Alpine 172 jako materiały zastępcze. Nie identyfikują one rzeczywistych
-modeli pod tymi nazwami. `snowboard2.jpg` pozostaje nieprzypisany. Źródła i prawa
-do zdjęć pobranych przez użytkownika nie zostały zweryfikowane.
+Pierwotne zdjęcia `snowboard1.jpg` i `narty.jpg` pozostają w repozytorium.
+Odświeżony zestaw demo używa 32 zdjęć w `static/img/products/`, opisanych w
+[CATALOG_SOURCES.md](CATALOG_SOURCES.md). `snowboard2.jpg` nadal jest nieprzypisany.
+Każdą ofertę można później zilustrować własnym zdjęciem przez panel administratora.
 
 ### Panorama i kategorie
 
@@ -193,7 +317,7 @@ automatycznie nowych produktów. Źródła i prawa do panoram dostarczonych prze
 użytkownika nie zostały zweryfikowane.
 
 - `config/` — ustawienia, adresy i uruchamianie aplikacji.
-- `accounts/` — własny model użytkownika oparty na Django, przygotowany do dalszej rozbudowy.
+- `accounts/` — konta, logowanie i rejestracja, zakładki profilu oraz zapisany w bazie koszyk.
 - `catalog/` — produkty, widoki, panel administratora, migracje i testy.
 - `templates/` — wspólna rama HTML i strony katalogu.
 - `static/` — style i własne ilustracje SVG. Strona nie wymaga zewnętrznych fontów ani usług.

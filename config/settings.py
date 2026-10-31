@@ -52,6 +52,9 @@ DATABASES = {"default": {
     "OPTIONS": {"connect_timeout": 5},
 }}
 AUTH_USER_MODEL = "accounts.User"
+LOGIN_URL = "accounts:login"
+LOGIN_REDIRECT_URL = "accounts:orders"
+LOGOUT_REDIRECT_URL = "catalog:home"
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},

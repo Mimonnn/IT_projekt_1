@@ -7,6 +7,13 @@ from .taxonomy import SUBCATEGORIES
 
 
 class ProductAdminForm(forms.ModelForm):
+    discount_percent = forms.IntegerField(label="Rabat (%)", required=False, min_value=0, max_value=99, help_text="0 lub puste pole wyłącza promocję. Rabat od ceny regularnej.")
+
+    def clean_discount_percent(self):
+        if self.add_prefix("discount_percent") not in self.data:
+            return self.instance.discount_percent
+        return self.cleaned_data["discount_percent"] or 0
+
     subcategory = forms.ChoiceField(
         label="Podkategoria", required=False,
         help_text="Wybierz typ właściwy dla kategorii produktu.",

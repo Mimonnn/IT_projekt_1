@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, render
 
-from .models import Product
+from .models import Material, Product
 from .taxonomy import ALL_LABELS, SUBCATEGORIES
 
 
@@ -11,6 +11,7 @@ def home(request):
     ).exclude(image_path="").order_by("featured_order", "pk")[:3]
     return render(request, "catalog/home.html", {
         "featured_products": featured_products,
+        "promotion_products": Product.objects.filter(is_active=True, sale_stock__gt=0, discount_percent__gt=0).order_by("discount_percent", "pk")[:3],
         "category_menus": [
             {"value": value, "label": "Snowboard" if value == "snowboards" else label,
              "all_label": ALL_LABELS[value], "subcategories": SUBCATEGORIES[value]}
@@ -28,28 +29,62 @@ def home(request):
 
 
 def product_list(request):
-    products = Product.objects.filter(is_active=True)
+    products = Product.objects.filter(is_active=True).prefetch_related("materials")
     category = request.GET.get("category", "")
     subcategory = request.GET.get("subcategory", "") if category in SUBCATEGORIES else ""
     # Zachowujemy działanie dotychczasowych odnośników do nart.
     if category == Product.Category.SKIS and "subcategory" not in request.GET:
         subcategory = request.GET.get("ski_subcategory", "")
     query = request.GET.get("q", "").strip()[:100]
+    size = request.GET.get("size", "").strip()[:80]
+    material = request.GET.get("material", "").strip()[:50]
+    if query:
+        products = products.filter(Q(name__icontains=query) | Q(description__icontains=query) | Q(construction__icontains=query))
+    specification_options = [
+        {"category": item.category, "subcategory": item.subcategory, "size": item.size,
+         "materials": [(material.code, material.name) for material in item.materials.all()]}
+        for item in products
+    ]
     if category:
         products = products.filter(category=category)
     if subcategory:
         products = products.filter(subcategory=subcategory)
-    if query:
-        products = products.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    # Rozmiary i materiały wynikają z kategorii, typu i wyszukiwania;
+    # nie zawężamy opcji wybranym rozmiarem lub materiałem.
+    size_options = list(products.exclude(size="").order_by("size").values_list("size", flat=True).distinct())
+    material_options = list(Material.objects.filter(products__in=products).distinct())
+    if size:
+        products = products.filter(size=size)
+    if material:
+        products = products.filter(materials__code=material)
     return render(request, "catalog/product_list.html", {
         "products": products, "categories": Product.Category.choices,
         "selected_category": category, "query": query,
         "subcategory_options": SUBCATEGORIES,
         "subcategories": SUBCATEGORIES.get(category, []),
         "selected_subcategory": subcategory,
+        "sizes": size_options, "materials": material_options,
+        "selected_size": size, "selected_material": material,
+        "material_codes": [item.code for item in material_options],
+        "specification_options": specification_options,
     })
 
 
 def product_detail(request, slug):
-    product = get_object_or_404(Product, slug=slug, is_active=True)
-    return render(request, "catalog/product_detail.html", {"product": product})
+    product = get_object_or_404(Product.objects.prefetch_related("materials"), slug=slug, is_active=True)
+    is_favorite = request.user.is_authenticated and request.user.favorites.filter(product=product).exists()
+    return render(request, "catalog/product_detail.html", {"product": product, "is_favorite": is_favorite})
+
+
+def terms(request):
+    return render(request, "catalog/terms.html")
+
+
+def contact(request):
+    from .store_info import SUPPORT
+    return render(request, "catalog/contact.html", {"support": SUPPORT})
+
+
+def stores(request):
+    from .store_info import STORES
+    return render(request, "catalog/stores.html", {"stores": STORES})

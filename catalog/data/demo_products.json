@@ -1,0 +1,2120 @@
+{
+  "checked_on": "2026-10-31",
+  "currency": "PLN",
+  "note": "Fikcyjne nazwy i opisy katalogowe. Ceny odpowiadają ofertom referencyjnym sprawdzonym tego dnia; mogą być promocyjne i nie obejmują rabatów z kodem. Zdjęcia przedstawiają rzeczywiste produkty referencyjne, a nie odrębne wyroby pod fikcyjnymi nazwami. Zdjęcia pochodzą z serwera Decathlon; nie są objęte licencją kodu projektu. Warianty ofert mogą współdzielić zdjęcie i cenę tego samego modelu referencyjnego; oznaczenia liczbowe w fikcyjnych nazwach nie są specyfikacją techniczną.",
+  "products": [
+    {
+      "product": {
+        "slug": "narty-alpine-172",
+        "name": "Alpine 172",
+        "category": "skis",
+        "subcategory": "downhill",
+        "price": "1699.00",
+        "sale_stock": 5,
+        "description": "Zestaw nart trasowych z wiązaniami. Dobry wybór do ćwiczenia skrętów i całodziennej jazdy po przygotowanym stoku.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Alpine 172 ma rozmiar 172 cm. Długość: 172 cm; taliowanie dziób / środek / piętka: 122 / 73 / 106 mm. Masa: 4120 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-alpine-172.jpg",
+        "featured_order": 2,
+        "is_active": true,
+        "size": "172 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 172 cm; taliowanie dziób / środek / piętka: 122 / 73 / 106 mm.",
+        "weight_g": 4120,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 10
+      },
+      "reference": {
+        "name": "Head WC Rebels E.XSR z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-zjazdowe-meskie-head-wc-rebels-e-xsr-z-wiazaniami/375753/m8974378",
+        "image_url": "https://contents.mediadecathlon.com/p2944527/k%244e49461a8bf8128842fd16143fcdb295/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1699.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-traverse-84",
+        "name": "Traverse 84",
+        "category": "skis",
+        "subcategory": "all_mountain",
+        "price": "2199.00",
+        "sale_stock": 4,
+        "description": "Narty all-mountain z wiązaniami, do jazdy w zmiennych warunkach. Uniwersalny zestaw na trasę i miękki śnieg przy jej krawędzi.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Traverse 84 ma rozmiar 174 cm. Długość: 174 cm; taliowanie dziób / środek / piętka: 126 / 84 / 110 mm. Masa: 4240 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-traverse-84.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "174 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 174 cm; taliowanie dziób / środek / piętka: 126 / 84 / 110 mm.",
+        "weight_g": 4240,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Salomon Stance 84 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-all-mountain-meskie-salomon-stance-84-z-wiazaniami/375669/m8974579",
+        "image_url": "https://contents.mediadecathlon.com/p2944416/k%24926436ad8f0c51bc1e3236ff642aec0a/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "2199.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-ascend-102",
+        "name": "Ascend 102",
+        "category": "skis",
+        "subcategory": "touring",
+        "price": "3699.00",
+        "sale_stock": 2,
+        "description": "Zestaw skiturowy obejmujący narty, wiązania i foki. Przeznaczony na wycieczki łączące podejście z terenowym zjazdem.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Włókno węglowe usztywnia lekki korpus. Wariant Ascend 102 ma rozmiar 178 cm. Długość: 178 cm; taliowanie dziób / środek / piętka: 134 / 102 / 121 mm. Masa: 3480 g (para nart z wiązaniami i fokami).",
+        "image_path": "img/products/narty-ascend-102.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "178 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Włókno węglowe usztywnia lekki korpus.",
+        "dimensions": "Długość: 178 cm; taliowanie dziób / środek / piętka: 134 / 102 / 121 mm.",
+        "weight_g": 3480,
+        "weight_scope": "para nart z wiązaniami i fokami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Wilder 102 z wiązaniami i fokami",
+        "url": "https://www.decathlon.pl/p/narty-skiturowe-wedze-wilder-102-z-wiazaniami-i-fokami/335496/m8958389",
+        "image_url": "https://contents.mediadecathlon.com/p3196220/k%24fef3d932daf3408df0877840f6c7cdf0/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "3699.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel",
+        "carbon"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-drift-156",
+        "name": "Drift 156",
+        "category": "snowboards",
+        "subcategory": "all_mountain",
+        "price": "819.99",
+        "sale_stock": 3,
+        "description": "Uniwersalna deska all-mountain na trasę i wyjazdy w poszukiwaniu miękkiego śniegu. Zrównoważony charakter do rozwijania własnego stylu jazdy.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Drift 156 ma rozmiar 156 cm. Długość: 156 cm; szerokość w talii: 25,2 cm. Masa: 2880 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-drift-156.jpg",
+        "featured_order": 1,
+        "is_active": true,
+        "size": "156 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 156 cm; szerokość w talii: 25,2 cm.",
+        "weight_g": 2880,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape Landscape allmountain / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-meska-damska-dreamscape-landscape-allmountain-freeride/339571/c180m8739887",
+        "image_url": "https://contents.mediadecathlon.com/p2503658/k%24aea3d3b40278fe4ed3e37a5376257e43/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "819.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-orbit-152",
+        "name": "Orbit 152",
+        "category": "snowboards",
+        "subcategory": "freestyle",
+        "price": "799.99",
+        "sale_stock": 5,
+        "description": "Deska freestyle do snowparku i zabawy na stoku. Sprężysty charakter ułatwia ćwiczenie skoków i zmianę kierunku jazdy.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Orbit 152 ma rozmiar 152 cm. Długość: 152 cm; szerokość w talii: 25,2 cm. Masa: 2760 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-orbit-152.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "152 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 152 cm; szerokość w talii: 25,2 cm.",
+        "weight_g": 2760,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape Park & Ride 500",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-damska-dreamscape-park-and-ride-500-all-mountain-and-freestyle/306010/c368c1m8938816",
+        "image_url": "https://contents.mediadecathlon.com/p2944912/k%2466d5c01120b9ce44c8d119565f25f916/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "799.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-glacier-158",
+        "name": "Glacier 158",
+        "category": "snowboards",
+        "subcategory": "freeride",
+        "price": "999.99",
+        "sale_stock": 3,
+        "description": "Deska freeride do jazdy w miękkim śniegu i na szerszych łukach. Propozycja na dni, w których chcesz odkryć teren poza główną trasą.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Glacier 158 ma rozmiar 158 cm. Długość: 158 cm; szerokość w talii: 26,1 cm. Masa: 2940 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-glacier-158.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "158 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 158 cm; szerokość w talii: 26,1 cm.",
+        "weight_g": 2940,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape All Road 500 trasa / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-meska-dreamscape-all-road-500-trasa-freeride/173311/m8951770",
+        "image_url": "https://contents.mediadecathlon.com/p2944920/k%24702920f3f7ff53b5c0cab24d210a1da4/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "999.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-latch-junior",
+        "name": "Latch Junior",
+        "category": "bindings",
+        "subcategory": "alpine",
+        "price": "337.50",
+        "sale_stock": 6,
+        "description": "Narciarskie wiązania zjazdowe dla młodszych użytkowników. Dobór i ustawienie wiązań powinien wykonać serwis odpowiednio do butów oraz narciarza.\n\nKorpus z poliamidu, stalowy mechanizm wypięcia i aluminiowe elementy prowadnicy. Przedni i tylny element tworzą komplet na parę nart. Wariant Latch Junior ma rozmiar Junior (podeszwa 200–300 mm). Zakres długości podeszwy: 200–300 mm; szerokość hamulca: 76 mm. Masa: 900 g (para wiązań).",
+        "image_path": "img/products/wiazania-latch-junior.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Junior (podeszwa 200–300 mm)",
+        "construction": "Korpus z poliamidu, stalowy mechanizm wypięcia i aluminiowe elementy prowadnicy. Przedni i tylny element tworzą komplet na parę nart.",
+        "dimensions": "Zakres długości podeszwy: 200–300 mm; szerokość hamulca: 76 mm.",
+        "weight_g": 900,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Look Team 4 GW B76",
+        "url": "https://www.decathlon.pl/p/mp/wiazania-narciarskie-dla-dzieci-look-team-4-gw-b76/4b66a747-d99a-45d9-ab6a-9890950aa7d3/c4",
+        "image_url": "https://contents.mediadecathlon.com/m33092002/k%246fadeb59f154f8fbad6d107f4f8f4798/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "337.50",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "steel",
+        "aluminium"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-anchor-500",
+        "name": "Anchor 500",
+        "category": "bindings",
+        "subcategory": "straps",
+        "price": "449.99",
+        "sale_stock": 7,
+        "description": "Snowboardowe wiązania paskowe z regulacją dopasowania. Uniwersalna propozycja do jazdy po trasach i pierwszych prób w snowparku.\n\nPodstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA.Dwa paski stabilizują but w wiązaniu. Wariant Anchor 500 ma rozmiar M (EU 39–43). Podstawa: 26 × 15 cm; wysokość łyżki: 26 cm. Masa: 1800 g (para wiązań).",
+        "image_path": "img/products/wiazania-anchor-500.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M (EU 39–43)",
+        "construction": "Podstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA.Dwa paski stabilizują but w wiązaniu.",
+        "dimensions": "Podstawa: 26 × 15 cm; wysokość łyżki: 26 cm.",
+        "weight_g": 1800,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB 500 all mountain/freestyle",
+        "url": "https://www.decathlon.pl/p/wiazania-snowboardowe-dla-doroslych-dreamscape-snb-500-all-mountain-freestyle/336603/c227m8668654",
+        "image_url": "https://contents.mediadecathlon.com/p2573496/k%24353e5fd924967da12911035b5eeb0342/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "449.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "aluminium",
+        "eva"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-swift-360",
+        "name": "Swift 360",
+        "category": "bindings",
+        "subcategory": "quick_entry",
+        "price": "469.00",
+        "sale_stock": 4,
+        "description": "Wiązania snowboardowe z szybkim wpinaniem. Ułatwiają przygotowanie do kolejnego zjazdu, zachowując możliwość regulacji dopasowania do buta.\n\nPodstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA. Otwierana tylna łyżka ułatwia wpinanie buta. Wariant Swift 360 ma rozmiar M (EU 39–43). Podstawa: 26 × 15 cm; wysokość łyżki: 26 cm. Masa: 1800 g (para wiązań).",
+        "image_path": "img/products/wiazania-swift-360.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M (EU 39–43)",
+        "construction": "Podstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA. Otwierana tylna łyżka ułatwia wpinanie buta.",
+        "dimensions": "Podstawa: 26 × 15 cm; wysokość łyżki: 26 cm.",
+        "weight_g": 1800,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Raven Fastec FT360",
+        "url": "https://www.decathlon.pl/p/mp/wiazania-snowboardowe-raven-fastec-ft360/a18d14d1-34c6-4333-919b-e08730be7064/c4",
+        "image_url": "https://contents.mediadecathlon.com/m26092303/k%24b7bfad04ba7274aa36f2b1c78296db9b/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "469.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "aluminium",
+        "eva"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-ridge-m",
+        "name": "Ridge M",
+        "category": "helmets",
+        "subcategory": "classic",
+        "price": "179.99",
+        "sale_stock": 0,
+        "description": "Klasyczny kask narciarski i snowboardowy z regulacją dopasowania. Lekka propozycja na cały dzień jazdy; rozmiar należy dobrać do obwodu głowy.\n\nSkorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Wariant Ridge M ma rozmiar M (55–59 cm). Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm. Masa: 450 g (jeden kask).",
+        "image_path": "img/products/kask-ridge-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M (55–59 cm)",
+        "construction": "Skorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie.",
+        "dimensions": "Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm.",
+        "weight_g": 450,
+        "weight_scope": "jeden kask",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze PST 500",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-dla-doroslych-wedze-pst-500/302055/c381c383m8543286",
+        "image_url": "https://contents.mediadecathlon.com/p2977654/k%24239df746194cbfbf8be8bc2ff50f7dd9/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "179.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-vista-m",
+        "name": "Vista M",
+        "category": "helmets",
+        "subcategory": "visor",
+        "price": "399.99",
+        "sale_stock": 5,
+        "description": "Kask z wbudowanym wizjerem osłaniającym oczy. Wygodna alternatywa dla zestawu z oddzielnymi goglami podczas rekreacyjnej jazdy.\n\nSkorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Zintegrowany wizjer wykonano z poliwęglanu. Wariant Vista M ma rozmiar M (55–59 cm). Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm. Masa: 620 g (jeden kask z wizjerem).",
+        "image_path": "img/products/kask-vista-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M (55–59 cm)",
+        "construction": "Skorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Zintegrowany wizjer wykonano z poliwęglanu.",
+        "dimensions": "Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm.",
+        "weight_g": 620,
+        "weight_scope": "jeden kask z wizjerem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze PST 550 z szybą",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-dla-doroslych-wedze-pst-550-z-szyba/302061/c71c381m8817979",
+        "image_url": "https://contents.mediadecathlon.com/p2977597/k%24ef67c3be49a7cb25b83443e3a46daf49/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "399.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-district-m",
+        "name": "District M",
+        "category": "helmets",
+        "subcategory": "freestyle",
+        "price": "129.99",
+        "sale_stock": 8,
+        "description": "Kask freestyle o prostej, kompaktowej sylwetce. Do jazdy na snowboardzie i nartach, szczególnie dla osób lubiących snowparkowy styl.\n\nSkorupa ABS otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Wariant District M ma rozmiar M (55–59 cm). Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm. Masa: 490 g (jeden kask).",
+        "image_path": "img/products/kask-district-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M (55–59 cm)",
+        "construction": "Skorupa ABS otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie.",
+        "dimensions": "Obwód głowy: 55–59 cm; zewnętrzne wymiary: 27 × 23 × 24 cm.",
+        "weight_g": 490,
+        "weight_scope": "jeden kask",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze FS 300",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-i-snowboardowy-dla-doroslych-i-dzieci-wedze-fs-300/166071/c169m8873889",
+        "image_url": "https://contents.mediadecathlon.com/p2977530/k%24df36031bff09ea997f8fa48c75aa65a1/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "129.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "abs",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-halo-s3",
+        "name": "Halo S3",
+        "category": "goggles",
+        "subcategory": "sunny",
+        "price": "249.99",
+        "sale_stock": 9,
+        "description": "Gogle z ciemną szybą do jasnych, słonecznych dni na stoku. Szeroka oprawka i regulowany pasek pomagają dopasować je do kasku.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Przyciemniona szyba do słonecznych dni. Wariant Halo S3 ma rozmiar L. Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 150 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-halo-s3.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Przyciemniona szyba do słonecznych dni.",
+        "dimensions": "Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 150,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 15
+      },
+      "reference": {
+        "name": "Wedze G 500 I",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-500-i/166213/c71c382m8758726",
+        "image_url": "https://contents.mediadecathlon.com/p3233460/k%24717831283fec22786adff650a4e44d2f/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "249.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-mist-s1",
+        "name": "Mist S1",
+        "category": "goggles",
+        "subcategory": "cloudy",
+        "price": "54.99",
+        "sale_stock": 12,
+        "description": "Gogle z jasną szybą do pochmurnych dni i słabszego światła. Prosta propozycja na zimowe wyjazdy, gdy widoczność na trasie się zmienia.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Jaśniejsza szyba do pochmurnych dni. Wariant Mist S1 ma rozmiar L. Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 150 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-mist-s1.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Jaśniejsza szyba do pochmurnych dni.",
+        "dimensions": "Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 150,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze G 100 S1",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-100-s1/341127/c381c381m8757852",
+        "image_url": "https://contents.mediadecathlon.com/p2971836/k%24cae312b697008f66e77d59be807851c1/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "54.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-flux-ph",
+        "name": "Flux PH",
+        "category": "goggles",
+        "subcategory": "photochromic",
+        "price": "399.99",
+        "sale_stock": 4,
+        "description": "Gogle fotochromowe, których szyba dostosowuje przyciemnienie do warunków oświetleniowych. Jeden model na zmienną pogodę podczas dnia na stoku.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Szyba fotochromowa zmienia przyciemnienie zależnie od światła. Wariant Flux PH ma rozmiar L. Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 150 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-flux-ph.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Szyba fotochromowa zmienia przyciemnienie zależnie od światła.",
+        "dimensions": "Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 150,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Quechua G900 S PH",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-quechua-g900-s-ph/340061/c71c381m8755021",
+        "image_url": "https://contents.mediadecathlon.com/p3233469/k%2461b9938f7f9ec569806a6ad74bc7ecf6/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "399.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-roam-500",
+        "name": "Roam 500",
+        "category": "snowboard_boots",
+        "subcategory": "all_mountain",
+        "price": "589.99",
+        "sale_stock": 6,
+        "description": "Buty snowboardowe all-mountain do codziennej jazdy w różnych warunkach. Zrównoważona propozycja łącząca wygodę z podparciem stopy.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Roam 500 ma rozmiar EU 42. Długość podeszwy zewnętrznej: 305 mm; wysokość cholewki: 30 cm. Masa: 1870 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-roam-500.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 42",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 305 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1870,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 20
+      },
+      "reference": {
+        "name": "Dreamscape Allroad 500 all mountain",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-meskie-dreamscape-allroad-500-all-mountain/305902/c382c231c344m8734563",
+        "image_url": "https://contents.mediadecathlon.com/p2573034/k%24190eb546a63c75f810e3a09bf3022123/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "589.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-flex-100",
+        "name": "Flex 100",
+        "category": "snowboard_boots",
+        "subcategory": "freestyle",
+        "price": "449.99",
+        "sale_stock": 8,
+        "description": "Miękkie buty snowboardowe do swobodnej jazdy i pierwszych prób freestyle. Wygodny punkt wyjścia do nauki oraz rozwijania własnego stylu.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Flex 100 ma rozmiar EU 40. Długość podeszwy zewnętrznej: 295 mm; wysokość cholewki: 30 cm. Masa: 1750 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-flex-100.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 40",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 295 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1750,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB100",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-dreamscape-snb100/327044/c382c179m8872187",
+        "image_url": "https://contents.mediadecathlon.com/p2695756/k%24d540457d51890a03744d5b2b88af4158/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "449.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-rift-900",
+        "name": "Rift 900",
+        "category": "snowboard_boots",
+        "subcategory": "freeride",
+        "price": "779.99",
+        "sale_stock": 4,
+        "description": "Buty snowboardowe do bardziej zdecydowanej jazdy i terenowych zjazdów. Propozycja z mocniejszym podparciem dla miłośników freeride.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Rift 900 ma rozmiar EU 43. Długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 30 cm. Masa: 1930 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-rift-900.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 43",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1930,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB All Road 900",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-meskie-damskie-dreamscape-snb-all-road-900/332378/c93c382m8643401",
+        "image_url": "https://contents.mediadecathlon.com/p2321295/k%2434bb2f92c65e5ec5b138b6b513f1ace0/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "779.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-summit-27",
+        "name": "Summit 27",
+        "category": "boots",
+        "subcategory": "alpine",
+        "price": "979.99",
+        "sale_stock": 8,
+        "description": "Buty narciarskie na przygotowane trasy, w rozmiarze mondo 27. Regulowane zapięcia pozwalają dopasować trzymanie stopy do całodziennej jazdy.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Summit 27 ma rozmiar 27,0 MP. Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm. Masa: 4060 g (para butów).",
+        "image_path": "img/products/buty-summit-27.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "27,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 4060,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Salomon Delta 90 HV",
+        "url": "https://www.decathlon.pl/p/buty-narciarskie-meskie-salomon-delta-90-hv/374488/c1m8970932",
+        "image_url": "https://contents.mediadecathlon.com/p2944651/k%2400158ccd8433ef350581849fa8ce8892/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "979.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-contour-100",
+        "name": "Contour 100",
+        "category": "boots",
+        "subcategory": "all_mountain_freeride",
+        "price": "1299.00",
+        "sale_stock": 5,
+        "description": "Buty narciarskie do dynamicznej jazdy w zróżnicowanych warunkach. Mocniejsze podparcie stopy dla osób szukających precyzji na stoku.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Contour 100 ma rozmiar 26,0 MP. Mondopoint: 26,0 cm; długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 32 cm. Masa: 3980 g (para butów).",
+        "image_path": "img/products/buty-contour-100.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "26,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 26,0 cm; długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 3980,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Atomic Hawx Magna 100 HV",
+        "url": "https://www.decathlon.pl/p/buty-narciarskie-meskie-atomic-hawx-magna-100-hv-flex-100/353325/m9040350",
+        "image_url": "https://contents.mediadecathlon.com/p3145197/k%244e14ac093169f2f698205807605de7b6/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1299.00",
+        "price_kind": "from_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-cloud-80",
+        "name": "Cloud 80",
+        "category": "boots",
+        "subcategory": "alpine",
+        "price": "849.99",
+        "sale_stock": 7,
+        "description": "Komfortowe buty narciarskie do rekreacyjnej jazdy po trasach. Łagodniejszy charakter sprawdzi się podczas spokojnych wyjazdów i doskonalenia techniki.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Cloud 80 ma rozmiar 25,0 MP. Mondopoint: 25,0 cm; długość podeszwy zewnętrznej: 290 mm; wysokość cholewki: 32 cm. Masa: 3900 g (para butów).",
+        "image_path": "img/products/buty-cloud-80.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "25,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 25,0 cm; długość podeszwy zewnętrznej: 290 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 3900,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Salomon Sense 80 HV",
+        "url": "https://www.decathlon.pl/p/buty-narciarskie-meskie-salomon-sense-80-hv/374489/c1m8970933",
+        "image_url": "https://contents.mediadecathlon.com/p2944816/k%24e5ac9711c166c1d3c64966fd525af037/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "849.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "pokrowiec-trail-bag",
+        "name": "Trail Bag",
+        "category": "accessories",
+        "subcategory": "",
+        "price": "149.99",
+        "sale_stock": 10,
+        "description": "Pokrowiec na jedną parę nart i kijki, z regulacją długości. Ułatwia transport sprzętu i jego przechowywanie między wyjazdami.\n\nTkanina poliestrowa z powłoką poliuretanową, wzmocnione uchwyty i zamek na całej długości. Pokrowiec mieści parę nart z wiązaniami. Wariant Trail Bag ma rozmiar Do nart do 190 cm. Długość × szerokość × wysokość: 195 × 28 × 18 cm. Masa: 750 g (pusty pokrowiec).",
+        "image_path": "img/products/pokrowiec-trail-bag.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Do nart do 190 cm",
+        "construction": "Tkanina poliestrowa z powłoką poliuretanową, wzmocnione uchwyty i zamek na całej długości. Pokrowiec mieści parę nart z wiązaniami.",
+        "dimensions": "Długość × szerokość × wysokość: 195 × 28 × 18 cm.",
+        "weight_g": 750,
+        "weight_scope": "pusty pokrowiec",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze 500 — pokrowiec na narty",
+        "url": "https://www.decathlon.pl/p/pokrowiec-na-narty-wedze-500/339994/c355m8817150",
+        "image_url": "https://contents.mediadecathlon.com/p2495303/k%242b6ddd44bf3416e721efabc044dc2b65/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "149.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane"
+      ]
+    },
+    {
+      "product": {
+        "slug": "plytka-axis-disc",
+        "name": "Axis Disc",
+        "category": "accessories",
+        "subcategory": "",
+        "price": "29.99",
+        "sale_stock": 12,
+        "description": "Płytka montażowa z czterema śrubami do wiązań snowboardowych. Przed montażem sprawdź zgodność elementu ze swoim sprzętem.\n\nPłytka montażowa z poliamidu oraz cztery stalowe śruby z podkładkami. Zestaw do montowania zgodnego wiązania snowboardowego. Wariant Axis Disc ma rozmiar Dysk 4 × 4. Średnica płytki: 10 cm; rozstaw montażowy: 4 × 4 cm; długość śrub: 16 mm. Masa: 140 g (płytka z 4 śrubami).",
+        "image_path": "img/products/plytka-axis-disc.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Dysk 4 × 4",
+        "construction": "Płytka montażowa z poliamidu oraz cztery stalowe śruby z podkładkami. Zestaw do montowania zgodnego wiązania snowboardowego.",
+        "dimensions": "Średnica płytki: 10 cm; rozstaw montażowy: 4 × 4 cm; długość śrub: 16 mm.",
+        "weight_g": 140,
+        "weight_scope": "płytka z 4 śrubami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Płytka do wiązań snowboardowych + 4 śruby 16 mm",
+        "url": "https://www.decathlon.pl/p/1-plytka-do-wiazan-snowboardowych-4-sruby-16-mm-decathlon-wedze/341711/m8758290",
+        "image_url": "https://contents.mediadecathlon.com/p2579215/k%24ffbec0fe409c5bb40767029495aa169b/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "29.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "sruby-mount-kit",
+        "name": "Mount Kit",
+        "category": "accessories",
+        "subcategory": "",
+        "price": "24.99",
+        "sale_stock": 15,
+        "description": "Komplet ośmiu śrub 16 mm z podkładkami do mocowania wiązań snowboardowych. Praktyczny zestaw zapasowych elementów montażowych.\n\nOsiem stalowych śrub i podkładek do wiązań snowboardowych. Gwint i długość trzeba dopasować do insertów oraz podstawy wiązania. Wariant Mount Kit ma rozmiar M6 × 16 mm. Gwint: M6; długość śruby: 16 mm; średnica podkładki: 12 mm. Masa: 70 g (komplet 8 śrub z podkładkami).",
+        "image_path": "img/products/sruby-mount-kit.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "M6 × 16 mm",
+        "construction": "Osiem stalowych śrub i podkładek do wiązań snowboardowych. Gwint i długość trzeba dopasować do insertów oraz podstawy wiązania.",
+        "dimensions": "Gwint: M6; długość śruby: 16 mm; średnica podkładki: 12 mm.",
+        "weight_g": 70,
+        "weight_scope": "komplet 8 śrub z podkładkami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "8 śrub 16 mm i podkładek do wiązań snowboardowych",
+        "url": "https://www.decathlon.pl/p/8-srub-16-mm-podkladek-do-wiazan-snowboardowych/9335/c3m2778679",
+        "image_url": "https://contents.mediadecathlon.com/p2572828/k%243049a28c404be2470d41034449213172/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "24.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-alpine-178",
+        "name": "Alpine 178",
+        "category": "skis",
+        "subcategory": "downhill",
+        "price": "1699.00",
+        "sale_stock": 3,
+        "description": "Zestaw nart trasowych z wiązaniami. Dobry wybór do ćwiczenia skrętów i całodziennej jazdy po przygotowanym stoku.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Alpine 178 ma rozmiar 178 cm. Długość: 178 cm; taliowanie dziób / środek / piętka: 124 / 74 / 108 mm. Masa: 4180 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-alpine-172.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "178 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 178 cm; taliowanie dziób / środek / piętka: 124 / 74 / 108 mm.",
+        "weight_g": 4180,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Head WC Rebels E.XSR z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-zjazdowe-meskie-head-wc-rebels-e-xsr-z-wiazaniami/375753/m8974378",
+        "image_url": "https://contents.mediadecathlon.com/p2944527/k%244e49461a8bf8128842fd16143fcdb295/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1699.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-traverse-88",
+        "name": "Traverse 88",
+        "category": "skis",
+        "subcategory": "all_mountain",
+        "price": "2199.00",
+        "sale_stock": 4,
+        "description": "Narty all-mountain z wiązaniami, do jazdy w zmiennych warunkach. Uniwersalny zestaw na trasę i miękki śnieg przy jej krawędzi.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Traverse 88 ma rozmiar 180 cm. Długość: 180 cm; taliowanie dziób / środek / piętka: 130 / 88 / 114 mm. Masa: 4200 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-traverse-84.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "180 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 180 cm; taliowanie dziób / środek / piętka: 130 / 88 / 114 mm.",
+        "weight_g": 4200,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Salomon Stance 84 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-all-mountain-meskie-salomon-stance-84-z-wiazaniami/375669/m8974579",
+        "image_url": "https://contents.mediadecathlon.com/p2944416/k%24926436ad8f0c51bc1e3236ff642aec0a/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "2199.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-ascend-95",
+        "name": "Ascend 95",
+        "category": "skis",
+        "subcategory": "touring",
+        "price": "3699.00",
+        "sale_stock": 5,
+        "description": "Zestaw skiturowy obejmujący narty, wiązania i foki. Przeznaczony na wycieczki łączące podejście z terenowym zjazdem.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Włókno węglowe usztywnia lekki korpus. Wariant Ascend 95 ma rozmiar 171 cm. Długość: 171 cm; taliowanie dziób / środek / piętka: 126 / 95 / 113 mm. Masa: 3410 g (para nart z wiązaniami i fokami).",
+        "image_path": "img/products/narty-ascend-102.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "171 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Włókno węglowe usztywnia lekki korpus.",
+        "dimensions": "Długość: 171 cm; taliowanie dziób / środek / piętka: 126 / 95 / 113 mm.",
+        "weight_g": 3410,
+        "weight_scope": "para nart z wiązaniami i fokami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Wilder 102 z wiązaniami i fokami",
+        "url": "https://www.decathlon.pl/p/narty-skiturowe-wedze-wilder-102-z-wiazaniami-i-fokami/335496/m8958389",
+        "image_url": "https://contents.mediadecathlon.com/p3196220/k%24fef3d932daf3408df0877840f6c7cdf0/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "3699.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel",
+        "carbon"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-drift-162",
+        "name": "Drift 162",
+        "category": "snowboards",
+        "subcategory": "all_mountain",
+        "price": "819.99",
+        "sale_stock": 6,
+        "description": "Uniwersalna deska all-mountain na trasę i wyjazdy w poszukiwaniu miękkiego śniegu. Zrównoważony charakter do rozwijania własnego stylu jazdy.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Drift 162 ma rozmiar 162 cm. Długość: 162 cm; szerokość w talii: 26,1 cm. Masa: 3060 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-drift-156.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "162 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 162 cm; szerokość w talii: 26,1 cm.",
+        "weight_g": 3060,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape Landscape allmountain / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-meska-damska-dreamscape-landscape-allmountain-freeride/339571/c180m8739887",
+        "image_url": "https://contents.mediadecathlon.com/p2503658/k%24aea3d3b40278fe4ed3e37a5376257e43/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "819.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-orbit-156",
+        "name": "Orbit 156",
+        "category": "snowboards",
+        "subcategory": "freestyle",
+        "price": "799.99",
+        "sale_stock": 7,
+        "description": "Deska freestyle do snowparku i zabawy na stoku. Sprężysty charakter ułatwia ćwiczenie skoków i zmianę kierunku jazdy.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Orbit 156 ma rozmiar 156 cm. Długość: 156 cm; szerokość w talii: 25,2 cm. Masa: 2880 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-orbit-152.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "156 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 156 cm; szerokość w talii: 25,2 cm.",
+        "weight_g": 2880,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape Park & Ride 500",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-damska-dreamscape-park-and-ride-500-all-mountain-and-freestyle/306010/c368c1m8938816",
+        "image_url": "https://contents.mediadecathlon.com/p2944912/k%2466d5c01120b9ce44c8d119565f25f916/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "799.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-glacier-163",
+        "name": "Glacier 163",
+        "category": "snowboards",
+        "subcategory": "freeride",
+        "price": "999.99",
+        "sale_stock": 3,
+        "description": "Deska freeride do jazdy w miękkim śniegu i na szerszych łukach. Propozycja na dni, w których chcesz odkryć teren poza główną trasą.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Glacier 163 ma rozmiar 163 cm. Długość: 163 cm; szerokość w talii: 26,1 cm. Masa: 3090 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-glacier-158.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "163 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 163 cm; szerokość w talii: 26,1 cm.",
+        "weight_g": 3090,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape All Road 500 trasa / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-meska-dreamscape-all-road-500-trasa-freeride/173311/m8951770",
+        "image_url": "https://contents.mediadecathlon.com/p2944920/k%24702920f3f7ff53b5c0cab24d210a1da4/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "999.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-latch-youth",
+        "name": "Latch Youth",
+        "category": "bindings",
+        "subcategory": "alpine",
+        "price": "337.50",
+        "sale_stock": 4,
+        "description": "Narciarskie wiązania zjazdowe dla młodszych użytkowników. Dobór i ustawienie wiązań powinien wykonać serwis odpowiednio do butów oraz narciarza.\n\nKorpus z poliamidu, stalowy mechanizm wypięcia i aluminiowe elementy prowadnicy. Przedni i tylny element tworzą komplet na parę nart. Wariant Latch Youth ma rozmiar Junior (podeszwa 220–320 mm). Zakres długości podeszwy: 220–320 mm; szerokość hamulca: 76 mm. Masa: 950 g (para wiązań).",
+        "image_path": "img/products/wiazania-latch-junior.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Junior (podeszwa 220–320 mm)",
+        "construction": "Korpus z poliamidu, stalowy mechanizm wypięcia i aluminiowe elementy prowadnicy. Przedni i tylny element tworzą komplet na parę nart.",
+        "dimensions": "Zakres długości podeszwy: 220–320 mm; szerokość hamulca: 76 mm.",
+        "weight_g": 950,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Look Team 4 GW B76",
+        "url": "https://www.decathlon.pl/p/mp/wiazania-narciarskie-dla-dzieci-look-team-4-gw-b76/4b66a747-d99a-45d9-ab6a-9890950aa7d3/c4",
+        "image_url": "https://contents.mediadecathlon.com/m33092002/k%246fadeb59f154f8fbad6d107f4f8f4798/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "337.50",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "steel",
+        "aluminium"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-anchor-700",
+        "name": "Anchor 700",
+        "category": "bindings",
+        "subcategory": "straps",
+        "price": "449.99",
+        "sale_stock": 5,
+        "description": "Snowboardowe wiązania paskowe z regulacją dopasowania. Uniwersalna propozycja do jazdy po trasach i pierwszych prób w snowparku.\n\nPodstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA.Dwa paski stabilizują but w wiązaniu. Wariant Anchor 700 ma rozmiar L (EU 43–47). Podstawa: 28 × 16 cm; wysokość łyżki: 26 cm. Masa: 1900 g (para wiązań).",
+        "image_path": "img/products/wiazania-anchor-500.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L (EU 43–47)",
+        "construction": "Podstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA.Dwa paski stabilizują but w wiązaniu.",
+        "dimensions": "Podstawa: 28 × 16 cm; wysokość łyżki: 26 cm.",
+        "weight_g": 1900,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB 500 all mountain/freestyle",
+        "url": "https://www.decathlon.pl/p/wiazania-snowboardowe-dla-doroslych-dreamscape-snb-500-all-mountain-freestyle/336603/c227m8668654",
+        "image_url": "https://contents.mediadecathlon.com/p2573496/k%24353e5fd924967da12911035b5eeb0342/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "449.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "aluminium",
+        "eva"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-swift-400",
+        "name": "Swift 400",
+        "category": "bindings",
+        "subcategory": "quick_entry",
+        "price": "469.00",
+        "sale_stock": 6,
+        "description": "Wiązania snowboardowe z szybkim wpinaniem. Ułatwiają przygotowanie do kolejnego zjazdu, zachowując możliwość regulacji dopasowania do buta.\n\nPodstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA. Otwierana tylna łyżka ułatwia wpinanie buta. Wariant Swift 400 ma rozmiar L (EU 43–47). Podstawa: 28 × 16 cm; wysokość łyżki: 26 cm. Masa: 1900 g (para wiązań).",
+        "image_path": "img/products/wiazania-swift-360.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L (EU 43–47)",
+        "construction": "Podstawa i łyżka z poliamidu, aluminiowe klamry oraz amortyzujące podkładki EVA. Otwierana tylna łyżka ułatwia wpinanie buta.",
+        "dimensions": "Podstawa: 28 × 16 cm; wysokość łyżki: 26 cm.",
+        "weight_g": 1900,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Raven Fastec FT360",
+        "url": "https://www.decathlon.pl/p/mp/wiazania-snowboardowe-raven-fastec-ft360/a18d14d1-34c6-4333-919b-e08730be7064/c4",
+        "image_url": "https://contents.mediadecathlon.com/m26092303/k%24b7bfad04ba7274aa36f2b1c78296db9b/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "469.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyamide",
+        "aluminium",
+        "eva"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-ridge-l",
+        "name": "Ridge L",
+        "category": "helmets",
+        "subcategory": "classic",
+        "price": "179.99",
+        "sale_stock": 7,
+        "description": "Klasyczny kask narciarski i snowboardowy z regulacją dopasowania. Lekka propozycja na cały dzień jazdy; rozmiar należy dobrać do obwodu głowy.\n\nSkorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Wariant Ridge L ma rozmiar L (59–62 cm). Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm. Masa: 480 g (jeden kask).",
+        "image_path": "img/products/kask-ridge-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L (59–62 cm)",
+        "construction": "Skorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie.",
+        "dimensions": "Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm.",
+        "weight_g": 480,
+        "weight_scope": "jeden kask",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze PST 500",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-dla-doroslych-wedze-pst-500/302055/c381c383m8543286",
+        "image_url": "https://contents.mediadecathlon.com/p2977654/k%24239df746194cbfbf8be8bc2ff50f7dd9/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "179.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-vista-l",
+        "name": "Vista L",
+        "category": "helmets",
+        "subcategory": "visor",
+        "price": "399.99",
+        "sale_stock": 3,
+        "description": "Kask z wbudowanym wizjerem osłaniającym oczy. Wygodna alternatywa dla zestawu z oddzielnymi goglami podczas rekreacyjnej jazdy.\n\nSkorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Zintegrowany wizjer wykonano z poliwęglanu. Wariant Vista L ma rozmiar L (59–62 cm). Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm. Masa: 650 g (jeden kask z wizjerem).",
+        "image_path": "img/products/kask-vista-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L (59–62 cm)",
+        "construction": "Skorupa z poliwęglanu otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Zintegrowany wizjer wykonano z poliwęglanu.",
+        "dimensions": "Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm.",
+        "weight_g": 650,
+        "weight_scope": "jeden kask z wizjerem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze PST 550 z szybą",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-dla-doroslych-wedze-pst-550-z-szyba/302061/c71c381m8817979",
+        "image_url": "https://contents.mediadecathlon.com/p2977597/k%24ef67c3be49a7cb25b83443e3a46daf49/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "399.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "kask-district-l",
+        "name": "District L",
+        "category": "helmets",
+        "subcategory": "freestyle",
+        "price": "129.99",
+        "sale_stock": 4,
+        "description": "Kask freestyle o prostej, kompaktowej sylwetce. Do jazdy na snowboardzie i nartach, szczególnie dla osób lubiących snowparkowy styl.\n\nSkorupa ABS otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie. Wariant District L ma rozmiar L (59–62 cm). Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm. Masa: 520 g (jeden kask).",
+        "image_path": "img/products/kask-district-m.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L (59–62 cm)",
+        "construction": "Skorupa ABS otacza rdzeń z pianki EPS. Wyjmowana wyściółka poliestrowa poprawia komfort i ułatwia czyszczenie.",
+        "dimensions": "Obwód głowy: 59–62 cm; zewnętrzne wymiary: 28 × 24 × 25 cm.",
+        "weight_g": 520,
+        "weight_scope": "jeden kask",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze FS 300",
+        "url": "https://www.decathlon.pl/p/kask-narciarski-i-snowboardowy-dla-doroslych-i-dzieci-wedze-fs-300/166071/c169m8873889",
+        "image_url": "https://contents.mediadecathlon.com/p2977530/k%24df36031bff09ea997f8fa48c75aa65a1/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "129.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "abs",
+        "eps",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-halo-wide",
+        "name": "Halo Wide",
+        "category": "goggles",
+        "subcategory": "sunny",
+        "price": "249.99",
+        "sale_stock": 5,
+        "description": "Gogle z ciemną szybą do jasnych, słonecznych dni na stoku. Szeroka oprawka i regulowany pasek pomagają dopasować je do kasku.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Przyciemniona szyba do słonecznych dni. Wariant Halo Wide ma rozmiar XL. Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 165 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-halo-s3.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "XL",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Przyciemniona szyba do słonecznych dni.",
+        "dimensions": "Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 165,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze G 500 I",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-500-i/166213/c71c382m8758726",
+        "image_url": "https://contents.mediadecathlon.com/p3233460/k%24717831283fec22786adff650a4e44d2f/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "249.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-mist-wide",
+        "name": "Mist Wide",
+        "category": "goggles",
+        "subcategory": "cloudy",
+        "price": "54.99",
+        "sale_stock": 6,
+        "description": "Gogle z jasną szybą do pochmurnych dni i słabszego światła. Prosta propozycja na zimowe wyjazdy, gdy widoczność na trasie się zmienia.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Jaśniejsza szyba do pochmurnych dni. Wariant Mist Wide ma rozmiar XL. Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 165 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-mist-s1.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "XL",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Jaśniejsza szyba do pochmurnych dni.",
+        "dimensions": "Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 165,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze G 100 S1",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-100-s1/341127/c381c381m8757852",
+        "image_url": "https://contents.mediadecathlon.com/p2971836/k%24cae312b697008f66e77d59be807851c1/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "54.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-flux-pro",
+        "name": "Flux Pro",
+        "category": "goggles",
+        "subcategory": "photochromic",
+        "price": "399.99",
+        "sale_stock": 7,
+        "description": "Gogle fotochromowe, których szyba dostosowuje przyciemnienie do warunków oświetleniowych. Jeden model na zmienną pogodę podczas dnia na stoku.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Szyba fotochromowa zmienia przyciemnienie zależnie od światła. Wariant Flux Pro ma rozmiar L. Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 150 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-flux-ph.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Szyba fotochromowa zmienia przyciemnienie zależnie od światła.",
+        "dimensions": "Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 150,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Quechua G900 S PH",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-quechua-g900-s-ph/340061/c71c381m8755021",
+        "image_url": "https://contents.mediadecathlon.com/p3233469/k%2461b9938f7f9ec569806a6ad74bc7ecf6/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "399.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-roam-700",
+        "name": "Roam 700",
+        "category": "snowboard_boots",
+        "subcategory": "all_mountain",
+        "price": "589.99",
+        "sale_stock": 3,
+        "description": "Buty snowboardowe all-mountain do codziennej jazdy w różnych warunkach. Zrównoważona propozycja łącząca wygodę z podparciem stopy.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Roam 700 ma rozmiar EU 43. Długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 30 cm. Masa: 1930 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-roam-500.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 43",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1930,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape Allroad 500 all mountain",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-meskie-dreamscape-allroad-500-all-mountain/305902/c382c231c344m8734563",
+        "image_url": "https://contents.mediadecathlon.com/p2573034/k%24190eb546a63c75f810e3a09bf3022123/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "589.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-flex-200",
+        "name": "Flex 200",
+        "category": "snowboard_boots",
+        "subcategory": "freestyle",
+        "price": "449.99",
+        "sale_stock": 4,
+        "description": "Miękkie buty snowboardowe do swobodnej jazdy i pierwszych prób freestyle. Wygodny punkt wyjścia do nauki oraz rozwijania własnego stylu.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Flex 200 ma rozmiar EU 41. Długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 30 cm. Masa: 1810 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-flex-100.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 41",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1810,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB100",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-dreamscape-snb100/327044/c382c179m8872187",
+        "image_url": "https://contents.mediadecathlon.com/p2695756/k%24d540457d51890a03744d5b2b88af4158/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "449.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-snowboardowe-rift-950",
+        "name": "Rift 950",
+        "category": "snowboard_boots",
+        "subcategory": "freeride",
+        "price": "779.99",
+        "sale_stock": 5,
+        "description": "Buty snowboardowe do bardziej zdecydowanej jazdy i terenowych zjazdów. Propozycja z mocniejszym podparciem dla miłośników freeride.\n\nCholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę. Wariant Rift 950 ma rozmiar EU 44. Długość podeszwy zewnętrznej: 315 mm; wysokość cholewki: 30 cm. Masa: 1990 g (para butów).",
+        "image_path": "img/products/buty-snowboardowe-rift-900.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "EU 44",
+        "construction": "Cholewka z poliestru wzmocnionego poliuretanem, wewnętrzny botek z pianką EVA i gumowa podeszwa. Miękka wyściółka otacza stopę oraz kostkę.",
+        "dimensions": "Długość podeszwy zewnętrznej: 315 mm; wysokość cholewki: 30 cm.",
+        "weight_g": 1990,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape SNB All Road 900",
+        "url": "https://www.decathlon.pl/p/buty-snowboardowe-meskie-damskie-dreamscape-snb-all-road-900/332378/c93c382m8643401",
+        "image_url": "https://contents.mediadecathlon.com/p2321295/k%2434bb2f92c65e5ec5b138b6b513f1ace0/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "779.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyester",
+        "polyurethane",
+        "eva",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-contour-110",
+        "name": "Contour 110",
+        "category": "boots",
+        "subcategory": "all_mountain_freeride",
+        "price": "1299.00",
+        "sale_stock": 6,
+        "description": "Buty narciarskie do dynamicznej jazdy w zróżnicowanych warunkach. Mocniejsze podparcie stopy dla osób szukających precyzji na stoku.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Contour 110 ma rozmiar 28,0 MP. Mondopoint: 28,0 cm; długość podeszwy zewnętrznej: 320 mm; wysokość cholewki: 32 cm. Masa: 4140 g (para butów).",
+        "image_path": "img/products/buty-contour-100.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "28,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 28,0 cm; długość podeszwy zewnętrznej: 320 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 4140,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Atomic Hawx Magna 100 HV",
+        "url": "https://www.decathlon.pl/p/buty-narciarskie-meskie-atomic-hawx-magna-100-hv-flex-100/353325/m9040350",
+        "image_url": "https://contents.mediadecathlon.com/p3145197/k%244e14ac093169f2f698205807605de7b6/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1299.00",
+        "price_kind": "from_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-powder-108",
+        "name": "Powder 108",
+        "category": "skis",
+        "subcategory": "freeride",
+        "price": "1649.00",
+        "sale_stock": 4,
+        "description": "Narty freeride z wiązaniami, do jazdy w miękkim śniegu i poza przygotowanymi trasami.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Powder 108 ma rozmiar 181 cm. Długość: 181 cm; taliowanie dziób / środek / piętka: 140 / 108 / 129 mm. Masa: 4510 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-powder-108.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "181 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 181 cm; taliowanie dziób / środek / piętka: 140 / 108 / 129 mm.",
+        "weight_g": 4510,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dynastar M-Free 90 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-freeride-dynastar-m-free-90-z-wiazaniami/375790/m8974605",
+        "image_url": "https://contents.mediadecathlon.com/p2944629/k%242d104ed1b9423150d71b4ec2f96b4ef9/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1649.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-powder-114",
+        "name": "Powder 114",
+        "category": "skis",
+        "subcategory": "freeride",
+        "price": "1649.00",
+        "sale_stock": 5,
+        "description": "Narty freeride z wiązaniami, do jazdy w miękkim śniegu i poza przygotowanymi trasami.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Powder 114 ma rozmiar 188 cm. Długość: 188 cm; taliowanie dziób / środek / piętka: 146 / 114 / 135 mm. Masa: 4580 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-powder-108.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "188 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 188 cm; taliowanie dziób / środek / piętka: 146 / 114 / 135 mm.",
+        "weight_g": 4580,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dynastar M-Free 90 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-freeride-dynastar-m-free-90-z-wiazaniami/375790/m8974605",
+        "image_url": "https://contents.mediadecathlon.com/p2944629/k%242d104ed1b9423150d71b4ec2f96b4ef9/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1649.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-pulse-164",
+        "name": "Pulse 164",
+        "category": "skis",
+        "subcategory": "freestyle",
+        "price": "1799.00",
+        "sale_stock": 4,
+        "description": "Narty o konstrukcji twin-tip do freestyle i zabawy na śniegu. Zestaw z wiązaniami.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Pulse 164 ma rozmiar 164 cm. Długość: 164 cm; taliowanie dziób / środek / piętka: 118 / 88 / 112 mm. Masa: 3840 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-pulse-164.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "164 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 164 cm; taliowanie dziób / środek / piętka: 118 / 88 / 112 mm.",
+        "weight_g": 3840,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Slash 100 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-freeride-freestyle-meskie-wedze-slash-100-z-wiazaniami/311320/m8556180",
+        "image_url": "https://contents.mediadecathlon.com/p2579802/k%244a016f0ae8214323df9b85632e6acf24/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1799.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-pulse-172",
+        "name": "Pulse 172",
+        "category": "skis",
+        "subcategory": "freestyle",
+        "price": "1799.00",
+        "sale_stock": 5,
+        "description": "Narty o konstrukcji twin-tip do freestyle i zabawy na śniegu. Zestaw z wiązaniami.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Pulse 172 ma rozmiar 172 cm. Długość: 172 cm; taliowanie dziób / środek / piętka: 120 / 90 / 114 mm. Masa: 3820 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-pulse-164.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "172 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 172 cm; taliowanie dziób / środek / piętka: 120 / 90 / 114 mm.",
+        "weight_g": 3820,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Slash 100 z wiązaniami",
+        "url": "https://www.decathlon.pl/p/narty-freeride-freestyle-meskie-wedze-slash-100-z-wiazaniami/311320/m8556180",
+        "image_url": "https://contents.mediadecathlon.com/p2579802/k%244a016f0ae8214323df9b85632e6acf24/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1799.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-nordic-180",
+        "name": "Nordic 180",
+        "category": "skis",
+        "subcategory": "cross_country",
+        "price": "799.99",
+        "sale_stock": 4,
+        "description": "Narty biegowe do techniki łyżwowej na przygotowanych trasach. Oferta obejmuje wiązania biegowe.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Wariant Nordic 180 ma rozmiar 180 cm. Długość: 180 cm; taliowanie dziób / środek / piętka: 44 / 44 / 44 mm. Masa: 1350 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-nordic-180.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "180 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu.",
+        "dimensions": "Długość: 180 cm; taliowanie dziób / środek / piętka: 44 / 44 / 44 mm.",
+        "weight_g": 1350,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Inovik 500 z wiązaniami Fischer Compact Step In",
+        "url": "https://www.decathlon.pl/p/narty-biegowe-do-stylu-lyzwowego-inovik-500-wiazania-fischer-compact-step-in/_/R-p-353065",
+        "image_url": "https://contents.mediadecathlon.com/p2714259/k%245710cc652e3d3f9c56ce67d67c9c86dd/sq/narty-biegowe-do-stylu-lyzwowego-inovik-500-wiazania-fischer-compact-step-in.jpg?f=800x800&format=jpg",
+        "price_pln": "799.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-nordic-190",
+        "name": "Nordic 190",
+        "category": "skis",
+        "subcategory": "cross_country",
+        "price": "799.99",
+        "sale_stock": 5,
+        "description": "Narty biegowe do techniki łyżwowej na przygotowanych trasach. Oferta obejmuje wiązania biegowe.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Wariant Nordic 190 ma rozmiar 190 cm. Długość: 190 cm; taliowanie dziób / środek / piętka: 44 / 44 / 44 mm. Masa: 1350 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-nordic-180.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "190 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu.",
+        "dimensions": "Długość: 190 cm; taliowanie dziób / środek / piętka: 44 / 44 / 44 mm.",
+        "weight_g": 1350,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Inovik 500 z wiązaniami Fischer Compact Step In",
+        "url": "https://www.decathlon.pl/p/narty-biegowe-do-stylu-lyzwowego-inovik-500-wiazania-fischer-compact-step-in/_/R-p-353065",
+        "image_url": "https://contents.mediadecathlon.com/p2714259/k%245710cc652e3d3f9c56ce67d67c9c86dd/sq/narty-biegowe-do-stylu-lyzwowego-inovik-500-wiazania-fischer-compact-step-in.jpg?f=800x800&format=jpg",
+        "price_pln": "799.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-velocity-165",
+        "name": "Velocity 165",
+        "category": "skis",
+        "subcategory": "race",
+        "price": "2279.00",
+        "sale_stock": 4,
+        "description": "Sportowe narty slalomowe z wiązaniami, do dynamicznych skrętów na przygotowanym stoku. Dla zaawansowanych narciarzy.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Velocity 165 ma rozmiar 165 cm. Długość: 165 cm; taliowanie dziób / środek / piętka: 121 / 68 / 104 mm. Masa: 4750 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-velocity-165.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "165 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 165 cm; taliowanie dziób / środek / piętka: 121 / 68 / 104 mm.",
+        "weight_g": 4750,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Head Supershape E-Original z wiązaniami PRD 12 GW",
+        "url": "https://www.decathlon.pl/p/mp/head/narty-slalomowe-head-supershape-e-original-wiazania-head-prd-12-z-grip-walk/_/R-p-daf42c84-c976-4761-8fff-4541390f9b17",
+        "image_url": "https://contents.mediadecathlon.com/m17642644/k%2484b533923b7fedc4fa877f8c7caded99/sq/narty-slalomowe-head-supershape-e-original-wiazania-head-prd-12-z-grip-walk.jpg?f=800x800&format=jpg",
+        "price_pln": "2279.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "narty-velocity-170",
+        "name": "Velocity 170",
+        "category": "skis",
+        "subcategory": "race",
+        "price": "2279.00",
+        "sale_stock": 5,
+        "description": "Sportowe narty slalomowe z wiązaniami, do dynamicznych skrętów na przygotowanym stoku. Dla zaawansowanych narciarzy.\n\nDrewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu. Wariant Velocity 170 ma rozmiar 170 cm. Długość: 170 cm; taliowanie dziób / środek / piętka: 123 / 69 / 105 mm. Masa: 4700 g (para nart z wiązaniami).",
+        "image_path": "img/products/narty-velocity-165.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "170 cm",
+        "construction": "Drewniany rdzeń ze wzmocnieniem z włókna szklanego i ślizgiem z polietylenu. Stalowe krawędzie biegną wzdłuż ślizgu.",
+        "dimensions": "Długość: 170 cm; taliowanie dziób / środek / piętka: 123 / 69 / 105 mm.",
+        "weight_g": 4700,
+        "weight_scope": "para nart z wiązaniami",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Head Supershape E-Original z wiązaniami PRD 12 GW",
+        "url": "https://www.decathlon.pl/p/mp/head/narty-slalomowe-head-supershape-e-original-wiazania-head-prd-12-z-grip-walk/_/R-p-daf42c84-c976-4761-8fff-4541390f9b17",
+        "image_url": "https://contents.mediadecathlon.com/m17642644/k%2484b533923b7fedc4fa877f8c7caded99/sq/narty-slalomowe-head-supershape-e-original-wiazania-head-prd-12-z-grip-walk.jpg?f=800x800&format=jpg",
+        "price_pln": "2279.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-edge-156",
+        "name": "Edge 156",
+        "category": "snowboards",
+        "subcategory": "carving",
+        "price": "1299.00",
+        "sale_stock": 4,
+        "description": "Deska do jazdy na trasie i carvingowych skrętów na krawędzi. Oferta dotyczy deski bez wiązań.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Edge 156 ma rozmiar 156 cm. Długość: 156 cm; szerokość w talii: 25,2 cm. Masa: 2880 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-edge-156.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "156 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 156 cm; szerokość w talii: 25,2 cm.",
+        "weight_g": 2880,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape All Road 900 trasa / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-dla-doroslych-dreamscape-all-road-900-trasa-freeride/332434/c314c29m8643399",
+        "image_url": "https://contents.mediadecathlon.com/p2572726/k%2471ec9103476ba320ff720d13e85c95ba/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1299.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "snowboard-edge-162",
+        "name": "Edge 162",
+        "category": "snowboards",
+        "subcategory": "carving",
+        "price": "1299.00",
+        "sale_stock": 5,
+        "description": "Deska do jazdy na trasie i carvingowych skrętów na krawędzi. Oferta dotyczy deski bez wiązań.\n\nDrewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią. Wariant Edge 162 ma rozmiar 162 cm. Długość: 162 cm; szerokość w talii: 26,1 cm. Masa: 3060 g (deska bez wiązań).",
+        "image_path": "img/products/snowboard-edge-156.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "162 cm",
+        "construction": "Drewniany rdzeń laminowany włóknem szklanym, ślizg z polietylenu i stalowe krawędzie. Górna warstwa osłania laminat przed wilgocią.",
+        "dimensions": "Długość: 162 cm; szerokość w talii: 26,1 cm.",
+        "weight_g": 3060,
+        "weight_scope": "deska bez wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Dreamscape All Road 900 trasa / freeride",
+        "url": "https://www.decathlon.pl/p/deska-snowboardowa-dla-doroslych-dreamscape-all-road-900-trasa-freeride/332434/c314c29m8643399",
+        "image_url": "https://contents.mediadecathlon.com/p2572726/k%2471ec9103476ba320ff720d13e85c95ba/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1299.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "wood",
+        "fiberglass",
+        "polyethylene",
+        "steel"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-ascent-10",
+        "name": "Ascent 10",
+        "category": "bindings",
+        "subcategory": "touring",
+        "price": "949.99",
+        "sale_stock": 4,
+        "description": "Wiązania skiturowe na inserty, z trybem podejścia i zjazdu. Wymagają zgodnych butów skiturowych.\n\nAluminiowy korpus ze stalowymi pinami i poliamidowymi podkładkami. Ruchoma piętka umożliwia przełączanie między podejściem a zjazdem. Wariant Ascent 10 ma rozmiar Podeszwa 260–310 mm. Zakres podeszwy: 260–310 mm; regulacja piętki: 30 mm. Masa: 650 g (para wiązań).",
+        "image_path": "img/products/wiazania-ascent-10.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Podeszwa 260–310 mm",
+        "construction": "Aluminiowy korpus ze stalowymi pinami i poliamidowymi podkładkami. Ruchoma piętka umożliwia przełączanie między podejściem a zjazdem.",
+        "dimensions": "Zakres podeszwy: 260–310 mm; regulacja piętki: 30 mm.",
+        "weight_g": 650,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Tour Light",
+        "url": "https://www.decathlon.pl/p/wiazania-skiturowe-wedze-tour-light/312095/m8569490",
+        "image_url": "https://contents.mediadecathlon.com/p2579555/k%24cd29ed688691b3f2eb7a249cf11b742e/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "949.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "aluminium",
+        "steel",
+        "polyamide"
+      ]
+    },
+    {
+      "product": {
+        "slug": "wiazania-ascent-12",
+        "name": "Ascent 12",
+        "category": "bindings",
+        "subcategory": "touring",
+        "price": "949.99",
+        "sale_stock": 5,
+        "description": "Wiązania skiturowe na inserty, z trybem podejścia i zjazdu. Wymagają zgodnych butów skiturowych.\n\nAluminiowy korpus ze stalowymi pinami i poliamidowymi podkładkami. Ruchoma piętka umożliwia przełączanie między podejściem a zjazdem. Wariant Ascent 12 ma rozmiar Podeszwa 280–330 mm. Zakres podeszwy: 280–330 mm; regulacja piętki: 30 mm. Masa: 690 g (para wiązań).",
+        "image_path": "img/products/wiazania-ascent-10.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "Podeszwa 280–330 mm",
+        "construction": "Aluminiowy korpus ze stalowymi pinami i poliamidowymi podkładkami. Ruchoma piętka umożliwia przełączanie między podejściem a zjazdem.",
+        "dimensions": "Zakres podeszwy: 280–330 mm; regulacja piętki: 30 mm.",
+        "weight_g": 690,
+        "weight_scope": "para wiązań",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze Tour Light",
+        "url": "https://www.decathlon.pl/p/wiazania-skiturowe-wedze-tour-light/312095/m8569490",
+        "image_url": "https://contents.mediadecathlon.com/p2579555/k%24cd29ed688691b3f2eb7a249cf11b742e/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "949.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "aluminium",
+        "steel",
+        "polyamide"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-climb-27",
+        "name": "Climb 27",
+        "category": "boots",
+        "subcategory": "touring",
+        "price": "1399.00",
+        "sale_stock": 4,
+        "description": "Buty skiturowe z ruchomą cholewką na podejście i blokadą do zjazdu. Do zestawu z kompatybilnymi wiązaniami skiturowymi.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Ruchoma cholewka z poliamidu ma tryb podejścia, a podeszwa gumowe fragmenty. Wariant Climb 27 ma rozmiar 27,0 MP. Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm. Masa: 2760 g (para butów).",
+        "image_path": "img/products/buty-climb-27.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "27,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Ruchoma cholewka z poliamidu ma tryb podejścia, a podeszwa gumowe fragmenty.",
+        "dimensions": "Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 2760,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Fischer Travers TS",
+        "url": "https://www.decathlon.pl/p/buty-skiturowe-meskie-fischer-travers-ts/_/R-p-353656",
+        "image_url": "https://contents.mediadecathlon.com/p2944879/k%24fc004b47dab8ce0d834459f0304f55f4/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1399.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester",
+        "polyamide",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-climb-28",
+        "name": "Climb 28",
+        "category": "boots",
+        "subcategory": "touring",
+        "price": "1399.00",
+        "sale_stock": 5,
+        "description": "Buty skiturowe z ruchomą cholewką na podejście i blokadą do zjazdu. Do zestawu z kompatybilnymi wiązaniami skiturowymi.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Ruchoma cholewka z poliamidu ma tryb podejścia, a podeszwa gumowe fragmenty. Wariant Climb 28 ma rozmiar 28,0 MP. Mondopoint: 28,0 cm; długość podeszwy zewnętrznej: 320 mm; wysokość cholewki: 32 cm. Masa: 2840 g (para butów).",
+        "image_path": "img/products/buty-climb-27.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "28,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Ruchoma cholewka z poliamidu ma tryb podejścia, a podeszwa gumowe fragmenty.",
+        "dimensions": "Mondopoint: 28,0 cm; długość podeszwy zewnętrznej: 320 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 2840,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Fischer Travers TS",
+        "url": "https://www.decathlon.pl/p/buty-skiturowe-meskie-fischer-travers-ts/_/R-p-353656",
+        "image_url": "https://contents.mediadecathlon.com/p2944879/k%24fc004b47dab8ce0d834459f0304f55f4/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "1399.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester",
+        "polyamide",
+        "rubber"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-race-pro-26",
+        "name": "Race Pro 26",
+        "category": "boots",
+        "subcategory": "race",
+        "price": "2350.00",
+        "sale_stock": 4,
+        "description": "Sportowe buty narciarskie do precyzyjnej jazdy na trasie. Sztywna konstrukcja dla zaawansowanych narciarzy.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Race Pro 26 ma rozmiar 26,0 MP. Mondopoint: 26,0 cm; długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 32 cm. Masa: 3980 g (para butów).",
+        "image_path": "img/products/buty-race-pro-26.png",
+        "featured_order": null,
+        "is_active": true,
+        "size": "26,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 26,0 cm; długość podeszwy zewnętrznej: 300 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 3980,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Rossignol Hero World Cup 120 LV szare",
+        "url": "https://www.rossignol-outlet.pl/Buty-narciarskie-Rossignol-Hero-World-Cup-120-LV-szare",
+        "image_url": "https://www.rossignol-outlet.pl/environment/cache/images/productGfx_11956_800_800/24506.webp?overlay=1",
+        "price_pln": "2350.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "buty-race-pro-27",
+        "name": "Race Pro 27",
+        "category": "boots",
+        "subcategory": "race",
+        "price": "2350.00",
+        "sale_stock": 5,
+        "description": "Sportowe buty narciarskie do precyzyjnej jazdy na trasie. Sztywna konstrukcja dla zaawansowanych narciarzy.\n\nSkorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy. Wariant Race Pro 27 ma rozmiar 27,0 MP. Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm. Masa: 4060 g (para butów).",
+        "image_path": "img/products/buty-race-pro-26.png",
+        "featured_order": null,
+        "is_active": true,
+        "size": "27,0 MP",
+        "construction": "Skorupa z poliuretanu, aluminiowe klamry i poliestrowa wyściółka botka wewnętrznego. Regulacja klamer pozwala dopasować trzymanie stopy.",
+        "dimensions": "Mondopoint: 27,0 cm; długość podeszwy zewnętrznej: 310 mm; wysokość cholewki: 32 cm.",
+        "weight_g": 4060,
+        "weight_scope": "para butów",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Rossignol Hero World Cup 120 LV szare",
+        "url": "https://www.rossignol-outlet.pl/Buty-narciarskie-Rossignol-Hero-World-Cup-120-LV-szare",
+        "image_url": "https://www.rossignol-outlet.pl/environment/cache/images/productGfx_11956_800_800/24506.webp?overlay=1",
+        "price_pln": "2350.00",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polyurethane",
+        "aluminium",
+        "polyester"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-clear-otg",
+        "name": "Clear OTG",
+        "category": "goggles",
+        "subcategory": "otg",
+        "price": "249.99",
+        "sale_stock": 6,
+        "description": "Gogle OTG przeznaczone do noszenia na okularach korekcyjnych. Obszerna oprawka i ciemna szyba do jazdy w słoneczne dni.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Wnętrze oprawki ma przestrzeń na okulary korekcyjne. Wariant Clear OTG ma rozmiar L. Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 150 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-halo-s3.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "L",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Wnętrze oprawki ma przestrzeń na okulary korekcyjne.",
+        "dimensions": "Szerokość oprawki: 18 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 150,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze G 500 I",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-500-i/166213/c71c382m8758726",
+        "image_url": "https://contents.mediadecathlon.com/p3233460/k%24717831283fec22786adff650a4e44d2f/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "249.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    },
+    {
+      "product": {
+        "slug": "gogle-clear-otg-wide",
+        "name": "Clear OTG Wide",
+        "category": "goggles",
+        "subcategory": "otg",
+        "price": "249.99",
+        "sale_stock": 6,
+        "description": "Gogle OTG przeznaczone do noszenia na okularach korekcyjnych. Obszerna oprawka i ciemna szyba do jazdy w słoneczne dni.\n\nSzyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Wnętrze oprawki ma przestrzeń na okulary korekcyjne. Wariant Clear OTG Wide ma rozmiar XL. Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany. Masa: 165 g (gogle z paskiem).",
+        "image_path": "img/products/gogle-halo-s3.jpg",
+        "featured_order": null,
+        "is_active": true,
+        "size": "XL",
+        "construction": "Szyba z poliwęglanu osadzona w elastycznej oprawce z poliuretanu. Regulowany pasek poliestrowy ma silikonowe elementy ograniczające przesuwanie. Wnętrze oprawki ma przestrzeń na okulary korekcyjne.",
+        "dimensions": "Szerokość oprawki: 19 cm; wysokość oprawki: 10 cm; pasek regulowany.",
+        "weight_g": 165,
+        "weight_scope": "gogle z paskiem",
+        "specifications_are_demo": true,
+        "discount_percent": 0
+      },
+      "reference": {
+        "name": "Wedze G 500 I",
+        "url": "https://www.decathlon.pl/p/gogle-narciarskie-i-snowboardowe-dla-doroslych-i-dzieci-wedze-g-500-i/166213/c71c382m8758726",
+        "image_url": "https://contents.mediadecathlon.com/p3233460/k%24717831283fec22786adff650a4e44d2f/picture.jpg?f=800x800&format=jpg",
+        "price_pln": "249.99",
+        "price_kind": "offer_without_coupon"
+      },
+      "materials": [
+        "polycarbonate",
+        "polyurethane",
+        "polyester",
+        "silicone"
+      ]
+    }
+  ],
+  "specifications_note": "Materiały, rozmiary, konstrukcja, wymiary i masy to dane demonstracyjne fikcyjnych modeli Szron, niezależne od fotografii i rzeczywistych ofert referencyjnych. Masa zawsze ma podaną jednostkę i zakres zestawu. Oznaczenia w nazwie nie zastępują tabeli parametrów.",
+  "materials": [
+    {
+      "code": "wood",
+      "name": "Drewno"
+    },
+    {
+      "code": "fiberglass",
+      "name": "Włókno szklane"
+    },
+    {
+      "code": "carbon",
+      "name": "Włókno węglowe"
+    },
+    {
+      "code": "steel",
+      "name": "Stal"
+    },
+    {
+      "code": "aluminium",
+      "name": "Aluminium"
+    },
+    {
+      "code": "polyethylene",
+      "name": "Polietylen (PE)"
+    },
+    {
+      "code": "polyamide",
+      "name": "Poliamid (PA)"
+    },
+    {
+      "code": "polyurethane",
+      "name": "Poliuretan (PU)"
+    },
+    {
+      "code": "polycarbonate",
+      "name": "Poliwęglan (PC)"
+    },
+    {
+      "code": "abs",
+      "name": "Tworzywo ABS"
+    },
+    {
+      "code": "eps",
+      "name": "Pianka EPS"
+    },
+    {
+      "code": "eva",
+      "name": "Pianka EVA"
+    },
+    {
+      "code": "polyester",
+      "name": "Poliester"
+    },
+    {
+      "code": "rubber",
+      "name": "Guma"
+    },
+    {
+      "code": "silicone",
+      "name": "Silikon"
+    }
+  ],
+  "promotions_note": "Rabaty demonstracyjne Szron od cen regularnych zapisanych w product.price; cena referencyjna źródła pozostaje niezmieniona. Cena po rabacie jest zaokrąglana do groszy przed mnożeniem przez ilość."
+}

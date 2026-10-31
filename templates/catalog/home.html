@@ -27,6 +27,7 @@
     <button class="panorama-pause" type="button" data-pause aria-pressed="false">Wstrzymaj pokaz</button>
   </div>
 </section>
+{% include 'catalog/promotions.html' %}
 {% if featured_products %}
 <section class="showcase wrap" aria-labelledby="showcase-title">
   <div class="showcase-heading">
@@ -38,7 +39,7 @@
     <a class="showcase-card" href="{{ product.get_absolute_url }}">
       <div class="showcase-label"><span>{{ product.get_category_display }}</span><span>0{{ forloop.counter }} / WYBÓR SZRON</span></div>
       <div class="showcase-image"><img src="{% static product.image_path %}" alt="{{ product.name }}" width="600" height="650" {% if forloop.first %}fetchpriority="high"{% endif %}></div>
-      <div class="showcase-caption"><div><h2>{{ product.name }}</h2><p>{{ product.price|floatformat:2 }} zł</p></div><span class="showcase-arrow" aria-hidden="true">↗</span></div>
+      <div class="showcase-caption"><div><h2>{{ product.name }}</h2><p class="product-prices">{% include 'catalog/price.html' %}</p></div><span class="showcase-arrow" aria-hidden="true">↗</span></div>
       <span class="showcase-action">Zobacz produkt <span aria-hidden="true">→</span></span>
     </a>
     {% endfor %}

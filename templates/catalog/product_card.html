@@ -2,7 +2,10 @@
 <article class="product-card">
   <a href="{{ product.get_absolute_url }}" class="product-art art-{{ product.category }}{% if product.image_path %} product-photo{% endif %}" aria-label="Zobacz {{ product.name }}"><img src="{% if product.image_path %}{% static product.image_path %}{% else %}{% static product.illustration_path %}{% endif %}" alt="" width="320" height="260" loading="lazy"><span class="art-tag">{{ product.get_category_display }}</span></a>
   <div class="product-meta"><span>{{ product.get_category_display }}</span>{% if product.sale_stock %}<span class="stock">Dostępne: {{ product.sale_stock }} szt.</span>{% else %}<span>Brak w magazynie</span>{% endif %}</div>
-  <div class="product-title"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3><strong>{{ product.price|floatformat:2 }} zł</strong></div>
+  <div class="product-title"><h3><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3><span class="product-prices">{% include 'catalog/price.html' %}</span></div>
+  {% if product.discount_percent %}<p class="discount-label">Promocja −{{ product.discount_percent }}%</p>{% endif %}
+  {% if product.size %}<p class="product-size">Rozmiar: {{ product.size }}</p>{% endif %}
   <a class="product-link" href="{{ product.get_absolute_url }}">Zobacz szczegóły <span aria-hidden="true">↗</span></a>
+  {% if user.is_authenticated and not hide_favorite_action %}<form method="post" action="{% url 'accounts:favorite_add' product.slug %}" class="favorite-card-form">{% csrf_token %}<button type="submit" class="favorite-action" aria-label="Zapisz {{ product.name }} w ulubionych">♡ Zapisz w ulubionych</button></form>{% endif %}
 </article>
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.templatetags.static import static
-from .models import Product
+from .models import Material, Product
 from .forms import ProductAdminForm
 from .taxonomy import SUBCATEGORIES
 
@@ -28,10 +28,11 @@ class SubcategoryFilter(admin.SimpleListFilter):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     form = ProductAdminForm
-    list_display = ("name", "category", "display_subcategory", "price", "sale_stock", "is_active", "featured_order")
+    list_display = ("name", "category", "display_subcategory", "price", "discount_percent", "sale_stock", "is_active", "featured_order")
     list_editable = ("featured_order",)
-    list_filter = ("category", SubcategoryFilter, "is_active")
-    search_fields = ("name", "description")
+    list_filter = ("category", SubcategoryFilter, "materials", "size", "is_active")
+    search_fields = ("name", "description", "construction")
+    filter_horizontal = ("materials",)
     prepopulated_fields = {"slug": ("name",)}
 
     @admin.display(description="podkategoria", ordering="subcategory")
@@ -45,3 +46,10 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.site_header = "Szron — zarządzanie"
 admin.site.site_title = "Szron"
 admin.site.index_title = "Panel administratora"
+
+
+@admin.register(Material)
+class MaterialAdmin(admin.ModelAdmin):
+    list_display = ("name", "code")
+    search_fields = ("name", "code")
+    prepopulated_fields = {"code": ("name",)}

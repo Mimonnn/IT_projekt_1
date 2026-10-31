@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Szron — sprzęt zimowy. Znajdź narty, buty i snowboard na swój kolejny wyjazd.">
   <title>{% block title %}Szron — bliżej gór{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261022-4">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261031-5">
   {% block extra_styles %}{% endblock %}
 </head>
 <body>
@@ -17,11 +17,22 @@
     <nav aria-label="Menu główne">
       <a href="{% url 'catalog:home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Strona główna</a>
       <a href="{% url 'catalog:list' %}" {% if request.resolver_match.url_name == 'list' or request.resolver_match.url_name == 'detail' %}aria-current="page"{% endif %}>Sprzęt</a>
-      <a class="admin-link" href="{% url 'admin:index' %}">Panel administratora <span aria-hidden="true">↗</span></a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'accounts:profile' %}" {% if request.resolver_match.namespace == 'accounts' %}aria-current="page"{% endif %}>Moje konto</a>
+        <a href="{% url 'accounts:cart' %}">Koszyk</a>
+        {% if user.is_staff %}<a class="admin-link" href="{% url 'admin:index' %}">Panel administratora <span aria-hidden="true">↗</span></a>{% endif %}
+        <form method="post" action="{% url 'accounts:logout' %}" class="nav-form">{% csrf_token %}<button class="nav-button" type="submit">Wyloguj się</button></form>
+      {% else %}
+        <a class="admin-link" href="{% url 'accounts:login' %}">Zaloguj się</a>
+      {% endif %}
     </nav>
   </header>
-  <main id="main">{% block content %}{% endblock %}</main>
-  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>Dobry sprzęt. Twoje tempo. Twoja zima.</p><span>Projekt demonstracyjny · {% now 'Y' %}</span></div></footer>
+  <main id="main">
+    {% if messages %}<div class="wrap flash-messages" aria-live="polite">{% for message in messages %}<p class="flash-message {{ message.tags }}" role="status">{{ message }}</p>{% endfor %}</div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>Dobry sprzęt. Twoje tempo. Twoja zima.</p><span>Projekt demonstracyjny · {% now 'Y' %}</span></div>
+  <nav class="wrap footer-links" aria-label="Informacje o sklepie"><a href="{% url 'catalog:terms' %}">Regulamin</a><a href="{% url 'catalog:contact' %}">Kontakt i pomoc</a><a href="{% url 'catalog:stores' %}">Sklepy stacjonarne</a></nav></footer>
   {% block scripts %}{% endblock %}
 </body>
 </html>
