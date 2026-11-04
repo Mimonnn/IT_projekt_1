@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from django.contrib import admin
 from django.templatetags.static import static
 from .models import Material, Product
@@ -6,7 +7,7 @@ from .taxonomy import SUBCATEGORIES
 
 
 class SubcategoryFilter(admin.SimpleListFilter):
-    title = "podkategoria"
+    title = _("podkategoria")
     parameter_name = "subcategory"
 
     def lookups(self, request, model_admin):
@@ -31,11 +32,11 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ("name", "category", "display_subcategory", "price", "discount_percent", "sale_stock", "is_active", "featured_order")
     list_editable = ("featured_order",)
     list_filter = ("category", SubcategoryFilter, "materials", "size", "is_active")
-    search_fields = ("name", "description", "construction")
+    search_fields = ("name", "description", "construction", "description_en", "construction_en")
     filter_horizontal = ("materials",)
     prepopulated_fields = {"slug": ("name",)}
 
-    @admin.display(description="podkategoria", ordering="subcategory")
+    @admin.display(description=_("podkategoria"), ordering="subcategory")
     def display_subcategory(self, obj):
         return obj.get_subcategory_display()
 
@@ -43,13 +44,13 @@ class ProductAdmin(admin.ModelAdmin):
         js = (static("js/admin-subcategories.js") + "?v=1",)
 
 
-admin.site.site_header = "Szron — zarządzanie"
-admin.site.site_title = "Szron"
-admin.site.index_title = "Panel administratora"
+admin.site.site_header = _("Szron — zarządzanie")
+admin.site.site_title = _("Szron")
+admin.site.index_title = _("Panel administratora")
 
 
 @admin.register(Material)
 class MaterialAdmin(admin.ModelAdmin):
-    list_display = ("name", "code")
-    search_fields = ("name", "code")
+    list_display = ("name", "name_en", "code")
+    search_fields = ("name", "name_en", "code")
     prepopulated_fields = {"code": ("name",)}

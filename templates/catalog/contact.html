@@ -1,10 +1,10 @@
-{% extends 'catalog/info_base.html' %}
-{% block title %}Kontakt i pomoc — Szron{% endblock %}
+{% extends 'catalog/info_base.html' %}{% load i18n %}
+{% block title %}{% translate "Kontakt i pomoc — Szron" %}{% endblock %}
 {% block information_content %}
-<h1 class="page-title">Jak możemy pomóc?</h1><p class="intro">Dobór sprzętu, pytania o konto i wsparcie przy korzystaniu ze sklepu — porozmawiaj z naszym działem obsługi klienta.</p>
-<p class="notice">Dane demonstracyjne: osoby, adres e-mail, numer telefonu i godziny poniżej są fikcyjne. Nie umożliwiają kontaktu z prawdziwym sklepem.</p>
+<h1 class="page-title">{% translate "Jak możemy pomóc?" %}</h1><p class="intro">{% translate "Dobór sprzętu, pytania o konto i wsparcie przy korzystaniu ze sklepu — porozmawiaj z naszym działem obsługi klienta." %}</p>
+<p class="notice">{% translate "Dane demonstracyjne: osoby, adres e-mail, numer telefonu i godziny poniżej są fikcyjne. Nie umożliwiają kontaktu z prawdziwym sklepem." %}</p>
 <div class="information-grid">
-<article class="information-card"><p class="eyebrow">NAPISZ DO NAS</p><h2>Pomoc mailowa</h2><p><a class="text-link" href="mailto:{{ support.email }}">{{ support.email }}</a></p><p>Opisz pytanie i podaj nazwę produktu, jeżeli go dotyczy. Nie przesyłaj haseł ani danych płatniczych.</p><p class="info-muted">Adres w domenie .example jest przykładowy; wiadomości nie są odbierane.</p></article>
-<article class="information-card"><p class="eyebrow">POROZMAWIAJ Z DORADCĄ</p><h2>Obsługa telefoniczna</h2><p class="contact-number">{{ support.phone }}</p><p>{{ support.person }}</p><p>{{ support.hours }}</p><p class="info-muted">Numer demonstracyjny — nie jest działającą infolinią.</p></article>
-</div><div class="information-links"><a class="button" href="{% url 'catalog:stores' %}">Nasze sklepy <span aria-hidden="true">→</span></a><a class="text-link" href="{% url 'catalog:terms' %}">Zobacz regulamin</a></div>
+<article class="information-card"><p class="eyebrow">{% translate "NAPISZ DO NAS" %}</p><h2>{% translate "Pomoc mailowa" %}</h2><p><a class="text-link" href="mailto:{{ support.email }}">{{ support.email }}</a></p><p>{% translate "Opisz pytanie i podaj nazwę produktu, jeżeli go dotyczy. Nie przesyłaj haseł ani danych płatniczych." %}</p><p class="info-muted">{% translate "Adres w domenie .example jest przykładowy; wiadomości nie są odbierane." %}</p></article>
+<article class="information-card"><p class="eyebrow">{% translate "POROZMAWIAJ Z DORADCĄ" %}</p><h2>{% translate "Obsługa telefoniczna" %}</h2><p class="contact-number">{{ support.phone }}</p><p>{{ support.person }}</p><p>{{ support.hours }}</p><p class="info-muted">{% translate "Numer demonstracyjny — nie jest działającą infolinią." %}</p></article>
+</div><div class="information-links"><a class="button" href="{% url 'catalog:stores' %}">{% translate "Nasze sklepy" %} <span aria-hidden="true">→</span></a><a class="text-link" href="{% url 'catalog:terms' %}">{% translate "Zobacz regulamin" %}</a></div>
 {% endblock %}

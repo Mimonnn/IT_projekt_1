@@ -1,9 +1,9 @@
-{% extends 'accounts/profile_base.html' %}
+{% extends 'accounts/profile_base.html' %}{% load i18n %}
 {% block account_content %}
-<h2>Dane profilu</h2><p class="cart-note">Uzupełnij swoje dane kontaktowe. Możesz je później zmienić lub wyczyścić.</p>
-<p>Twój login: <strong>{{ user.username }}</strong></p>
+<h2>{% translate "Dane profilu" %}</h2><p class="cart-note">{% translate "Uzupełnij swoje dane kontaktowe. Możesz je później zmienić lub wyczyścić." %}</p>
+<p>{% translate "Twój login:" %} <strong>{{ user.username }}</strong></p>
 <form method="post" class="account-form profile-form">{% csrf_token %}
   {% include 'accounts/form_fields.html' %}
-  <button class="button" type="submit">Zapisz zmiany <span aria-hidden="true">→</span></button>
+  <button class="button" type="submit">{% translate "Zapisz zmiany" %} <span aria-hidden="true">→</span></button>
 </form>
 {% endblock %}

@@ -1,4 +1,5 @@
 (() => {
+  const ui = JSON.parse(document.querySelector('#ui-strings').textContent);
   const carousel = document.querySelector('[data-slideshow]');
   if (!carousel) return;
   const slides = [...carousel.querySelectorAll('[data-slide]')];
@@ -27,7 +28,7 @@
   }
 
   function updatePause() {
-    pause.textContent = paused ? 'Wznów pokaz' : 'Wstrzymaj pokaz';
+    pause.textContent = paused ? ui.resume : ui.pause;
     pause.setAttribute('aria-pressed', String(paused));
     schedule();
   }

@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 from decimal import Decimal
 from urllib.parse import urlsplit
 
@@ -36,7 +37,7 @@ def register(request):
     if request.method == "POST" and form.is_valid():
         user = form.save()
         login(request, user)
-        messages.success(request, "Konto zostało utworzone. Witaj w Szron!")
+        messages.success(request, _("Konto zostało utworzone. Witaj w Szron!"))
         return redirect("accounts:orders")
     return render(request, "accounts/register.html", {"form": form})
 
@@ -63,7 +64,7 @@ def edit_profile(request):
         # Zapisujemy tylko dozwolone pola, nigdy flagi konta z żądania.
         user = form.save(commit=False)
         user.save(update_fields=list(form.Meta.fields))
-        messages.success(request, "Dane profilu zostały zapisane.")
+        messages.success(request, _("Dane profilu zostały zapisane."))
         return redirect("accounts:edit_profile")
     return render(request, "accounts/edit_profile.html", {"form": form, "active_tab": "profile"})
 
@@ -79,7 +80,7 @@ def favorites(request):
 def favorite_add(request, slug):
     product = get_object_or_404(Product, slug=slug, is_active=True)
     Favorite.objects.get_or_create(user=request.user, product=product)
-    messages.success(request, f"Zapisano w ulubionych: {product.name}.")
+    messages.success(request, _("Zapisano w ulubionych: %(name)s.") % {"name": product.name})
     return redirect("accounts:favorites")
 
 
@@ -87,7 +88,7 @@ def favorite_add(request, slug):
 @require_POST
 def favorite_remove(request, slug):
     get_object_or_404(Favorite, user=request.user, product__slug=slug).delete()
-    messages.success(request, "Usunięto produkt z ulubionych.")
+    messages.success(request, _("Usunięto produkt z ulubionych."))
     return redirect("accounts:favorites")
 
 
@@ -109,19 +110,19 @@ def cart_add(request, slug):
     product = get_object_or_404(Product.objects.select_for_update(), slug=slug, is_active=True)
     form = CartQuantityForm(request.POST)
     if not form.is_valid():
-        messages.error(request, "Podaj poprawną, dodatnią liczbę sztuk.")
+        messages.error(request, _("Podaj poprawną, dodatnią liczbę sztuk."))
         return redirect(product)
     item = CartItem.objects.filter(user=request.user, product=product).first()
     quantity = (item.quantity if item else 0) + form.cleaned_data["quantity"]
     if quantity > product.sale_stock:
-        messages.error(request, "Nie można dodać tylu sztuk. Sprawdź dostępność i ilość w koszyku.")
+        messages.error(request, _("Nie można dodać tylu sztuk. Sprawdź dostępność i ilość w koszyku."))
         return redirect(product)
     if item:
         item.quantity = quantity
         item.save(update_fields=["quantity"])
     else:
         CartItem.objects.create(user=request.user, product=product, quantity=quantity)
-    messages.success(request, f"Dodano do koszyka: {product.name}.")
+    messages.success(request, _("Dodano do koszyka: %(name)s.") % {"name": product.name})
     return redirect("accounts:cart")
 
 
@@ -135,13 +136,13 @@ def cart_update(request, pk):
     item = get_object_or_404(CartItem.objects.filter(user=request.user), pk=pk)
     form = CartQuantityForm(request.POST)
     if not form.is_valid():
-        messages.error(request, "Podaj poprawną, dodatnią liczbę sztuk.")
+        messages.error(request, _("Podaj poprawną, dodatnią liczbę sztuk."))
     elif not product.is_active or form.cleaned_data["quantity"] > product.sale_stock:
-        messages.error(request, "Wybrana ilość produktu jest obecnie niedostępna.")
+        messages.error(request, _("Wybrana ilość produktu jest obecnie niedostępna."))
     else:
         item.quantity = form.cleaned_data["quantity"]
         item.save(update_fields=["quantity"])
-        messages.success(request, "Zmieniono ilość w koszyku.")
+        messages.success(request, _("Zmieniono ilość w koszyku."))
     return redirect("accounts:cart")
 
 
@@ -153,5 +154,5 @@ def cart_remove(request, pk):
     # Każda modyfikacja koszyka blokuje najpierw ten sam produkt.
     get_object_or_404(Product.objects.select_for_update(), pk=item.product_id)
     get_object_or_404(CartItem, pk=pk, user=request.user).delete()
-    messages.success(request, "Usunięto produkt z koszyka.")
+    messages.success(request, _("Usunięto produkt z koszyka."))
     return redirect("accounts:cart")

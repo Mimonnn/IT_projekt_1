@@ -1,29 +1,29 @@
-{% extends 'accounts/profile_base.html' %}{% load static %}
+{% extends 'accounts/profile_base.html' %}{% load i18n %}{% load static %}
 {% block account_content %}
-<h2>Twój koszyk</h2>
+<h2>{% translate "Twój koszyk" %}</h2>
 {% if items %}
-  <p class="cart-note">Produkty w koszyku nie są zarezerwowane. Ceny i dostępność są aktualizowane zgodnie z katalogiem.</p>
+  <p class="cart-note">{% translate "Produkty w koszyku nie są zarezerwowane. Ceny i dostępność są aktualizowane zgodnie z katalogiem." %}</p>
   <div class="cart-items">
   {% for item in items %}
     <article class="cart-item">
       <img src="{% if item.product.image_path %}{% static item.product.image_path %}{% else %}{% static item.product.illustration_path %}{% endif %}" alt="{{ item.product.name }}" width="100" height="100">
-      <div class="cart-product"><h3>{% if item.product.is_active %}<a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a>{% else %}{{ item.product.name }}{% endif %}</h3><p>{{ item.product.selling_price|floatformat:2 }} zł / szt.{% if item.product.discount_percent %} · Rabat {{ item.product.discount_percent }}%{% endif %}</p>
-        {% if not item.is_available %}<p class="cart-unavailable">Wybrana ilość jest obecnie niedostępna.</p>{% endif %}
+      <div class="cart-product"><h3>{% if item.product.is_active %}<a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a>{% else %}{{ item.product.name }}{% endif %}</h3><p>{% blocktranslate with v0=item.product.selling_price|floatformat:2 %}{{ v0 }} zł / szt.{% endblocktranslate %}{% if item.product.discount_percent %} {% blocktranslate with v0=item.product.discount_percent %}· Rabat {{ v0 }}%{% endblocktranslate %}{% endif %}</p>
+        {% if not item.is_available %}<p class="cart-unavailable">{% translate "Wybrana ilość jest obecnie niedostępna." %}</p>{% endif %}
       </div>
       <form method="post" action="{% url 'accounts:cart_update' item.pk %}" class="cart-quantity">{% csrf_token %}
-        <label for="quantity-{{ item.pk }}">Ilość</label><input id="quantity-{{ item.pk }}" name="quantity" type="number" min="1" max="{{ item.product.sale_stock }}" value="{{ item.quantity }}" required>
-        <button type="submit" class="text-button">Zapisz ilość</button>
+        <label for="quantity-{{ item.pk }}">{% translate "Ilość" %}</label><input id="quantity-{{ item.pk }}" name="quantity" type="number" min="1" max="{{ item.product.sale_stock }}" value="{{ item.quantity }}" required>
+        <button type="submit" class="text-button">{% translate "Zapisz ilość" %}</button>
       </form>
-      <div class="cart-line-total"><strong>{{ item.subtotal|floatformat:2 }} zł</strong>
-        <form method="post" action="{% url 'accounts:cart_remove' item.pk %}">{% csrf_token %}<button type="submit" class="text-button" aria-label="Usuń {{ item.product.name }} z koszyka">Usuń</button></form>
+      <div class="cart-line-total"><strong>{% blocktranslate with v0=item.subtotal|floatformat:2 %}{{ v0 }} zł{% endblocktranslate %}</strong>
+        <form method="post" action="{% url 'accounts:cart_remove' item.pk %}">{% csrf_token %}<button type="submit" class="text-button" aria-label="{% blocktranslate with v0=item.product.name %}Usuń {{ v0 }} z koszyka{% endblocktranslate %}">{% translate "Usuń" %}</button></form>
       </div>
     </article>
   {% endfor %}
   </div>
-  <div class="cart-summary"><span>Wartość produktów</span><strong>{{ total|floatformat:2 }} zł</strong></div>
-  <div class="notice">Możesz już zapisywać produkty w koszyku. Składanie zamówień udostępnimy w kolejnym etapie.</div>
-  <a class="text-link" href="{% url 'catalog:list' %}">← Kontynuuj przeglądanie</a>
+  <div class="cart-summary"><span>{% translate "Wartość produktów" %}</span><strong>{% blocktranslate with v0=total|floatformat:2 %}{{ v0 }} zł{% endblocktranslate %}</strong></div>
+  <div class="notice">{% translate "Możesz już zapisywać produkty w koszyku. Składanie zamówień udostępnimy w kolejnym etapie." %}</div>
+  <a class="text-link" href="{% url 'catalog:list' %}">{% translate "← Kontynuuj przeglądanie" %}</a>
 {% else %}
-  <div class="account-empty"><p class="empty-title">Twój koszyk jest pusty.</p><p>Znajdź sprzęt na kolejny wyjazd i dodaj go do koszyka.</p><a class="button" href="{% url 'catalog:list' %}">Przeglądaj sprzęt <span aria-hidden="true">→</span></a></div>
+  <div class="account-empty"><p class="empty-title">{% translate "Twój koszyk jest pusty." %}</p><p>{% translate "Znajdź sprzęt na kolejny wyjazd i dodaj go do koszyka." %}</p><a class="button" href="{% url 'catalog:list' %}">{% translate "Przeglądaj sprzęt" %} <span aria-hidden="true">→</span></a></div>
 {% endif %}
 {% endblock %}

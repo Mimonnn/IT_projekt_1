@@ -1,4 +1,6 @@
+from django.utils.translation import gettext_lazy as _
 import json
+from django.core.serializers.json import DjangoJSONEncoder
 
 from django import forms
 
@@ -7,7 +9,7 @@ from .taxonomy import SUBCATEGORIES
 
 
 class ProductAdminForm(forms.ModelForm):
-    discount_percent = forms.IntegerField(label="Rabat (%)", required=False, min_value=0, max_value=99, help_text="0 lub puste pole wyłącza promocję. Rabat od ceny regularnej.")
+    discount_percent = forms.IntegerField(label=_("Rabat (%)"), required=False, min_value=0, max_value=99, help_text=_("0 lub puste pole wyłącza promocję. Rabat od ceny regularnej."))
 
     def clean_discount_percent(self):
         if self.add_prefix("discount_percent") not in self.data:
@@ -15,8 +17,8 @@ class ProductAdminForm(forms.ModelForm):
         return self.cleaned_data["discount_percent"] or 0
 
     subcategory = forms.ChoiceField(
-        label="Podkategoria", required=False,
-        help_text="Wybierz typ właściwy dla kategorii produktu.",
+        label=_("Podkategoria"), required=False,
+        help_text=_("Wybierz typ właściwy dla kategorii produktu."),
     )
 
     class Meta:
@@ -30,4 +32,4 @@ class ProductAdminForm(forms.ModelForm):
         )
         choices = SUBCATEGORIES.get(category, [])
         self.fields["subcategory"].choices = [("", "---------"), *choices]
-        self.fields["subcategory"].widget.attrs["data-subcategories"] = json.dumps(SUBCATEGORIES, ensure_ascii=False)
+        self.fields["subcategory"].widget.attrs["data-subcategories"] = json.dumps(SUBCATEGORIES, ensure_ascii=False, cls=DjangoJSONEncoder)

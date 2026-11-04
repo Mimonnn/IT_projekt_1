@@ -1,0 +1,13 @@
+{% load i18n %}
+      <section class="product-specs" aria-labelledby="specs-heading">
+        <h2 id="specs-heading">{% if rental_item %}{% translate "Parametry modelu" %}{% else %}{% translate "Parametry produktu" %}{% endif %}</h2>
+        {% if product.specifications_are_demo %}<p class="specs-note">{% translate "Parametry demonstracyjne fikcyjnego modelu Szron. Zdjęcie przedstawia produkt referencyjny i nie potwierdza tych danych." %}</p>{% endif %}
+        <dl>
+          {% if product.display_size %}<div><dt>{% translate "Rozmiar" %}</dt><dd>{{ product.display_size }}</dd></div>{% endif %}
+          {% if product.materials.all %}<div><dt>{% translate "Materiały" %}</dt><dd>{% for material in product.materials.all %}{{ material.display_name }}{% if not forloop.last %}, {% endif %}{% endfor %}</dd></div>{% endif %}
+          {% if product.display_construction %}<div><dt>{% translate "Konstrukcja" %}</dt><dd>{{ product.display_construction }}</dd></div>{% endif %}
+          {% if product.display_dimensions %}<div><dt>{% translate "Wymiary" %}</dt><dd>{{ product.display_dimensions }}</dd></div>{% endif %}
+          {% if product.weight_g %}<div><dt>{% translate "Masa" %}</dt><dd>{% blocktranslate with v0=product.weight_g %}{{ v0 }} g{% endblocktranslate %}{% if product.display_weight_scope %} — {{ product.display_weight_scope }}{% endif %}</dd></div>{% endif %}
+        </dl>
+        {% if not product.display_size and not product.display_dimensions and not product.weight_g and not product.display_construction and not product.materials.all %}<p>{% translate "Parametry zostaną uzupełnione." %}</p>{% endif %}
+      </section>

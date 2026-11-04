@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}{% load i18n static %}
+{% block title %}{{ title }} | {{ site_title }}{% endblock %}
+{% block branding %}<div id="site-name"><a href="{% url 'admin:index' %}">{{ site_header }}</a></div>{% endblock %}
+{% block extrahead %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/admin-language.css' %}?v=1">{% endblock %}
+{% block userlinks %}{{ block.super }}
+{% get_current_language as LANGUAGE_CODE %}
+<form class="admin-language-switch" action="{% url 'set_language' %}" method="post" aria-label="{% translate 'Język strony' %}">
+  {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+  <button type="submit" name="language" value="pl" lang="pl" aria-pressed="{% if LANGUAGE_CODE == 'pl' %}true{% else %}false{% endif %}"><img src="{% static 'img/flags/pl.svg' %}" alt="" width="21" height="14"> Polski</button>
+  <button type="submit" name="language" value="en" lang="en" aria-pressed="{% if LANGUAGE_CODE == 'en' %}true{% else %}false{% endif %}"><img src="{% static 'img/flags/en.svg' %}" alt="" width="21" height="14"> English</button>
+</form>{% endblock %}

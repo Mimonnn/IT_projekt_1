@@ -1,14 +1,14 @@
-{% extends 'accounts/profile_base.html' %}
+{% extends 'accounts/profile_base.html' %}{% load i18n %}
 {% block account_content %}
 {% if active_tab == 'orders' %}
-  <h2>Aktualne zamówienia</h2><div class="account-empty">
-    <p class="empty-title">Nie masz jeszcze zamówień.</p>
-    <p>Tutaj zobaczysz swoje zamówienia i stan ich realizacji, gdy udostępnimy składanie zamówień.</p>
+  <h2>{% translate "Aktualne zamówienia" %}</h2><div class="account-empty">
+    <p class="empty-title">{% translate "Nie masz jeszcze zamówień." %}</p>
+    <p>{% translate "Tutaj zobaczysz swoje zamówienia i stan ich realizacji, gdy udostępnimy składanie zamówień." %}</p>
 {% else %}
-  <h2>Historia zakupów</h2><div class="account-empty">
-    <p class="empty-title">Twoja historia zakupów jest pusta.</p>
-    <p>Tutaj pojawią się Twoje zakończone zakupy, gdy udostępnimy składanie zamówień.</p>
+  <h2>{% translate "Historia zakupów" %}</h2><div class="account-empty">
+    <p class="empty-title">{% translate "Twoja historia zakupów jest pusta." %}</p>
+    <p>{% translate "Tutaj pojawią się Twoje zakończone zakupy, gdy udostępnimy składanie zamówień." %}</p>
 {% endif %}
-  <a class="button" href="{% url 'catalog:list' %}">Przeglądaj sprzęt <span aria-hidden="true">→</span></a>
+  <a class="button" href="{% url 'catalog:list' %}">{% translate "Przeglądaj sprzęt" %} <span aria-hidden="true">→</span></a>
 </div>
 {% endblock %}

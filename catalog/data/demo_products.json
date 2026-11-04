@@ -21,7 +21,12 @@
         "weight_g": 4120,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 10
+        "discount_percent": 10,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 172 cm; sidecut tip / waist / tail: 122 / 73 / 106 mm.",
+        "size_en": "172 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Piste skis with bindings for practising turns and spending a full day on groomed slopes.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Alpine 172 variant is size 172 cm. Length: 172 cm; sidecut tip / waist / tail: 122 / 73 / 106 mm. Weight: 4120 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Head WC Rebels E.XSR z wiązaniami",
@@ -55,7 +60,12 @@
         "weight_g": 4240,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 174 cm; sidecut tip / waist / tail: 126 / 84 / 110 mm.",
+        "size_en": "174 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Versatile all-mountain skis with bindings for piste runs and variable snow conditions.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Traverse 84 variant is size 174 cm. Length: 174 cm; sidecut tip / waist / tail: 126 / 84 / 110 mm. Weight: 4240 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Salomon Stance 84 z wiązaniami",
@@ -89,7 +99,12 @@
         "weight_g": 3480,
         "weight_scope": "para nart z wiązaniami i fokami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. Carbon fibre stiffens the lightweight body.",
+        "dimensions_en": "Length: 178 cm; sidecut tip / waist / tail: 134 / 102 / 121 mm.",
+        "size_en": "178 cm",
+        "weight_scope_en": "pair of skis with bindings and skins",
+        "description_en": "Touring skis with bindings and skins for climbing and skiing in mountain terrain.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. Carbon fibre stiffens the lightweight body. The Ascend 102 variant is size 178 cm. Length: 178 cm; sidecut tip / waist / tail: 134 / 102 / 121 mm. Weight: 3480 g (pair of skis with bindings and skins)."
       },
       "reference": {
         "name": "Wedze Wilder 102 z wiązaniami i fokami",
@@ -124,7 +139,12 @@
         "weight_g": 2880,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 156 cm; waist width: 25.2 cm.",
+        "size_en": "156 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "An all-mountain snowboard for piste runs and exploring beyond the slopes. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Drift 156 variant is size 156 cm. Length: 156 cm; waist width: 25.2 cm. Weight: 2880 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape Landscape allmountain / freeride",
@@ -158,7 +178,12 @@
         "weight_g": 2760,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 152 cm; waist width: 25.2 cm.",
+        "size_en": "152 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A freestyle snowboard for tricks, jumps and riding in the snowpark. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Orbit 152 variant is size 152 cm. Length: 152 cm; waist width: 25.2 cm. Weight: 2760 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape Park & Ride 500",
@@ -192,7 +217,12 @@
         "weight_g": 2940,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 158 cm; waist width: 26.1 cm.",
+        "size_en": "158 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A freeride snowboard for soft snow and riding beyond groomed runs. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Glacier 158 variant is size 158 cm. Length: 158 cm; waist width: 26.1 cm. Weight: 2940 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape All Road 500 trasa / freeride",
@@ -226,7 +256,12 @@
         "weight_g": 900,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide body, steel release mechanism and aluminium rail components. Toe and heel pieces form a set for a pair of skis.",
+        "dimensions_en": "Sole length range: 200–300 mm; brake width: 76 mm.",
+        "size_en": "Junior (sole 200–300 mm)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Junior alpine ski bindings for piste skiing. Match the boot sole length and brake width to your equipment.\n\nA polyamide body, steel release mechanism and aluminium rail components. Toe and heel pieces form a set for a pair of skis. The Latch Junior variant is size Junior (sole 200–300 mm). Sole length range: 200–300 mm; brake width: 76 mm. Weight: 900 g (pair of bindings)."
       },
       "reference": {
         "name": "Look Team 4 GW B76",
@@ -259,7 +294,12 @@
         "weight_g": 1800,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide base and highback, aluminium buckles and cushioning EVA pads. Two straps hold the boot in the binding.",
+        "dimensions_en": "Base: 26 × 15 cm; highback height: 26 cm.",
+        "size_en": "M (EU 39–43)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Strap snowboard bindings for all-mountain and freestyle riding. Choose the binding size to match your boots.\n\nA polyamide base and highback, aluminium buckles and cushioning EVA pads. Two straps hold the boot in the binding. The Anchor 500 variant is size M (EU 39–43). Base: 26 × 15 cm; highback height: 26 cm. Weight: 1800 g (pair of bindings)."
       },
       "reference": {
         "name": "Dreamscape SNB 500 all mountain/freestyle",
@@ -292,7 +332,12 @@
         "weight_g": 1800,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide base and highback, aluminium buckles and cushioning EVA pads. A rear-opening highback makes boot entry easier.",
+        "dimensions_en": "Base: 26 × 15 cm; highback height: 26 cm.",
+        "size_en": "M (EU 39–43)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Quick-entry snowboard bindings with a rear-opening highback for easier boot entry.\n\nA polyamide base and highback, aluminium buckles and cushioning EVA pads. A rear-opening highback makes boot entry easier. The Swift 360 variant is size M (EU 39–43). Base: 26 × 15 cm; highback height: 26 cm. Weight: 1800 g (pair of bindings)."
       },
       "reference": {
         "name": "Raven Fastec FT360",
@@ -325,7 +370,12 @@
         "weight_g": 450,
         "weight_scope": "jeden kask",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier.",
+        "dimensions_en": "Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm.",
+        "size_en": "M (55–59 cm)",
+        "weight_scope_en": "one helmet",
+        "description_en": "A classic helmet for recreational skiing and snowboarding. Choose the size to match your head circumference.\n\nA polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The Ridge M variant is size M (55–59 cm). Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm. Weight: 450 g (one helmet)."
       },
       "reference": {
         "name": "Wedze PST 500",
@@ -358,7 +408,12 @@
         "weight_g": 620,
         "weight_scope": "jeden kask z wizjerem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The integrated visor is made of polycarbonate.",
+        "dimensions_en": "Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm.",
+        "size_en": "M (55–59 cm)",
+        "weight_scope_en": "one helmet with visor",
+        "description_en": "A helmet with an integrated visor that shields your eyes, as an alternative to separate goggles.\n\nA polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The integrated visor is made of polycarbonate. The Vista M variant is size M (55–59 cm). Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm. Weight: 620 g (one helmet with visor)."
       },
       "reference": {
         "name": "Wedze PST 550 z szybą",
@@ -391,7 +446,12 @@
         "weight_g": 490,
         "weight_scope": "jeden kask",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "An ABS shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier.",
+        "dimensions_en": "Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm.",
+        "size_en": "M (55–59 cm)",
+        "weight_scope_en": "one helmet",
+        "description_en": "A freestyle ski and snowboard helmet with a shape suited to snowpark riding.\n\nAn ABS shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The District M variant is size M (55–59 cm). Head circumference: 55–59 cm; external dimensions: 27 × 23 × 24 cm. Weight: 490 g (one helmet)."
       },
       "reference": {
         "name": "Wedze FS 300",
@@ -424,7 +484,12 @@
         "weight_g": 150,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 15
+        "discount_percent": 15,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A tinted lens for sunny days.",
+        "dimensions_en": "Frame width: 18 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "L",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a darker lens for bright, sunny days on the slopes.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A tinted lens for sunny days. The Halo S3 variant is size L. Frame width: 18 cm; frame height: 10 cm; adjustable strap. Weight: 150 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 500 I",
@@ -458,7 +523,12 @@
         "weight_g": 150,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A lighter lens for overcast conditions.",
+        "dimensions_en": "Frame width: 18 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "L",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a lighter lens for overcast days and low-light conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A lighter lens for overcast conditions. The Mist S1 variant is size L. Frame width: 18 cm; frame height: 10 cm; adjustable strap. Weight: 150 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 100 S1",
@@ -492,7 +562,12 @@
         "weight_g": 150,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The photochromic lens changes its tint with the light.",
+        "dimensions_en": "Frame width: 18 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "L",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a photochromic lens that adjusts its tint to changing light conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The photochromic lens changes its tint with the light. The Flux PH variant is size L. Frame width: 18 cm; frame height: 10 cm; adjustable strap. Weight: 150 g (goggles with strap)."
       },
       "reference": {
         "name": "Quechua G900 S PH",
@@ -526,7 +601,12 @@
         "weight_g": 1870,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 20
+        "discount_percent": 20,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 305 mm; cuff height: 30 cm.",
+        "size_en": "EU 42",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Versatile all-mountain snowboard boots for different riding styles and snow conditions.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Roam 500 variant is size EU 42. Outer sole length: 305 mm; cuff height: 30 cm. Weight: 1870 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape Allroad 500 all mountain",
@@ -560,7 +640,12 @@
         "weight_g": 1750,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 295 mm; cuff height: 30 cm.",
+        "size_en": "EU 40",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Freestyle snowboard boots designed for freedom of movement during tricks and snowpark riding.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Flex 100 variant is size EU 40. Outer sole length: 295 mm; cuff height: 30 cm. Weight: 1750 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape SNB100",
@@ -594,7 +679,12 @@
         "weight_g": 1930,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 310 mm; cuff height: 30 cm.",
+        "size_en": "EU 43",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Freeride snowboard boots with a supportive construction for precise control.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Rift 900 variant is size EU 43. Outer sole length: 310 mm; cuff height: 30 cm. Weight: 1930 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape SNB All Road 900",
@@ -628,7 +718,12 @@
         "weight_g": 4060,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm.",
+        "size_en": "27.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Alpine ski boots for recreational skiing on groomed slopes. Choose the correct Mondopoint size for your feet.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Summit 27 variant is size 27.0 MP. Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm. Weight: 4060 g (pair of boots)."
       },
       "reference": {
         "name": "Salomon Delta 90 HV",
@@ -661,7 +756,12 @@
         "weight_g": 3980,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 26.0 cm; outer sole length: 300 mm; cuff height: 32 cm.",
+        "size_en": "26.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "All-mountain ski boots for varied snow conditions and riding beyond groomed runs.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Contour 100 variant is size 26.0 MP. Mondopoint: 26.0 cm; outer sole length: 300 mm; cuff height: 32 cm. Weight: 3980 g (pair of boots)."
       },
       "reference": {
         "name": "Atomic Hawx Magna 100 HV",
@@ -694,7 +794,12 @@
         "weight_g": 3900,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 25.0 cm; outer sole length: 290 mm; cuff height: 32 cm.",
+        "size_en": "25.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Alpine ski boots for recreational skiing on groomed slopes. Choose the correct Mondopoint size for your feet.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Cloud 80 variant is size 25.0 MP. Mondopoint: 25.0 cm; outer sole length: 290 mm; cuff height: 32 cm. Weight: 3900 g (pair of boots)."
       },
       "reference": {
         "name": "Salomon Sense 80 HV",
@@ -727,7 +832,12 @@
         "weight_g": 750,
         "weight_scope": "pusty pokrowiec",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "Polyester fabric with a polyurethane coating, reinforced handles and a full-length zip. The bag holds a pair of skis with bindings.",
+        "dimensions_en": "Length × width × height: 195 × 28 × 18 cm.",
+        "size_en": "Skis up to 190 cm",
+        "weight_scope_en": "empty bag",
+        "description_en": "A protective ski bag for travel and storage.\n\nPolyester fabric with a polyurethane coating, reinforced handles and a full-length zip. The bag holds a pair of skis with bindings. The Trail Bag variant is size Skis up to 190 cm. Length × width × height: 195 × 28 × 18 cm. Weight: 750 g (empty bag)."
       },
       "reference": {
         "name": "Wedze 500 — pokrowiec na narty",
@@ -759,7 +869,12 @@
         "weight_g": 140,
         "weight_scope": "płytka z 4 śrubami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide mounting disc with four steel screws and washers. A set for mounting a compatible snowboard binding.",
+        "dimensions_en": "Disc diameter: 10 cm; mounting pattern: 4 × 4 cm; screw length: 16 mm.",
+        "size_en": "Disc 4 × 4",
+        "weight_scope_en": "disc with four screws",
+        "description_en": "A mounting disc and screws for compatible snowboard bindings.\n\nA polyamide mounting disc with four steel screws and washers. A set for mounting a compatible snowboard binding. The Axis Disc variant is size Disc 4 × 4. Disc diameter: 10 cm; mounting pattern: 4 × 4 cm; screw length: 16 mm. Weight: 140 g (disc with four screws)."
       },
       "reference": {
         "name": "Płytka do wiązań snowboardowych + 4 śruby 16 mm",
@@ -791,7 +906,12 @@
         "weight_g": 70,
         "weight_scope": "komplet 8 śrub z podkładkami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "Eight steel screws and washers for snowboard bindings. Match the thread and screw length to the inserts and binding base.",
+        "dimensions_en": "Thread: M6; screw length: 16 mm; washer diameter: 12 mm.",
+        "size_en": "M6 × 16 mm",
+        "weight_scope_en": "set of eight screws and washers",
+        "description_en": "A spare screw and washer set for compatible snowboard bindings.\n\nEight steel screws and washers for snowboard bindings. Match the thread and screw length to the inserts and binding base. The Mount Kit variant is size M6 × 16 mm. Thread: M6; screw length: 16 mm; washer diameter: 12 mm. Weight: 70 g (set of eight screws and washers)."
       },
       "reference": {
         "name": "8 śrub 16 mm i podkładek do wiązań snowboardowych",
@@ -822,7 +942,12 @@
         "weight_g": 4180,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 178 cm; sidecut tip / waist / tail: 124 / 74 / 108 mm.",
+        "size_en": "178 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Piste skis with bindings for practising turns and spending a full day on groomed slopes.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Alpine 178 variant is size 178 cm. Length: 178 cm; sidecut tip / waist / tail: 124 / 74 / 108 mm. Weight: 4180 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Head WC Rebels E.XSR z wiązaniami",
@@ -856,7 +981,12 @@
         "weight_g": 4200,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 180 cm; sidecut tip / waist / tail: 130 / 88 / 114 mm.",
+        "size_en": "180 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Versatile all-mountain skis with bindings for piste runs and variable snow conditions.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Traverse 88 variant is size 180 cm. Length: 180 cm; sidecut tip / waist / tail: 130 / 88 / 114 mm. Weight: 4200 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Salomon Stance 84 z wiązaniami",
@@ -890,7 +1020,12 @@
         "weight_g": 3410,
         "weight_scope": "para nart z wiązaniami i fokami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. Carbon fibre stiffens the lightweight body.",
+        "dimensions_en": "Length: 171 cm; sidecut tip / waist / tail: 126 / 95 / 113 mm.",
+        "size_en": "171 cm",
+        "weight_scope_en": "pair of skis with bindings and skins",
+        "description_en": "Touring skis with bindings and skins for climbing and skiing in mountain terrain.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. Carbon fibre stiffens the lightweight body. The Ascend 95 variant is size 171 cm. Length: 171 cm; sidecut tip / waist / tail: 126 / 95 / 113 mm. Weight: 3410 g (pair of skis with bindings and skins)."
       },
       "reference": {
         "name": "Wedze Wilder 102 z wiązaniami i fokami",
@@ -925,7 +1060,12 @@
         "weight_g": 3060,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 162 cm; waist width: 26.1 cm.",
+        "size_en": "162 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "An all-mountain snowboard for piste runs and exploring beyond the slopes. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Drift 162 variant is size 162 cm. Length: 162 cm; waist width: 26.1 cm. Weight: 3060 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape Landscape allmountain / freeride",
@@ -959,7 +1099,12 @@
         "weight_g": 2880,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 156 cm; waist width: 25.2 cm.",
+        "size_en": "156 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A freestyle snowboard for tricks, jumps and riding in the snowpark. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Orbit 156 variant is size 156 cm. Length: 156 cm; waist width: 25.2 cm. Weight: 2880 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape Park & Ride 500",
@@ -993,7 +1138,12 @@
         "weight_g": 3090,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 163 cm; waist width: 26.1 cm.",
+        "size_en": "163 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A freeride snowboard for soft snow and riding beyond groomed runs. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Glacier 163 variant is size 163 cm. Length: 163 cm; waist width: 26.1 cm. Weight: 3090 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape All Road 500 trasa / freeride",
@@ -1027,7 +1177,12 @@
         "weight_g": 950,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide body, steel release mechanism and aluminium rail components. Toe and heel pieces form a set for a pair of skis.",
+        "dimensions_en": "Sole length range: 220–320 mm; brake width: 76 mm.",
+        "size_en": "Junior (sole 220–320 mm)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Junior alpine ski bindings for piste skiing. Match the boot sole length and brake width to your equipment.\n\nA polyamide body, steel release mechanism and aluminium rail components. Toe and heel pieces form a set for a pair of skis. The Latch Youth variant is size Junior (sole 220–320 mm). Sole length range: 220–320 mm; brake width: 76 mm. Weight: 950 g (pair of bindings)."
       },
       "reference": {
         "name": "Look Team 4 GW B76",
@@ -1060,7 +1215,12 @@
         "weight_g": 1900,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide base and highback, aluminium buckles and cushioning EVA pads. Two straps hold the boot in the binding.",
+        "dimensions_en": "Base: 28 × 16 cm; highback height: 26 cm.",
+        "size_en": "L (EU 43–47)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Strap snowboard bindings for all-mountain and freestyle riding. Choose the binding size to match your boots.\n\nA polyamide base and highback, aluminium buckles and cushioning EVA pads. Two straps hold the boot in the binding. The Anchor 700 variant is size L (EU 43–47). Base: 28 × 16 cm; highback height: 26 cm. Weight: 1900 g (pair of bindings)."
       },
       "reference": {
         "name": "Dreamscape SNB 500 all mountain/freestyle",
@@ -1093,7 +1253,12 @@
         "weight_g": 1900,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyamide base and highback, aluminium buckles and cushioning EVA pads. A rear-opening highback makes boot entry easier.",
+        "dimensions_en": "Base: 28 × 16 cm; highback height: 26 cm.",
+        "size_en": "L (EU 43–47)",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Quick-entry snowboard bindings with a rear-opening highback for easier boot entry.\n\nA polyamide base and highback, aluminium buckles and cushioning EVA pads. A rear-opening highback makes boot entry easier. The Swift 400 variant is size L (EU 43–47). Base: 28 × 16 cm; highback height: 26 cm. Weight: 1900 g (pair of bindings)."
       },
       "reference": {
         "name": "Raven Fastec FT360",
@@ -1126,7 +1291,12 @@
         "weight_g": 480,
         "weight_scope": "jeden kask",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier.",
+        "dimensions_en": "Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm.",
+        "size_en": "L (59–62 cm)",
+        "weight_scope_en": "one helmet",
+        "description_en": "A classic helmet for recreational skiing and snowboarding. Choose the size to match your head circumference.\n\nA polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The Ridge L variant is size L (59–62 cm). Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm. Weight: 480 g (one helmet)."
       },
       "reference": {
         "name": "Wedze PST 500",
@@ -1159,7 +1329,12 @@
         "weight_g": 650,
         "weight_scope": "jeden kask z wizjerem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The integrated visor is made of polycarbonate.",
+        "dimensions_en": "Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm.",
+        "size_en": "L (59–62 cm)",
+        "weight_scope_en": "one helmet with visor",
+        "description_en": "A helmet with an integrated visor that shields your eyes, as an alternative to separate goggles.\n\nA polycarbonate shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The integrated visor is made of polycarbonate. The Vista L variant is size L (59–62 cm). Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm. Weight: 650 g (one helmet with visor)."
       },
       "reference": {
         "name": "Wedze PST 550 z szybą",
@@ -1192,7 +1367,12 @@
         "weight_g": 520,
         "weight_scope": "jeden kask",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "An ABS shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier.",
+        "dimensions_en": "Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm.",
+        "size_en": "L (59–62 cm)",
+        "weight_scope_en": "one helmet",
+        "description_en": "A freestyle ski and snowboard helmet with a shape suited to snowpark riding.\n\nAn ABS shell surrounds an EPS foam core. A removable polyester liner improves comfort and makes cleaning easier. The District L variant is size L (59–62 cm). Head circumference: 59–62 cm; external dimensions: 28 × 24 × 25 cm. Weight: 520 g (one helmet)."
       },
       "reference": {
         "name": "Wedze FS 300",
@@ -1225,7 +1405,12 @@
         "weight_g": 165,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A tinted lens for sunny days.",
+        "dimensions_en": "Frame width: 19 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "XL",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a darker lens for bright, sunny days on the slopes.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A tinted lens for sunny days. The Halo Wide variant is size XL. Frame width: 19 cm; frame height: 10 cm; adjustable strap. Weight: 165 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 500 I",
@@ -1259,7 +1444,12 @@
         "weight_g": 165,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A lighter lens for overcast conditions.",
+        "dimensions_en": "Frame width: 19 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "XL",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a lighter lens for overcast days and low-light conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. A lighter lens for overcast conditions. The Mist Wide variant is size XL. Frame width: 19 cm; frame height: 10 cm; adjustable strap. Weight: 165 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 100 S1",
@@ -1293,7 +1483,12 @@
         "weight_g": 150,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The photochromic lens changes its tint with the light.",
+        "dimensions_en": "Frame width: 18 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "L",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Goggles with a photochromic lens that adjusts its tint to changing light conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The photochromic lens changes its tint with the light. The Flux Pro variant is size L. Frame width: 18 cm; frame height: 10 cm; adjustable strap. Weight: 150 g (goggles with strap)."
       },
       "reference": {
         "name": "Quechua G900 S PH",
@@ -1327,7 +1522,12 @@
         "weight_g": 1930,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 310 mm; cuff height: 30 cm.",
+        "size_en": "EU 43",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Versatile all-mountain snowboard boots for different riding styles and snow conditions.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Roam 700 variant is size EU 43. Outer sole length: 310 mm; cuff height: 30 cm. Weight: 1930 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape Allroad 500 all mountain",
@@ -1361,7 +1561,12 @@
         "weight_g": 1810,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 300 mm; cuff height: 30 cm.",
+        "size_en": "EU 41",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Freestyle snowboard boots designed for freedom of movement during tricks and snowpark riding.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Flex 200 variant is size EU 41. Outer sole length: 300 mm; cuff height: 30 cm. Weight: 1810 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape SNB100",
@@ -1395,7 +1600,12 @@
         "weight_g": 1990,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle.",
+        "dimensions_en": "Outer sole length: 315 mm; cuff height: 30 cm.",
+        "size_en": "EU 44",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Freeride snowboard boots with a supportive construction for precise control.\n\nA polyester upper reinforced with polyurethane, an inner liner with EVA foam and a rubber outsole. Soft padding surrounds the foot and ankle. The Rift 950 variant is size EU 44. Outer sole length: 315 mm; cuff height: 30 cm. Weight: 1990 g (pair of boots)."
       },
       "reference": {
         "name": "Dreamscape SNB All Road 900",
@@ -1429,7 +1639,12 @@
         "weight_g": 4140,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 28.0 cm; outer sole length: 320 mm; cuff height: 32 cm.",
+        "size_en": "28.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "All-mountain ski boots for varied snow conditions and riding beyond groomed runs.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Contour 110 variant is size 28.0 MP. Mondopoint: 28.0 cm; outer sole length: 320 mm; cuff height: 32 cm. Weight: 4140 g (pair of boots)."
       },
       "reference": {
         "name": "Atomic Hawx Magna 100 HV",
@@ -1462,7 +1677,12 @@
         "weight_g": 4510,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 181 cm; sidecut tip / waist / tail: 140 / 108 / 129 mm.",
+        "size_en": "181 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Freeride skis with bindings for soft snow and skiing beyond groomed runs.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Powder 108 variant is size 181 cm. Length: 181 cm; sidecut tip / waist / tail: 140 / 108 / 129 mm. Weight: 4510 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Dynastar M-Free 90 z wiązaniami",
@@ -1496,7 +1716,12 @@
         "weight_g": 4580,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 188 cm; sidecut tip / waist / tail: 146 / 114 / 135 mm.",
+        "size_en": "188 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Freeride skis with bindings for soft snow and skiing beyond groomed runs.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Powder 114 variant is size 188 cm. Length: 188 cm; sidecut tip / waist / tail: 146 / 114 / 135 mm. Weight: 4580 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Dynastar M-Free 90 z wiązaniami",
@@ -1530,7 +1755,12 @@
         "weight_g": 3840,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 164 cm; sidecut tip / waist / tail: 118 / 88 / 112 mm.",
+        "size_en": "164 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Twin-tip skis with bindings for freestyle riding and playing in the snow.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Pulse 164 variant is size 164 cm. Length: 164 cm; sidecut tip / waist / tail: 118 / 88 / 112 mm. Weight: 3840 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Wedze Slash 100 z wiązaniami",
@@ -1564,7 +1794,12 @@
         "weight_g": 3820,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 172 cm; sidecut tip / waist / tail: 120 / 90 / 114 mm.",
+        "size_en": "172 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Twin-tip skis with bindings for freestyle riding and playing in the snow.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Pulse 172 variant is size 172 cm. Length: 172 cm; sidecut tip / waist / tail: 120 / 90 / 114 mm. Weight: 3820 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Wedze Slash 100 z wiązaniami",
@@ -1598,7 +1833,12 @@
         "weight_g": 1350,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base.",
+        "dimensions_en": "Length: 180 cm; sidecut tip / waist / tail: 44 / 44 / 44 mm.",
+        "size_en": "180 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Cross-country skis with bindings for skating technique on prepared trails.\n\nA wooden core reinforced with fibreglass and a polyethylene base. The Nordic 180 variant is size 180 cm. Length: 180 cm; sidecut tip / waist / tail: 44 / 44 / 44 mm. Weight: 1350 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Inovik 500 z wiązaniami Fischer Compact Step In",
@@ -1631,7 +1871,12 @@
         "weight_g": 1350,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base.",
+        "dimensions_en": "Length: 190 cm; sidecut tip / waist / tail: 44 / 44 / 44 mm.",
+        "size_en": "190 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Cross-country skis with bindings for skating technique on prepared trails.\n\nA wooden core reinforced with fibreglass and a polyethylene base. The Nordic 190 variant is size 190 cm. Length: 190 cm; sidecut tip / waist / tail: 44 / 44 / 44 mm. Weight: 1350 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Inovik 500 z wiązaniami Fischer Compact Step In",
@@ -1664,7 +1909,12 @@
         "weight_g": 4750,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 165 cm; sidecut tip / waist / tail: 121 / 68 / 104 mm.",
+        "size_en": "165 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Sporty slalom skis with bindings for dynamic turns on groomed slopes. Designed for advanced skiers.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Velocity 165 variant is size 165 cm. Length: 165 cm; sidecut tip / waist / tail: 121 / 68 / 104 mm. Weight: 4750 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Head Supershape E-Original z wiązaniami PRD 12 GW",
@@ -1698,7 +1948,12 @@
         "weight_g": 4700,
         "weight_scope": "para nart z wiązaniami",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base.",
+        "dimensions_en": "Length: 170 cm; sidecut tip / waist / tail: 123 / 69 / 105 mm.",
+        "size_en": "170 cm",
+        "weight_scope_en": "pair of skis with bindings",
+        "description_en": "Sporty slalom skis with bindings for dynamic turns on groomed slopes. Designed for advanced skiers.\n\nA wooden core reinforced with fibreglass and a polyethylene base. Steel edges run along the base. The Velocity 170 variant is size 170 cm. Length: 170 cm; sidecut tip / waist / tail: 123 / 69 / 105 mm. Weight: 4700 g (pair of skis with bindings)."
       },
       "reference": {
         "name": "Head Supershape E-Original z wiązaniami PRD 12 GW",
@@ -1732,7 +1987,12 @@
         "weight_g": 2880,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 156 cm; waist width: 25.2 cm.",
+        "size_en": "156 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A snowboard for piste riding and controlled carving turns on the edges. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Edge 156 variant is size 156 cm. Length: 156 cm; waist width: 25.2 cm. Weight: 2880 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape All Road 900 trasa / freeride",
@@ -1766,7 +2026,12 @@
         "weight_g": 3060,
         "weight_scope": "deska bez wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture.",
+        "dimensions_en": "Length: 162 cm; waist width: 26.1 cm.",
+        "size_en": "162 cm",
+        "weight_scope_en": "board without bindings",
+        "description_en": "A snowboard for piste riding and controlled carving turns on the edges. Bindings are sold separately.\n\nA wooden core laminated with fibreglass, a polyethylene base and steel edges. The top sheet protects the laminate from moisture. The Edge 162 variant is size 162 cm. Length: 162 cm; waist width: 26.1 cm. Weight: 3060 g (board without bindings)."
       },
       "reference": {
         "name": "Dreamscape All Road 900 trasa / freeride",
@@ -1800,7 +2065,12 @@
         "weight_g": 650,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "An aluminium body with steel pins and polyamide pads. The movable heel piece switches between uphill and downhill modes.",
+        "dimensions_en": "Sole range: 260–310 mm; heel adjustment: 30 mm.",
+        "size_en": "Sole 260–310 mm",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Pin touring bindings with uphill and downhill modes. Compatible touring boots are required.\n\nAn aluminium body with steel pins and polyamide pads. The movable heel piece switches between uphill and downhill modes. The Ascent 10 variant is size Sole 260–310 mm. Sole range: 260–310 mm; heel adjustment: 30 mm. Weight: 650 g (pair of bindings)."
       },
       "reference": {
         "name": "Wedze Tour Light",
@@ -1833,7 +2103,12 @@
         "weight_g": 690,
         "weight_scope": "para wiązań",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "An aluminium body with steel pins and polyamide pads. The movable heel piece switches between uphill and downhill modes.",
+        "dimensions_en": "Sole range: 280–330 mm; heel adjustment: 30 mm.",
+        "size_en": "Sole 280–330 mm",
+        "weight_scope_en": "pair of bindings",
+        "description_en": "Pin touring bindings with uphill and downhill modes. Compatible touring boots are required.\n\nAn aluminium body with steel pins and polyamide pads. The movable heel piece switches between uphill and downhill modes. The Ascent 12 variant is size Sole 280–330 mm. Sole range: 280–330 mm; heel adjustment: 30 mm. Weight: 690 g (pair of bindings)."
       },
       "reference": {
         "name": "Wedze Tour Light",
@@ -1866,7 +2141,12 @@
         "weight_g": 2760,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. A movable polyamide cuff has an uphill mode, while the sole has rubber sections.",
+        "dimensions_en": "Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm.",
+        "size_en": "27.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Touring ski boots with a movable cuff for climbing and a locking mode for downhill skiing. Use compatible touring bindings.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. A movable polyamide cuff has an uphill mode, while the sole has rubber sections. The Climb 27 variant is size 27.0 MP. Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm. Weight: 2760 g (pair of boots)."
       },
       "reference": {
         "name": "Fischer Travers TS",
@@ -1901,7 +2181,12 @@
         "weight_g": 2840,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. A movable polyamide cuff has an uphill mode, while the sole has rubber sections.",
+        "dimensions_en": "Mondopoint: 28.0 cm; outer sole length: 320 mm; cuff height: 32 cm.",
+        "size_en": "28.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Touring ski boots with a movable cuff for climbing and a locking mode for downhill skiing. Use compatible touring bindings.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. A movable polyamide cuff has an uphill mode, while the sole has rubber sections. The Climb 28 variant is size 28.0 MP. Mondopoint: 28.0 cm; outer sole length: 320 mm; cuff height: 32 cm. Weight: 2840 g (pair of boots)."
       },
       "reference": {
         "name": "Fischer Travers TS",
@@ -1936,7 +2221,12 @@
         "weight_g": 3980,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 26.0 cm; outer sole length: 300 mm; cuff height: 32 cm.",
+        "size_en": "26.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Sporty ski boots for precise piste skiing. A stiff construction for advanced skiers.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Race Pro 26 variant is size 26.0 MP. Mondopoint: 26.0 cm; outer sole length: 300 mm; cuff height: 32 cm. Weight: 3980 g (pair of boots)."
       },
       "reference": {
         "name": "Rossignol Hero World Cup 120 LV szare",
@@ -1969,7 +2259,12 @@
         "weight_g": 4060,
         "weight_scope": "para butów",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot.",
+        "dimensions_en": "Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm.",
+        "size_en": "27.0 MP",
+        "weight_scope_en": "pair of boots",
+        "description_en": "Sporty ski boots for precise piste skiing. A stiff construction for advanced skiers.\n\nA polyurethane shell, aluminium buckles and a polyester inner liner. Adjustable buckles help secure the foot. The Race Pro 27 variant is size 27.0 MP. Mondopoint: 27.0 cm; outer sole length: 310 mm; cuff height: 32 cm. Weight: 4060 g (pair of boots)."
       },
       "reference": {
         "name": "Rossignol Hero World Cup 120 LV szare",
@@ -2002,7 +2297,12 @@
         "weight_g": 150,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The frame has room for prescription glasses.",
+        "dimensions_en": "Frame width: 18 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "L",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Over-the-glasses goggles with space for prescription glasses and a darker lens for sunny conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The frame has room for prescription glasses. The Clear OTG variant is size L. Frame width: 18 cm; frame height: 10 cm; adjustable strap. Weight: 150 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 500 I",
@@ -2036,7 +2336,12 @@
         "weight_g": 165,
         "weight_scope": "gogle z paskiem",
         "specifications_are_demo": true,
-        "discount_percent": 0
+        "discount_percent": 0,
+        "construction_en": "A polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The frame has room for prescription glasses.",
+        "dimensions_en": "Frame width: 19 cm; frame height: 10 cm; adjustable strap.",
+        "size_en": "XL",
+        "weight_scope_en": "goggles with strap",
+        "description_en": "Over-the-glasses goggles with space for prescription glasses and a darker lens for sunny conditions.\n\nA polycarbonate lens in a flexible polyurethane frame. The adjustable polyester strap has silicone grip sections. The frame has room for prescription glasses. The Clear OTG Wide variant is size XL. Frame width: 19 cm; frame height: 10 cm; adjustable strap. Weight: 165 g (goggles with strap)."
       },
       "reference": {
         "name": "Wedze G 500 I",
@@ -2057,63 +2362,78 @@
   "materials": [
     {
       "code": "wood",
-      "name": "Drewno"
+      "name": "Drewno",
+      "name_en": "Wood"
     },
     {
       "code": "fiberglass",
-      "name": "Włókno szklane"
+      "name": "Włókno szklane",
+      "name_en": "Fibreglass"
     },
     {
       "code": "carbon",
-      "name": "Włókno węglowe"
+      "name": "Włókno węglowe",
+      "name_en": "Carbon fibre"
     },
     {
       "code": "steel",
-      "name": "Stal"
+      "name": "Stal",
+      "name_en": "Steel"
     },
     {
       "code": "aluminium",
-      "name": "Aluminium"
+      "name": "Aluminium",
+      "name_en": "Aluminium"
     },
     {
       "code": "polyethylene",
-      "name": "Polietylen (PE)"
+      "name": "Polietylen (PE)",
+      "name_en": "Polyethylene (PE)"
     },
     {
       "code": "polyamide",
-      "name": "Poliamid (PA)"
+      "name": "Poliamid (PA)",
+      "name_en": "Polyamide (PA)"
     },
     {
       "code": "polyurethane",
-      "name": "Poliuretan (PU)"
+      "name": "Poliuretan (PU)",
+      "name_en": "Polyurethane (PU)"
     },
     {
       "code": "polycarbonate",
-      "name": "Poliwęglan (PC)"
+      "name": "Poliwęglan (PC)",
+      "name_en": "Polycarbonate (PC)"
     },
     {
       "code": "abs",
-      "name": "Tworzywo ABS"
+      "name": "Tworzywo ABS",
+      "name_en": "ABS plastic"
     },
     {
       "code": "eps",
-      "name": "Pianka EPS"
+      "name": "Pianka EPS",
+      "name_en": "EPS foam"
     },
     {
       "code": "eva",
-      "name": "Pianka EVA"
+      "name": "Pianka EVA",
+      "name_en": "EVA foam"
     },
     {
       "code": "polyester",
-      "name": "Poliester"
+      "name": "Poliester",
+      "name_en": "Polyester"
     },
     {
       "code": "rubber",
-      "name": "Guma"
+      "name": "Guma",
+      "name_en": "Rubber"
     },
     {
       "code": "silicone",
-      "name": "Silikon"
+      "name": "Silikon",
+      "name_en": "Silicone"
     }
   ],
   "promotions_note": "Rabaty demonstracyjne Szron od cen regularnych zapisanych w product.price; cena referencyjna źródła pozostaje niezmieniona. Cena po rabacie jest zaokrąglana do groszy przed mnożeniem przez ilość."

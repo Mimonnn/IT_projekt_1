@@ -1,0 +1,10 @@
+.rental-notice{padding:16px 20px;background:#ecefe8;border-left:3px solid #375c4c;line-height:1.6}
+.rental-name{font-size:21px;margin:8px 0;letter-spacing:-.03em}
+.rental-rate{margin:12px 0 20px}
+.rental-status{font-weight:700}
+.rental-status-available{color:#28563c}
+.rental-status-rented,.rental-status-service{color:#80551d}
+.rental-total{font-size:22px;font-weight:700}
+.rental-rate{margin-bottom:12px}
+.filters .errorlist{color:#8c2b20;padding-left:18px;font-size:13px}
+.button:disabled{opacity:.55;cursor:not-allowed}

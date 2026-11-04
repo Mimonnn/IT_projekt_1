@@ -1,15 +1,15 @@
-{% extends 'base.html' %}{% load static %}
+{% extends 'base.html' %}{% load i18n %}{% load static %}
 {% block extra_styles %}<link rel="stylesheet" href="{% static 'css/ski-menu.css' %}?v=4">{% endblock %}
 {% block content %}
-<section class="panorama" data-slideshow aria-label="Zimowe krajobrazy" aria-roledescription="karuzela">
+<section class="panorama" data-slideshow aria-label="{% translate "Zimowe krajobrazy" %}" aria-roledescription="{% translate "karuzela" %}">
   <div class="panorama-slides">
     {% for image, description in hero_slides %}
-    <div class="panorama-slide{% if forloop.first %} is-current{% endif %}" data-slide role="group" aria-roledescription="slajd" aria-label="{{ forloop.counter }} z {{ hero_slides|length }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+    <div class="panorama-slide{% if forloop.first %} is-current{% endif %}" data-slide role="group" aria-roledescription="{% translate "slajd" %}" aria-label="{% blocktranslate with v0=forloop.counter v1=hero_slides|length %}{{ v0 }} z {{ v1 }}{% endblocktranslate %}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
       <img src="{% static image %}" alt="{{ description }}" width="1920" height="1080" {% if forloop.first %}fetchpriority="high"{% endif %}>
     </div>
     {% endfor %}
   </div>
-  <nav class="panorama-nav" aria-label="Kategorie sprzętu">
+  <nav class="panorama-nav" aria-label="{% translate "Kategorie sprzętu" %}">
     {% for menu in category_menus %}
       <div class="ski-menu" data-ski-menu>
         <button class="ski-menu-trigger" type="button" aria-expanded="false" aria-controls="submenu-{{ menu.value }}"><span class="ski-menu-arrow" aria-hidden="true">▸</span> {{ menu.label }}</button>
@@ -21,40 +21,40 @@
       </div>
     {% endfor %}
   </nav>
-  <div class="panorama-copy wrap"><p class="eyebrow">TWOJE TEMPO. TWOJA ZIMA.</p><h1>Wszystko zaczyna się<br>od gór.</h1><a class="button" href="{% url 'catalog:list' %}">Znajdź swój sprzęt <span aria-hidden="true">↗</span></a></div>
+  <div class="panorama-copy wrap"><p class="eyebrow">{% translate "TWOJE TEMPO. TWOJA ZIMA." %}</p><h1>{% translate "Wszystko zaczyna się" %}<br>{% translate "od gór." %}</h1><a class="button" href="{% url 'catalog:list' %}">{% translate "Znajdź swój sprzęt" %} <span aria-hidden="true">↗</span></a></div>
   <div class="panorama-controls wrap" data-controls hidden>
-    <div class="panorama-dots">{% for image, description in hero_slides %}<button type="button" data-slide-button aria-label="Pokaż zdjęcie {{ forloop.counter }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"><span aria-hidden="true">0{{ forloop.counter }}</span></button>{% endfor %}</div>
-    <button class="panorama-pause" type="button" data-pause aria-pressed="false">Wstrzymaj pokaz</button>
+    <div class="panorama-dots">{% for image, description in hero_slides %}<button type="button" data-slide-button aria-label="{% blocktranslate with v0=forloop.counter %}Pokaż zdjęcie {{ v0 }}{% endblocktranslate %}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"><span aria-hidden="true">0{{ forloop.counter }}</span></button>{% endfor %}</div>
+    <button class="panorama-pause" type="button" data-pause aria-pressed="false">{% translate "Wstrzymaj pokaz" %}</button>
   </div>
 </section>
 {% include 'catalog/promotions.html' %}
 {% if featured_products %}
 <section class="showcase wrap" aria-labelledby="showcase-title">
   <div class="showcase-heading">
-    <div><p class="eyebrow">SZRON / WYBRANE NA ZIMĘ</p><h2 id="showcase-title">Dobry styl.<br>Jeszcze lepszy zjazd.</h2></div>
-    <div class="showcase-intro"><p>Sprzęt, który przyciąga wzrok.<br>Wybierz swój kierunek na ten sezon.</p><a class="text-link" href="{% url 'catalog:list' %}">Odkryj cały katalog ↗</a></div>
+    <div><p class="eyebrow">{% translate "SZRON / WYBRANE NA ZIMĘ" %}</p><h2 id="showcase-title">{% translate "Dobry styl." %}<br>{% translate "Jeszcze lepszy zjazd." %}</h2></div>
+    <div class="showcase-intro"><p>{% translate "Sprzęt, który przyciąga wzrok." %}<br>{% translate "Wybierz swój kierunek na ten sezon." %}</p><a class="text-link" href="{% url 'catalog:list' %}">{% translate "Odkryj cały katalog ↗" %}</a></div>
   </div>
   <div class="showcase-grid">
     {% for product in featured_products %}
     <a class="showcase-card" href="{{ product.get_absolute_url }}">
-      <div class="showcase-label"><span>{{ product.get_category_display }}</span><span>0{{ forloop.counter }} / WYBÓR SZRON</span></div>
+      <div class="showcase-label"><span>{{ product.get_category_display }}</span><span>{% blocktranslate with v0=forloop.counter %}0{{ v0 }} / WYBÓR SZRON{% endblocktranslate %}</span></div>
       <div class="showcase-image"><img src="{% static product.image_path %}" alt="{{ product.name }}" width="600" height="650" {% if forloop.first %}fetchpriority="high"{% endif %}></div>
       <div class="showcase-caption"><div><h2>{{ product.name }}</h2><p class="product-prices">{% include 'catalog/price.html' %}</p></div><span class="showcase-arrow" aria-hidden="true">↗</span></div>
-      <span class="showcase-action">Zobacz produkt <span aria-hidden="true">→</span></span>
+      <span class="showcase-action">{% translate "Zobacz produkt" %} <span aria-hidden="true">→</span></span>
     </a>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 <section class="wrap section">
-  <div class="section-heading"><div><p class="eyebrow">ZNAJDŹ SWÓJ RYTM</p><h2>Wybierz swoją trasę</h2></div><p>Na stok przygotuj się po swojemu.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">{% translate "ZNAJDŹ SWÓJ RYTM" %}</p><h2>{% translate "Wybierz swoją trasę" %}</h2></div><p>{% translate "Na stok przygotuj się po swojemu." %}</p></div>
   <div class="category-grid">
-    <a href="{% url 'catalog:list' %}?category=skis"><span>01 / NARTY</span><strong>Precyzja w każdym skręcie</strong><span aria-hidden="true">↗</span></a>
-    <a href="{% url 'catalog:list' %}?category=snowboards"><span>02 / SNOWBOARDY</span><strong>Swoboda na całym stoku</strong><span aria-hidden="true">↗</span></a>
-    <a href="{% url 'catalog:list' %}?category=boots"><span>03 / BUTY</span><strong>Komfort od pierwszego zjazdu</strong><span aria-hidden="true">↗</span></a>
+    <a href="{% url 'catalog:list' %}?category=skis"><span>{% translate "01 / NARTY" %}</span><strong>{% translate "Precyzja w każdym skręcie" %}</strong><span aria-hidden="true">↗</span></a>
+    <a href="{% url 'catalog:list' %}?category=snowboards"><span>{% translate "02 / SNOWBOARDY" %}</span><strong>{% translate "Swoboda na całym stoku" %}</strong><span aria-hidden="true">↗</span></a>
+    <a href="{% url 'catalog:list' %}?category=boots"><span>{% translate "03 / BUTY" %}</span><strong>{% translate "Komfort od pierwszego zjazdu" %}</strong><span aria-hidden="true">↗</span></a>
   </div>
 </section>
-<section class="rental-banner wrap"><div><p class="eyebrow">JESZCZE WIĘCEJ MOŻLIWOŚCI</p><h2>Własny sprzęt czy wypożyczenie?</h2><p>Rozwijamy także wypożyczalnię. Rezerwacje terminowe udostępnimy w kolejnym etapie.</p></div><span class="coming-soon">W przygotowaniu</span></section>
+<section class="rental-banner wrap"><div><p class="eyebrow">{% translate "JESZCZE WIĘCEJ MOŻLIWOŚCI" %}</p><h2>{% translate "Własny sprzęt czy wypożyczenie?" %}</h2><p>{% translate "Wybierz sprzęt, sprawdź dostępność i zarezerwuj termin wypożyczenia online." %}</p></div><a class="coming-soon" href="{% url 'rentals:list' %}">{% translate "Przejdź do wypożyczalni" %} ↗</a></section>
 {% endblock %}
-{% block scripts %}<script src="{% static 'js/slideshow.js' %}" defer></script><script src="{% static 'js/ski-menu.js' %}?v=3" defer></script>{% endblock %}
+{% block scripts %}<script src="{% static 'js/slideshow.js' %}?v=2" defer></script><script src="{% static 'js/ski-menu.js' %}?v=3" defer></script>{% endblock %}
 

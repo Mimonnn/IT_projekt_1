@@ -1,17 +1,18 @@
-{% extends 'base.html' %}{% load static %}
-{% block title %}Moje konto — Szron{% endblock %}
+{% extends 'base.html' %}{% load i18n %}{% load static %}
+{% block title %}{% translate "Moje konto — Szron" %}{% endblock %}
 {% block extra_styles %}<link rel="stylesheet" href="{% static 'css/accounts.css' %}?v=2">{% endblock %}
 {% block content %}
 <section class="wrap section account-section">
-  <p class="eyebrow">TWOJE MIEJSCE W SZRON</p><h1 class="page-title">Moje konto</h1>
-  <p class="intro">Witaj, <strong>{{ user.username }}</strong>.</p>
-  <nav class="account-tabs" aria-label="Zakładki konta">
-    <a href="{% url 'accounts:edit_profile' %}" {% if active_tab == 'profile' %}aria-current="page"{% endif %}>Dane profilu</a>
-    <a href="{% url 'accounts:orders' %}" {% if active_tab == 'orders' %}aria-current="page"{% endif %}>Aktualne zamówienia</a>
-    <a href="{% url 'accounts:history' %}" {% if active_tab == 'history' %}aria-current="page"{% endif %}>Historia zakupów</a>
-    <a href="{% url 'accounts:returns' %}" {% if active_tab == 'returns' %}aria-current="page"{% endif %}>Zwroty</a>
-    <a href="{% url 'accounts:favorites' %}" {% if active_tab == 'favorites' %}aria-current="page"{% endif %}>Ulubione</a>
-    <a href="{% url 'accounts:cart' %}" {% if active_tab == 'cart' %}aria-current="page"{% endif %}>Koszyk</a>
+  <p class="eyebrow">{% translate "TWOJE MIEJSCE W SZRON" %}</p><h1 class="page-title">{% translate "Moje konto" %}</h1>
+  <p class="intro">{% translate "Witaj," %} <strong>{{ user.username }}</strong>.</p>
+  <nav class="account-tabs" aria-label="{% translate "Zakładki konta" %}">
+    <a href="{% url 'accounts:edit_profile' %}" {% if active_tab == 'profile' %}aria-current="page"{% endif %}>{% translate "Dane profilu" %}</a>
+    <a href="{% url 'accounts:orders' %}" {% if active_tab == 'orders' %}aria-current="page"{% endif %}>{% translate "Aktualne zamówienia" %}</a>
+    <a href="{% url 'accounts:history' %}" {% if active_tab == 'history' %}aria-current="page"{% endif %}>{% translate "Historia zakupów" %}</a>
+    <a href="{% url 'rentals:mine' %}" {% if active_tab == 'rentals' %}aria-current="page"{% endif %}>{% translate "Moje wypożyczenia" %}</a>
+    <a href="{% url 'accounts:returns' %}" {% if active_tab == 'returns' %}aria-current="page"{% endif %}>{% translate "Zwroty" %}</a>
+    <a href="{% url 'accounts:favorites' %}" {% if active_tab == 'favorites' %}aria-current="page"{% endif %}>{% translate "Ulubione" %}</a>
+    <a href="{% url 'accounts:cart' %}" {% if active_tab == 'cart' %}aria-current="page"{% endif %}>{% translate "Koszyk" %}</a>
   </nav>
   <div class="account-panel">{% block account_content %}{% endblock %}</div>
 </section>

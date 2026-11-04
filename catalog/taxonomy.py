@@ -1,63 +1,64 @@
+from django.utils.translation import gettext_lazy as _
 """Wspólne definicje podkategorii dla modelu, formularzy i menu."""
 from django.db.models import Q, TextChoices
 
 
 class SkiSubcategory(TextChoices):
-    DOWNHILL = "downhill", "Narty zjazdowe (trasowe)"
-    ALL_MOUNTAIN = "all_mountain", "Narty all-mountain"
-    FREERIDE = "freeride", "Narty freeride"
-    FREESTYLE = "freestyle", "Narty freestyle"
-    TOURING = "touring", "Narty skiturowe"
-    CROSS_COUNTRY = "cross_country", "Narty biegowe"
-    RACE = "race", "Narty sportowe / race"
+    DOWNHILL = "downhill", _("Narty zjazdowe (trasowe)")
+    ALL_MOUNTAIN = "all_mountain", _("Narty all-mountain")
+    FREERIDE = "freeride", _("Narty freeride")
+    FREESTYLE = "freestyle", _("Narty freestyle")
+    TOURING = "touring", _("Narty skiturowe")
+    CROSS_COUNTRY = "cross_country", _("Narty biegowe")
+    RACE = "race", _("Narty sportowe / race")
 
 
 SUBCATEGORIES = {
     "skis": SkiSubcategory.choices,
     "snowboards": [
-        ("all_mountain", "All-mountain"),
-        ("freestyle", "Freestyle"),
-        ("freeride", "Freeride"),
-        ("carving", "Carvingowe"),
+        ("all_mountain", _("All-mountain")),
+        ("freestyle", _("Freestyle")),
+        ("freeride", _("Freeride")),
+        ("carving", _("Carvingowe")),
     ],
     "bindings": [
-        ("alpine", "Narciarskie zjazdowe"),
-        ("touring", "Narciarskie skiturowe"),
-        ("straps", "Snowboardowe paskowe"),
-        ("quick_entry", "Snowboardowe z szybkim wpinaniem"),
+        ("alpine", _("Narciarskie zjazdowe")),
+        ("touring", _("Narciarskie skiturowe")),
+        ("straps", _("Snowboardowe paskowe")),
+        ("quick_entry", _("Snowboardowe z szybkim wpinaniem")),
     ],
     "helmets": [
-        ("classic", "Klasyczne"),
-        ("visor", "Z wizjerem"),
-        ("freestyle", "Freestyle"),
+        ("classic", _("Klasyczne")),
+        ("visor", _("Z wizjerem")),
+        ("freestyle", _("Freestyle")),
     ],
     "goggles": [
-        ("sunny", "Na słoneczne dni"),
-        ("cloudy", "Na pochmurne dni"),
-        ("photochromic", "Fotochromowe"),
-        ("otg", "OTG"),
+        ("sunny", _("Na słoneczne dni")),
+        ("cloudy", _("Na pochmurne dni")),
+        ("photochromic", _("Fotochromowe")),
+        ("otg", _("OTG")),
     ],
     "snowboard_boots": [
-        ("all_mountain", "All-mountain"),
-        ("freestyle", "Freestyle"),
-        ("freeride", "Freeride"),
+        ("all_mountain", _("All-mountain")),
+        ("freestyle", _("Freestyle")),
+        ("freeride", _("Freeride")),
     ],
     "boots": [
-        ("alpine", "Zjazdowe / trasowe"),
-        ("all_mountain_freeride", "All-mountain / freeride"),
-        ("touring", "Skiturowe"),
-        ("race", "Sportowe / race"),
+        ("alpine", _("Zjazdowe / trasowe")),
+        ("all_mountain_freeride", _("All-mountain / freeride")),
+        ("touring", _("Skiturowe")),
+        ("race", _("Sportowe / race")),
     ],
 }
 
 ALL_LABELS = {
-    "skis": "Wszystkie narty",
-    "snowboards": "Wszystkie deski snowboardowe",
-    "bindings": "Wszystkie wiązania",
-    "helmets": "Wszystkie kaski",
-    "goggles": "Wszystkie gogle",
-    "snowboard_boots": "Wszystkie buty snowboardowe",
-    "boots": "Wszystkie buty narciarskie",
+    "skis": _("Wszystkie narty"),
+    "snowboards": _("Wszystkie deski snowboardowe"),
+    "bindings": _("Wszystkie wiązania"),
+    "helmets": _("Wszystkie kaski"),
+    "goggles": _("Wszystkie gogle"),
+    "snowboard_boots": _("Wszystkie buty snowboardowe"),
+    "boots": _("Wszystkie buty narciarskie"),
 }
 
 

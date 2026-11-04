@@ -1,38 +1,46 @@
-{% load static %}
+{% load i18n %}{% load static %}
 <!doctype html>
-<html lang="pl">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Szron — sprzęt zimowy. Znajdź narty, buty i snowboard na swój kolejny wyjazd.">
-  <title>{% block title %}Szron — bliżej gór{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261031-5">
+  <meta name="description" content="{% translate "Szron — sprzęt zimowy. Znajdź narty, buty i snowboard na swój kolejny wyjazd." %}">
+  <title>{% block title %}{% translate "Szron — bliżej gór" %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261104-1">
   {% block extra_styles %}{% endblock %}
 </head>
 <body>
-  <a class="skip-link" href="#main">Przejdź do treści</a>
-  <div class="topbar">Zima zaczyna się od dobrego sprzętu.</div>
+  <a class="skip-link" href="#main">{% translate "Przejdź do treści" %}</a>
+  <div class="topbar">{% translate "Zima zaczyna się od dobrego sprzętu." %}</div>
   <header class="header wrap">
-    <a class="logo" href="{% url 'catalog:home' %}" aria-label="Szron — strona główna"><span aria-hidden="true">△</span> SZRON<span class="logo-dot">.</span></a>
-    <nav aria-label="Menu główne">
-      <a href="{% url 'catalog:home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>Strona główna</a>
-      <a href="{% url 'catalog:list' %}" {% if request.resolver_match.url_name == 'list' or request.resolver_match.url_name == 'detail' %}aria-current="page"{% endif %}>Sprzęt</a>
+    <a class="logo" href="{% url 'catalog:home' %}" aria-label="{% translate "Szron — strona główna" %}"><span aria-hidden="true">△</span> SZRON<span class="logo-dot">.</span></a>
+    <nav aria-label="{% translate "Menu główne" %}">
+      <a href="{% url 'catalog:home' %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>{% translate "Strona główna" %}</a>
+      <a href="{% url 'catalog:list' %}" {% if request.resolver_match.namespace == 'catalog' and request.resolver_match.url_name == 'list' or request.resolver_match.namespace == 'catalog' and request.resolver_match.url_name == 'detail' %}aria-current="page"{% endif %}>{% translate "Sprzęt" %}</a>
+      <a href="{% url 'rentals:list' %}" {% if request.resolver_match.namespace == 'rentals' and request.resolver_match.url_name != 'mine' %}aria-current="page"{% endif %}>{% translate "Wypożyczalnia" %}</a>
       {% if user.is_authenticated %}
-        <a href="{% url 'accounts:profile' %}" {% if request.resolver_match.namespace == 'accounts' %}aria-current="page"{% endif %}>Moje konto</a>
-        <a href="{% url 'accounts:cart' %}">Koszyk</a>
-        {% if user.is_staff %}<a class="admin-link" href="{% url 'admin:index' %}">Panel administratora <span aria-hidden="true">↗</span></a>{% endif %}
-        <form method="post" action="{% url 'accounts:logout' %}" class="nav-form">{% csrf_token %}<button class="nav-button" type="submit">Wyloguj się</button></form>
+        <a href="{% url 'accounts:profile' %}" {% if request.resolver_match.namespace == 'accounts' or request.resolver_match.url_name == 'mine' %}aria-current="page"{% endif %}>{% translate "Moje konto" %}</a>
+        <a href="{% url 'accounts:cart' %}">{% translate "Koszyk" %}</a>
+        {% if user.is_staff %}<a class="admin-link" href="{% url 'admin:index' %}">{% translate "Panel administratora" %} <span aria-hidden="true">↗</span></a>{% endif %}
+        <form method="post" action="{% url 'accounts:logout' %}" class="nav-form">{% csrf_token %}<button class="nav-button" type="submit">{% translate "Wyloguj się" %}</button></form>
       {% else %}
-        <a class="admin-link" href="{% url 'accounts:login' %}">Zaloguj się</a>
+        <a class="admin-link" href="{% url 'accounts:login' %}">{% translate "Zaloguj się" %}</a>
       {% endif %}
     </nav>
+    <form class="language-switch" action="{% url 'set_language' %}" method="post" aria-label="{% translate 'Język strony' %}">
+      {% csrf_token %}<input name="next" type="hidden" value="{{ request.get_full_path }}">
+      <button type="submit" name="language" value="pl" lang="pl" aria-pressed="{% if LANGUAGE_CODE == 'pl' %}true{% else %}false{% endif %}"><img src="{% static 'img/flags/pl.svg' %}" alt="" width="24" height="16"> Polski</button>
+      <button type="submit" name="language" value="en" lang="en" aria-pressed="{% if LANGUAGE_CODE == 'en' %}true{% else %}false{% endif %}"><img src="{% static 'img/flags/en.svg' %}" alt="" width="24" height="16"> English</button>
+    </form>
   </header>
   <main id="main">
     {% if messages %}<div class="wrap flash-messages" aria-live="polite">{% for message in messages %}<p class="flash-message {{ message.tags }}" role="status">{{ message }}</p>{% endfor %}</div>{% endif %}
     {% block content %}{% endblock %}
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>Dobry sprzęt. Twoje tempo. Twoja zima.</p><span>Projekt demonstracyjny · {% now 'Y' %}</span></div>
-  <nav class="wrap footer-links" aria-label="Informacje o sklepie"><a href="{% url 'catalog:terms' %}">Regulamin</a><a href="{% url 'catalog:contact' %}">Kontakt i pomoc</a><a href="{% url 'catalog:stores' %}">Sklepy stacjonarne</a></nav></footer>
+  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="{% url 'catalog:home' %}">△ SZRON.</a><p>{% translate "Dobry sprzęt. Twoje tempo. Twoja zima." %}</p><span>{% translate "Projekt demonstracyjny ·" %} {% now 'Y' %}</span></div>
+  <nav class="wrap footer-links" aria-label="{% translate "Informacje o sklepie" %}"><a href="{% url 'catalog:terms' %}">{% translate "Regulamin" %}</a><a href="{% url 'catalog:contact' %}">{% translate "Kontakt i pomoc" %}</a><a href="{% url 'catalog:stores' %}">{% translate "Sklepy stacjonarne" %}</a></nav></footer>
+  {{ ui_strings|json_script:"ui-strings" }}
   {% block scripts %}{% endblock %}
 </body>
 </html>

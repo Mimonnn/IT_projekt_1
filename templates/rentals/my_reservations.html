@@ -1,0 +1,18 @@
+{% extends 'accounts/profile_base.html' %}{% load i18n %}
+{% block account_content %}
+<h2>{% translate "Moje wypożyczenia" %}</h2>
+<p>{% translate "Tutaj znajdziesz swoje rezerwacje sprzętu. Rezerwację możesz anulować przed wydaniem sprzętu, do dnia odbioru włącznie." %}</p>
+{% for reservation in reservations %}
+<article class="account-empty">
+  <h3>{% translate "Rezerwacja" %} #{{ reservation.pk }} — {{ reservation.product_name }}</h3>
+  <p>{% translate "Rozmiar" %}: {{ reservation.display_size }}</p>
+  <p>{% translate "Data odbioru" %}: {{ reservation.start_date|date:"Y-m-d" }} · {% translate "Data zwrotu" %}: {{ reservation.end_date|date:"Y-m-d" }}</p>
+  <p>{{ reservation.get_status_display }} · {{ reservation.daily_rate }} {% translate "zł" %} / {% translate "doba" %}</p>
+  <p><strong>{% blocktranslate with days=reservation.days total=reservation.total_price %}Za {{ days }} dni: {{ total }} zł{% endblocktranslate %}</strong></p>
+  {% if reservation.issued_at %}<p>{% translate "Wydano" %}: {{ reservation.issued_at|date:"Y-m-d H:i" }}</p>{% endif %}
+  {% if reservation.returned_at %}<p>{% translate "Zwrócono" %}: {{ reservation.returned_at|date:"Y-m-d H:i" }}</p>{% endif %}
+  {% if reservation.is_overdue %}<p><strong>{% translate "Termin zwrotu minął. Skontaktuj się z wypożyczalnią." %}</strong></p>{% endif %}
+  {% if reservation.can_customer_cancel %}<form method="post" action="{% url 'rentals:cancel' reservation.pk %}">{% csrf_token %}<button class="button" type="submit">{% translate "Anuluj rezerwację" %}</button></form>{% endif %}
+</article>
+{% empty %}<div class="account-empty"><p>{% translate "Nie masz jeszcze rezerwacji sprzętu." %}</p><a class="button" href="{% url 'rentals:list' %}">{% translate "Przejdź do wypożyczalni" %}</a></div>{% endfor %}
+{% endblock %}

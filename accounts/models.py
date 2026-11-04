@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from django.db import models
@@ -6,13 +7,13 @@ from django.core.validators import RegexValidator
 
 class User(AbstractUser):
     """Własny model od początku ułatwi późniejszą rozbudowę kont klientów."""
-    phone = models.CharField("numer telefonu", max_length=25, blank=True, validators=[RegexValidator(
-        regex=r"\A\+?[0-9][0-9 ()-]{5,23}[0-9]\Z", message="Podaj numer telefonu złożony z 7–25 znaków: cyfr, spacji, nawiasów, myślników i opcjonalnego + na początku.",
+    phone = models.CharField(_("numer telefonu"), max_length=25, blank=True, validators=[RegexValidator(
+        regex=r"\A\+?[0-9][0-9 ()-]{5,23}[0-9]\Z", message=_("Podaj numer telefonu złożony z 7–25 znaków: cyfr, spacji, nawiasów, myślników i opcjonalnego + na początku."),
     )])
 
     class Meta(AbstractUser.Meta):
-        verbose_name = "użytkownik"
-        verbose_name_plural = "użytkownicy"
+        verbose_name = _("użytkownik")
+        verbose_name_plural = _("użytkownicy")
 
 
 class Favorite(models.Model):

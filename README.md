@@ -1,8 +1,9 @@
 # Szron — sklep narciarski z wypożyczalnią
 
-Pierwszy etap: lokalna aplikacja Django z PostgreSQL, stroną główną, katalogiem,
-szczegółami produktu, kontami klientów, koszykiem oraz panelem administratora.
-„Szron” jest nazwą roboczą. Składanie zamówień i rezerwacje będą rozwijane w kolejnych etapach.
+Lokalna aplikacja Django z PostgreSQL: sklep i wypożyczalnia sprzętu zimowego,
+katalog PL/EN, konta klientów, koszyk, rezerwacje oraz wydania i zwroty obsługiwane
+w panelu administratora. „Szron” jest nazwą roboczą. Składanie zamówień sprzedażowych
+pozostaje kolejnym etapem.
 
 ## Pobranie obecnej wersji na drugim komputerze
 
@@ -16,6 +17,7 @@ git pull --ff-only origin main
 ./.venv/Scripts/python -m pip install -r requirements.txt
 ./.venv/Scripts/python manage.py migrate
 ./.venv/Scripts/python manage.py seed_demo
+./.venv/Scripts/python manage.py seed_rental_demo
 ./.venv/Scripts/python manage.py check
 powershell -ExecutionPolicy Bypass -File ./start.ps1
 ```
@@ -127,6 +129,7 @@ z pierwszego komputera, jeżeli Twój serwer działa na 5432.
 ```powershell
 ./.venv/Scripts/python manage.py migrate
 ./.venv/Scripts/python manage.py seed_demo
+./.venv/Scripts/python manage.py seed_rental_demo
 ./.venv/Scripts/python manage.py createsuperuser
 ./start.ps1
 ```
@@ -165,6 +168,62 @@ Git synchronizuje kod, migracje i definicje danych demonstracyjnych, a nie zawar
 Testy korzystają z PostgreSQL i tworzą oraz usuwają osobną bazę `test_szron`;
 nie uruchamiaj ich na bazie produkcyjnej ani na bazie z taką nazwą zawierającej ważne dane.
 Przy zmianie modeli twórz migracje przez `manage.py makemigrations` i dodawaj je do commita.
+
+## Język polski i angielski
+
+W nagłówku sklepu i administracji są przyciski z flagami „Polski” / „English”.
+Zmiana języka odbywa się standardowym formularzem Django z ochroną CSRF;
+zachowuje bieżący adres i filtry. Wybór jest zapisany w ciasteczku przeglądarki
+na rok, także po wylogowaniu. Język bazowy to polski; bez zapisanego wyboru Django
+uwzględnia preferowany język przeglądarki. Nie zmieniamy adresów URL, identyfikatorów
+kategorii, materiałów ani wartości rozmiaru przesyłanych w filtrach.
+
+Przetłumaczono szablony, komunikaty, formularze, etykiety kategorii i podkategorii,
+teksty JavaScript, informacje o sklepie i interfejs administratora. Kwoty nadal
+są w PLN; zmiana języka nie przelicza cen ani rabatów. Nazwy modeli i nazwy własne
+(np. ulice i miasta) pozostają niezmienione.
+
+61 ofert demo ma angielskie opisy, konstrukcję, wymiary, zakres masy i rozmiary;
+15 materiałów ma angielskie nazwy. Dane źródłowe po polsku pozostają w dotychczasowych
+polach. Pola z końcówką `_en` można edytować w panelu administratora. Prezentacja
+używa właściwości `display_*`; jeżeli własny produkt nie ma tłumaczenia, pokazuje
+tekst źródłowy. Dodając własny produkt lub materiał, uzupełnij także wersję angielską.
+
+Po pobraniu zmian na drugim komputerze wykonaj:
+
+```powershell
+./.venv/Scripts/python manage.py migrate
+```
+
+Migracja `0012` dodaje pola angielskie, a `0013` uzupełnia znane oferty demo
+na podstawie zamrożonych danych. Sprawdza zgodność tekstu źródłowego dla każdego
+pola i zachowuje własne edycje oraz istniejące angielskie treści. Na pustej bazie
+`seed_demo` tworzy od razu obie wersje językowe. Zwykłe wywołanie nadal nie
+nadpisuje późniejszych edycji. Jawne odświeżenie angielskich treści demo:
+
+```powershell
+./.venv/Scripts/python manage.py seed_demo --refresh-translations
+```
+
+Ta opcja zmienia wyłącznie angielskie treści znanych ofert i materiałów. Zachowuje
+polskie opisy, ceny, rabaty, stany, zdjęcia i przypisania materiałów; pomija oferty
+przeklasyfikowane do innej kategorii. `--refresh-specs` odświeża teraz parametry
+i opisy w obu językach, a `--refresh-demo` pełny zestaw danych w obu językach.
+
+Tłumaczenia interfejsu korzystają z `LocaleMiddleware`, `gettext` / `gettext_lazy`
+oraz znaczników `{% translate %}` i `{% blocktranslate %}`. Źródło tłumaczeń jest
+w `locale/en/LC_MESSAGES/django.po`, a skompilowany `django.mo` należy przechowywać
+w Git razem z nim, aby druga kopia działała bez instalowania narzędzi tłumaczeniowych.
+Po zmianach interfejsu, z zainstalowanym GNU gettext, wykonaj:
+
+```powershell
+./.venv/Scripts/python manage.py makemessages -l en --no-wrap --ignore .venv --ignore work
+# Uzupełnij angielskie msgstr w django.po, następnie:
+./.venv/Scripts/python manage.py compilemessages -l en --ignore .venv --ignore work
+```
+
+Nowe funkcje wypożyczalni przygotowujemy od początku w obu językach. Katalog,
+formularze i koszyk nie wymagają zewnętrznego serwisu automatycznych tłumaczeń.
 
 ## Logowanie, konto klienta i koszyk
 
@@ -319,11 +378,12 @@ użytkownika nie zostały zweryfikowane.
 - `config/` — ustawienia, adresy i uruchamianie aplikacji.
 - `accounts/` — konta, logowanie i rejestracja, zakładki profilu oraz zapisany w bazie koszyk.
 - `catalog/` — produkty, widoki, panel administratora, migracje i testy.
+- `rentals/` — osobne egzemplarze wypożyczalni, ich katalog, administracja i dane demo.
 - `templates/` — wspólna rama HTML i strony katalogu.
 - `static/` — style i własne ilustracje SVG. Strona nie wymaga zewnętrznych fontów ani usług.
 
 Ceny są przechowywane jako liczby dziesiętne, a `sale_stock` opisuje wyłącznie sztuki
-na sprzedaż. Przyszłe egzemplarze wypożyczalni będą miały osobną ewidencję.
+na sprzedaż. Egzemplarze `rentals.RentalItem` mają osobną ewidencję.
 Produkty można ukryć bez usuwania ich z bazy. Uprawnienia panelu sprawdza backend Django.
 
 ## Podkategorie sprzętu
@@ -376,3 +436,138 @@ wymaga osobnej konfiguracji HTTPS, hostów, plików statycznych i ustawień bezp
 Jeżeli połączenie z bazą nie działa, sprawdź, czy PostgreSQL jest uruchomiony,
 port w `.env` jest poprawny oraz czy wpisane konto ma dostęp do wskazanej bazy.
 Brak `DJANGO_SECRET_KEY` oznacza, że trzeba dokończyć konfigurację `.env`.
+
+
+## Podstawa wypożyczalni
+
+Zakładka **Wypożyczalnia** (`/wypozyczalnia/`) działa po polsku i angielsku.
+Pokazuje poszczególne fizyczne egzemplarze sprzętu, ich rozmiary, stawki dobowe
+i bieżące statusy: na stanie, wypożyczony lub do serwisu. Kategorię, model i rozmiar wybiera się z rozwijanych list.
+Modele wynikają z widocznych egzemplarzy danej kategorii, a rozmiary dodatkowo
+z wybranego modelu. Listy aktualizują się od razu po zmianie wyboru, bez duplikatów.
+Bez JavaScript opcje odświeża przycisk „Pokaż sprzęt”. Ukryte egzemplarze i nieaktywne produkty
+nie są publikowane. Notatki techniczne pozostają wyłącznie w administracji.
+
+W panelu administratora otwórz **Wypożyczalnia → Egzemplarze do wypożyczenia**.
+Każda sztuka ma unikalny numer ewidencyjny (wielkie litery, cyfry i myślniki),
+powiązanie z produktem, własny rozmiar (także opcjonalnie po angielsku), dodatnią
+stawkę za dobę w PLN, status i widoczność. Uprawnienia Django kontrolują odczyt
+i edycję; samo `is_staff` nie nadaje praw do zarządzania egzemplarzami.
+Powiązanego produktu nie można usunąć — można go ukryć.
+
+Na drugim komputerze, po pobraniu zmian i aktywowaniu środowiska:
+
+```powershell
+./.venv/Scripts/python manage.py migrate
+./.venv/Scripts/python manage.py seed_demo
+./.venv/Scripts/python manage.py seed_rental_demo
+```
+
+Ostatnia komenda tworzy 10 demonstracyjnych egzemplarzy: 4 pary nart, 4 deski
+i 2 kaski, w tym jeden egzemplarz do serwisu. Stawki 15–75 zł/dobę są fikcyjne.
+Powtórne uruchomienie zachowuje wszystkie edycje istniejących egzemplarzy,
+ich statusy i widoczność. Nie kopiuje lokalnej bazy ani kont i nie zmienia
+cen, rabatów ani liczby sztuk na sprzedaż. Wymaga wcześniejszego `seed_demo`.
+
+Rezerwacje i sprawdzanie terminów działają zgodnie z opisem poniżej. Wydania i zwroty działają zgodnie z opisem poniżej i automatycznie aktualizują
+status egzemplarza; sama etykieta „na stanie” nie gwarantuje dostępności
+w wybranym terminie — należy podać daty i potwierdzić rezerwację.
+
+
+## Rezerwowanie sprzętu
+
+Zdjęcie, nazwa i odnośnik **Zobacz szczegóły** prowadzą do publicznej karty
+egzemplarza `/wypozyczalnia/<id>/`. Karta zawiera opis modelu, zdjęcie, materiały,
+konstrukcję, wymiary i masę, a osobno rozmiar egzemplarza i jego stawkę dobową.
+Opis i parametry są wspólne ze sprzedażą; nie trzeba ich wpisywać ponownie.
+Przycisk **Zarezerwuj** pozostaje na liście i jest także w szczegółach, jeśli
+sprzęt jest dostępny. Wybrane daty są przekazywane dalej, a powrót zachowuje
+filtry katalogu. W szczegółach można ponownie sprawdzić cenę i dostępność
+na inne daty. Czytanie nie wymaga logowania; potwierdzenie rezerwacji wymaga konta.
+
+1. W **Wypożyczalni** wybierz kategorię, model, rozmiar oraz daty odbioru i zwrotu.
+2. Kliknij **Pokaż sprzęt**. Po podaniu poprawnych dat lista zawiera wyłącznie
+   egzemplarze na stanie bez kolidujących rezerwacji i pokazuje cenę całego okresu.
+3. Wybierz **Zarezerwuj**. Zaloguj się, jeżeli trzeba, sprawdź termin i koszt,
+   a następnie kliknij **Potwierdź rezerwację**. Możesz też najpierw wejść
+   w wybrany egzemplarz i sprawdzić daty przyciskiem **Sprawdź cenę i dostępność**.
+4. Rezerwacja jest widoczna w **Moje konto → Moje wypożyczenia**.
+   Anulowanie jest możliwe do dnia odbioru włącznie i zwalnia termin.
+
+Liczymy oba dni: od 10 do 12 listopada to 3 dni, a odbiór i zwrot tego samego
+dnia to 1 dzień. Po zwrocie 12 listopada następna rezerwacja może zaczynać się
+13 listopada. Daty w przeszłości i odwrócony zakres są odrzucane. Nie pobieramy
+płatności online; są to demonstracyjne rezerwacje projektu.
+
+Podsumowanie przed potwierdzeniem pokazuje dokładne daty. Zmiana dat w formularzu
+blokuje przycisk potwierdzenia do ponownego sprawdzenia ceny i dostępności.
+Bez JavaScript potwierdzenie dotyczy dat wyraźnie pokazanych w podsumowaniu.
+
+Rezerwacja dotyczy konkretnego `RentalItem`. Cena dobowa, nazwa i rozmiar są
+kopiowane przy zapisie; późniejsze zmiany cennika i katalogu nie zmieniają historii.
+Serwer ponownie sprawdza dostępność i stawkę przy potwierdzeniu. Jeżeli stawka
+się zmieniła, trzeba ponownie sprawdzić cenę. Powtórzenie tego samego potwierdzenia
+nie tworzy drugiej identycznej aktywnej rezerwacji tego klienta.
+
+Zapis i anulowanie działają w transakcji z blokadą wiersza egzemplarza PostgreSQL.
+Chroni to przed jednoczesnym rezerwowaniem tego samego terminu przez dwa konta.
+Wszystkie przyszłe zapisy rezerwacji muszą korzystać z `rentals.services`;
+zwykłe ręczne zapisy ORM/SQL nie zapewniają kontroli kolizji. Ograniczenia bazy
+pilnują kolejności dat, dodatniej stawki i dozwolonych statusów. Potwierdzenie
+rezerwacji nie zmniejsza `sale_stock` i nie zmienia statusu sprzętu na wypożyczony.
+
+Administrator widzi rezerwacje w **Wypożyczalnia → Rezerwacje**.
+Historia jest tylko do odczytu; uprawnienie zmiany rezerwacji pozwala użyć akcji
+**Anuluj zaznaczone rezerwacje**, z tym samym ograniczeniem terminu anulowania.
+Rezerwacji nie usuwa się z panelu. Egzemplarze i konta z historią są chronione
+przed usunięciem. Zmiana stanu sprzętu na „do serwisu” blokuje nowe rezerwacje,
+ale nie anuluje istniejących — wymagają osobnego rozpatrzenia przez obsługę.
+
+Na drugim komputerze po pobraniu kodu uruchom `manage.py migrate`.
+Migracja `rentals/0002_reservation.py` tworzy tabelę; nie dodaje przykładowych
+rezerwacji ani kont. Nie potrzeba nowych zależności ani ponownego odświeżania
+katalogu. Wydanie i potwierdzenie faktycznego zwrotu opisano w kolejnym rozdziale.
+
+
+## Wydawanie i przyjmowanie zwrotów
+
+W panelu **Wypożyczalnia → Rezerwacje** zaznacz rezerwację i wybierz akcję:
+
+- **Wydaj sprzęt z zaznaczonych rezerwacji** — zmienia rezerwację na
+  „Wypożyczony”, a egzemplarz na „Wypożyczony”. Zapisuje datę i pracownika.
+- **Przyjmij zwrot — sprzęt na stan** — kończy wypożyczenie statusem „Zwrócono”
+  i przywraca egzemplarz na stan.
+- **Przyjmij zwrot — sprzęt do serwisu** — kończy wypożyczenie i blokuje
+  egzemplarz do czasu serwisu. Uwagi zapisz w wewnętrznych notatkach egzemplarza.
+
+Wydanie jest możliwe tylko dla potwierdzonej rezerwacji w jej okresie, gdy sprzęt
+jest na stanie, widoczny i nie ma innego blokującego wypożyczenia/rezerwacji.
+Zwrot przyjmuje się tylko dla wydanego sprzętu; może nastąpić wcześniej lub później
+niż planowano. Faktyczne daty i obsługujących pracowników zapisuje serwer.
+Każdy zaznaczony rekord jest sprawdzany osobno; przy błędnym stanie panel pokazuje
+komunikat, a ten rekord pozostaje bez zmian.
+
+Operacje wymagają aktywnego konta `is_staff` oraz obu uprawnień:
+`rentals.change_reservation` i `rentals.change_rentalitem` (superadministrator
+ma je domyślnie). Sam dostęp do panelu lub odczyt rezerwacji nie wystarcza.
+Historia pozostaje tylko do odczytu, zmiany wymagają POST i CSRF.
+Podczas trwającego wypożyczenia status i dane identyfikujące egzemplarz są
+w jego formularzu tylko do odczytu — należy użyć akcji zwrotu.
+
+Klient w **Moje konto → Moje wypożyczenia** widzi status oraz daty faktycznego
+wydania i zwrotu. Po wydaniu nie może anulować rezerwacji. Gdy minie termin
+zwrotu, widzi komunikat o opóźnieniu. Niezwrócony sprzęt nadal blokuje nowe
+rezerwacje, również na dalsze terminy. Cena nie jest automatycznie zmieniana
+przy wcześniejszym ani opóźnionym zwrocie; dopłat i rozliczeń jeszcze nie ma.
+
+Wszystkie operacje przechodzą przez `rentals.services`, w transakcji blokującej
+najpierw egzemplarz, potem rezerwację. Powtórzone wydanie lub identyczny zwrot
+nie zmienia dat pierwotnej operacji. Próba zmiany wyniku już zapisanego zwrotu
+jest odrzucana; dalszy serwis obsługuje się w ewidencji egzemplarzy.
+PostgreSQL dodatkowo blokuje dwa niezwrócone wydania jednego egzemplarza oraz
+niespójne statusy, daty i dane pracowników. Magazyn sprzedaży pozostaje niezależny.
+
+Na drugim komputerze po pobraniu uruchom `manage.py migrate`:
+`rentals/0003_remove_reservation_reservation_status_valid_and_more.py`
+dodaje historię operacji, nowe statusy i ograniczenia. Zachowuje dotychczasowe
+rezerwacje; nie tworzy kont ani demonstracyjnych wydań. Nowe zależności nie są wymagane.

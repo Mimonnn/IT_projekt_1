@@ -1,4 +1,5 @@
 (() => {
+  const ui = JSON.parse(document.querySelector('#ui-strings').textContent);
   const category = document.querySelector('#category');
   const group = document.querySelector('[data-subcategory-filter]');
   const data = document.querySelector('#subcategory-options');
@@ -8,7 +9,7 @@
   function update(reset = false) {
     const choices = options[category.value] || [];
     const selected = reset ? '' : subcategory.value;
-    subcategory.replaceChildren(new Option('Wszystkie podkategorie', ''));
+    subcategory.replaceChildren(new Option(ui.allSubcategories, ''));
     choices.forEach(([value, label]) => subcategory.add(new Option(label, value)));
     subcategory.value = choices.some(([value]) => value === selected) ? selected : '';
     group.hidden = choices.length === 0;
@@ -19,9 +20,9 @@
   function updateSpecifications(reset = false) {
     const rows = specifications.filter(item => (!category.value || item.category === category.value) &&
       (!subcategory.value || item.subcategory === subcategory.value));
-    const sizes = [...new Set(rows.map(item => item.size).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pl', {numeric:true}));
+    const sizes = [...new Map(rows.filter(item => item.size).map(item => [item.size, item.size_label])).entries()].sort((a, b) => a[1].localeCompare(b[1], document.documentElement.lang, {numeric:true}));
     const materials = new Map(rows.flatMap(item => item.materials));
-    const materialChoices = [...materials.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pl'));
+    const materialChoices = [...materials.entries()].sort((a, b) => a[1].localeCompare(b[1], document.documentElement.lang));
     function populate(selector, choices, label) {
       const select = document.querySelector(selector);
       if (!select) return;
@@ -29,12 +30,12 @@
       select.replaceChildren(new Option(label, ''));
       choices.forEach(([value, text]) => select.add(new Option(text, value)));
       if (selected && !choices.some(([value]) => value === selected)) {
-        select.add(new Option(`${selected} — brak w tej grupie`, selected));
+        select.add(new Option(`${selected} — ${ui.notInGroup}`, selected));
       }
       select.value = selected;
     }
-    populate('#size', sizes.map(size => [size, size]), 'Wszystkie rozmiary');
-    populate('#material', materialChoices, 'Wszystkie materiały');
+    populate('#size', sizes, ui.allSizes);
+    populate('#material', materialChoices, ui.allMaterials);
   }
   category.addEventListener('change', () => { update(true); updateSpecifications(true); });
   subcategory.addEventListener('change', () => updateSpecifications(true));

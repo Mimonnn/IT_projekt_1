@@ -19,8 +19,10 @@ from django.urls import include, path
 from accounts.views import AccountLoginView
 
 urlpatterns = [
+    path("i18n/", include("django.conf.urls.i18n")),
     path('admin/login/', AccountLoginView.as_view()),
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
     path('', include('catalog.urls')),
+    path('', include('rentals.urls')),
 ]

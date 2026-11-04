@@ -191,3 +191,5 @@ h2{font-size:31px;letter-spacing:-.035em;line-height:1.2;margin:0}
   .footer{margin-top:45px}.footer-inner{align-items:start;flex-direction:column;gap:5px}.footer p{margin:0}
 }
 
+
+.language-switch{display:flex;gap:5px;align-items:center;margin-left:auto}.language-switch button{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:white;color:var(--ink);border-radius:4px;padding:7px 9px;font-size:12px;cursor:pointer}.language-switch button[aria-pressed=true]{background:var(--accent);border-color:var(--green);font-weight:700}.language-switch img{object-fit:cover;border:1px solid #d9dfd8}

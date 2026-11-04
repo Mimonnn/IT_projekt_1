@@ -1,8 +1,8 @@
-{% extends 'accounts/profile_base.html' %}
+{% extends 'accounts/profile_base.html' %}{% load i18n %}
 {% block account_content %}
-<h2>Zwroty</h2>
-<div class="account-empty"><p class="empty-title">Nie masz jeszcze zgłoszeń zwrotu.</p>
-<p>Po uruchomieniu zamówień w tym miejscu wybierzesz zakup, zgłosisz zwrot i sprawdzisz postęp jego obsługi.</p>
-<p>Obecnie nie można wysłać zgłoszenia — sklep nie przyjmuje jeszcze zamówień.</p>
-<a class="button" href="{% url 'catalog:contact' %}">Pomoc i kontakt <span aria-hidden="true">→</span></a></div>
+<h2>{% translate "Zwroty" %}</h2>
+<div class="account-empty"><p class="empty-title">{% translate "Nie masz jeszcze zgłoszeń zwrotu." %}</p>
+<p>{% translate "Po uruchomieniu zamówień w tym miejscu wybierzesz zakup, zgłosisz zwrot i sprawdzisz postęp jego obsługi." %}</p>
+<p>{% translate "Obecnie nie można wysłać zgłoszenia — sklep nie przyjmuje jeszcze zamówień." %}</p>
+<a class="button" href="{% url 'catalog:contact' %}">{% translate "Pomoc i kontakt" %} <span aria-hidden="true">→</span></a></div>
 {% endblock %}

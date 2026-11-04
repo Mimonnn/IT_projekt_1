@@ -1,2 +1,2 @@
-{% if product.discount_percent %}<span class="regular-price"><span class="visually-hidden">Cena regularna: </span><del>{{ product.price|floatformat:2 }} zł</del></span>{% endif %}
-<strong class="selling-price">{{ product.selling_price|floatformat:2 }} zł</strong>
+{% load i18n %}{% if product.discount_percent %}<span class="regular-price"><span class="visually-hidden">{% translate "Cena regularna:" %} </span><del>{% blocktranslate with v0=product.price|floatformat:2 %}{{ v0 }} zł{% endblocktranslate %}</del></span>{% endif %}
+<strong class="selling-price">{% blocktranslate with v0=product.selling_price|floatformat:2 %}{{ v0 }} zł{% endblocktranslate %}</strong>
