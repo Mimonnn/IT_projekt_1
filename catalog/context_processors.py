@@ -3,6 +3,7 @@ from django.utils.translation import gettext as _
 
 def interface_strings(request):
     return {"ui_strings": {
+        "currency": _("zł"),
         "allSubcategories": _("Wszystkie podkategorie"),
         "allSizes": _("Wszystkie rozmiary"),
         "allMaterials": _("Wszystkie materiały"),

@@ -3,7 +3,7 @@
 <h2>{% translate "Moje wypożyczenia" %}</h2>
 <p>{% translate "Tutaj znajdziesz swoje rezerwacje sprzętu. Rezerwację możesz anulować przed wydaniem sprzętu, do dnia odbioru włącznie." %}</p>
 {% for reservation in reservations %}
-<article class="account-empty">
+<article class="account-empty" id="reservation-{{ reservation.pk }}">
   <h3>{% translate "Rezerwacja" %} #{{ reservation.pk }} — {{ reservation.product_name }}</h3>
   <p>{% translate "Rozmiar" %}: {{ reservation.display_size }}</p>
   <p>{% translate "Data odbioru" %}: {{ reservation.start_date|date:"Y-m-d" }} · {% translate "Data zwrotu" %}: {{ reservation.end_date|date:"Y-m-d" }}</p>

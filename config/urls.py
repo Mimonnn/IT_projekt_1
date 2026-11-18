@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/login/', AccountLoginView.as_view()),
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
+    path('', include('orders.urls')),
     path('', include('catalog.urls')),
     path('', include('rentals.urls')),
 ]

@@ -1,9 +1,31 @@
 # Szron — sklep narciarski z wypożyczalnią
 
+## Poradnik „Wybierz swoją trasę”
+
+Na stronie głównej wybierz poziom: początkujący, średniozaawansowany lub zaawansowany.
+Otwiera stronę z opisem umiejętności, doborem sprzętu i filtrem kategorii. Sekcja kupna
+prowadzi do szczegółów produktu, koszyka i zamówienia; sekcja wypożyczenia do szczegółów
+egzemplarza, wyboru dat i rezerwacji. Dostępność na termin sprawdzana jest po wybraniu dat.
+Poradnik i oba procesy działają po polsku i angielsku.
+
+Administrator edytuje pole **Poziomy zaawansowania** w produkcie. Model może należeć
+do kilku poziomów lub nie być pokazywany w poradniku. Przypisania są w bazie, niezależnie
+od ceny i magazynu sprzedaży. Egzemplarze do serwisu i niezwrócone wydania nie pojawiają
+się w propozycjach wypożyczenia. Po pobraniu zmian na drugim komputerze wykonaj migracje:
+
+```powershell
+./.venv/Scripts/python.exe manage.py migrate
+```
+
+Migracje dodają poziomy i klasyfikują rozpoznane, niezmienione oferty demonstracyjne.
+Nowe oferty demo otrzymują poziomy podczas `seed_demo`. Istniejące edycje zachowuje
+także `--refresh-demo`; wyłącznie `seed_demo --refresh-skills` jawnie odtwarza przypisania
+z JSON dla ofert o zgodnej kategorii, bez zmiany cen, stanów czy materiałów.
+
 Lokalna aplikacja Django z PostgreSQL: sklep i wypożyczalnia sprzętu zimowego,
 katalog PL/EN, konta klientów, koszyk, rezerwacje oraz wydania i zwroty obsługiwane
-w panelu administratora. „Szron” jest nazwą roboczą. Składanie zamówień sprzedażowych
-pozostaje kolejnym etapem.
+w panelu administratora. Działają również demonstracyjne zakupy z formularzem
+dostawy i obsługą realizacji. „Szron” jest nazwą roboczą.
 
 ## Pobranie obecnej wersji na drugim komputerze
 
@@ -229,9 +251,9 @@ formularze i koszyk nie wymagają zewnętrznego serwisu automatycznych tłumacze
 
 - Przycisk „Zaloguj się” prowadzi do `/zaloguj/`. Formularz służy klientom i administratorom: konto z `is_staff=True` po zwykłym logowaniu przechodzi do panelu administratora, a klient do swoich aktualnych zamówień. Powrót po logowaniu z karty produktu prowadzi z powrotem do produktu. Django sprawdza uprawnienia panelu niezależnie od nawigacji.
 - „Utwórz konto” (`/zarejestruj/`) rejestruje zwykłego klienta i automatycznie go loguje. Nie umożliwia nadania sobie uprawnień administratora. Używa walidacji i haszowania haseł Django. Istniejące konta i ich hasła pozostają bez zmian; administratora nadal tworzy się przez `manage.py createsuperuser`.
-- „Moje konto” ma zakładki Aktualne zamówienia, Historia zakupów i Koszyk. Dwie pierwsze pokazują obecnie puste stany. Ich dane i statusy realizacji zostaną podłączone wraz z przyszłym systemem zamówień; nie tworzymy fikcyjnych zakupów.
+- „Moje konto” otwiera zakładkę Zamówienia i rezerwacje: aktywne zakupy oraz rezerwacje/wypożyczenia. Historia pokazuje zakończone i anulowane rekordy. Osobna zakładka Moje wypożyczenia zachowuje pełną listę rezerwacji. Dane są prywatne i pozostają po ponownym zalogowaniu; ukrycie produktu nie usuwa historii.
 - Zalogowany użytkownik dodaje produkt z jego strony szczegółów. Koszyk pozwala zmienić ilość, usunąć pozycję i zobaczyć sumę aktualnych cen. Dane należą do konta w PostgreSQL i pozostają po wylogowaniu. Każdy klient ma dostęp wyłącznie do własnego koszyka.
-- Koszyk nie rezerwuje sztuk ani nie zmniejsza magazynu. Dodawanie i zmiany ilości sprawdzają stan w backendzie. Zmiana ceny lub dostępności w katalogu jest widoczna w koszyku; pozycja niedostępna zostaje oznaczona i można ją usunąć. Składanie zamówień nie jest jeszcze dostępne.
+- Koszyk nie rezerwuje sztuk ani nie zmniejsza magazynu. Dodawanie i zmiany ilości sprawdzają stan w backendzie. Zmiana ceny lub dostępności w katalogu jest widoczna w koszyku; pozycja niedostępna zostaje oznaczona i można ją usunąć. Zakup uruchamia przycisk Przejdź do zamówienia; dopiero potwierdzenie zmniejsza stan sprzedaży.
 - Wylogowanie i zmiany koszyka wymagają formularza POST z ochroną CSRF. Także `/admin/login/` wyświetla wspólny formularz logowania.
 
 Na drugim komputerze po pobraniu tej zmiany wykonaj `manage.py migrate`:
@@ -254,7 +276,7 @@ magazynowego nie blokuje zapisania ulubionego produktu. Zapisanie nie dodaje
 produktu do koszyka i nie rezerwuje go. Usuwanie działa z własnej listy.
 
 Zwroty mają obecnie zakładkę z pustym stanem i informacją o przyszłej obsłudze.
-Zgłaszanie zwrotów i ich statusy zostaną powiązane z zamówieniami po wdrożeniu
+Zgłaszanie zwrotów zakupów pozostaje osobnym etapem po wdrożeniu
 systemu zakupów. Nie utworzono fikcyjnych zgłoszeń ani formularza wysyłającego
 zwroty bez istniejącego zakupu.
 
@@ -379,6 +401,7 @@ użytkownika nie zostały zweryfikowane.
 - `accounts/` — konta, logowanie i rejestracja, zakładki profilu oraz zapisany w bazie koszyk.
 - `catalog/` — produkty, widoki, panel administratora, migracje i testy.
 - `rentals/` — osobne egzemplarze wypożyczalni, ich katalog, administracja i dane demo.
+- `orders/` — formularz zakupu, zamówienia i pozycje, transakcyjny zapis oraz obsługa realizacji.
 - `templates/` — wspólna rama HTML i strony katalogu.
 - `static/` — style i własne ilustracje SVG. Strona nie wymaga zewnętrznych fontów ani usług.
 
@@ -571,3 +594,52 @@ Na drugim komputerze po pobraniu uruchom `manage.py migrate`:
 `rentals/0003_remove_reservation_reservation_status_valid_and_more.py`
 dodaje historię operacji, nowe statusy i ograniczenia. Zachowuje dotychczasowe
 rezerwacje; nie tworzy kont ani demonstracyjnych wydań. Nowe zależności nie są wymagane.
+
+
+## Zakupy i widoczność rezerwacji na koncie
+
+Rezerwacje nie trafiały wcześniej na domyślny ekran Aktualne zamówienia,
+który był pustym szablonem. Teraz zakładka **Zamówienia i rezerwacje** pokazuje
+aktywne zakupy i wypożyczenia. Po zakończeniu/anulowaniu rekordy są w historii;
+pełna lista rezerwacji pozostaje także w **Moich wypożyczeniach**.
+Dodano ochronę przed nieaktualną zawartością prywatnych ekranów (`never_cache`).
+GitHub nadal nie synchronizuje lokalnych baz: konta, zamówienia i rezerwacje
+utworzone na jednym komputerze nie pojawiają się automatycznie na drugim.
+
+Aby kupić produkt w wersji demonstracyjnej:
+
+1. Zaloguj się, dodaj produkty do koszyka i wybierz **Przejdź do zamówienia**.
+2. Wypełnij dane kontaktowe. Wybierz darmowy odbiór w jednym z 4 salonów
+   lub kuriera za pobraniem (demonstracyjny koszt 19,99 zł, dostawa w Polsce).
+3. Dla kuriera podaj ulicę, kod pocztowy i miejscowość; dla odbioru wybierz sklep.
+4. Sprawdź podsumowanie i potwierdź zamówienie demonstracyjne.
+5. Zobacz zapisane pozycje, cenę i postęp realizacji na koncie.
+
+Nie ma bramki płatniczej, wysyłania e-maili ani rzeczywistej dostawy. Dane formularza
+są zapisywane wyłącznie w lokalnym zamówieniu i nie nadpisują profilu. Interfejs
+ma układ dwóch kolumn na komputerze i jednej na mniejszym ekranie; podsumowanie
+pokazuje produkty, dostawę i sumę. Przełączenie dostawy przelicza kwoty w groszach;
+backend zawsze samodzielnie waliduje dane, ceny, podpis podsumowania i dostępność.
+
+Zapis zakupu jest atomowy: blokuje konto i produkty, utrwala kopie nazw/rozmiarów/cen,
+zmniejsza magazyn sprzedaży i czyści własny koszyk. Ponowne potwierdzenie tego samego
+tokenu nie tworzy duplikatu ani nie usuwa później dodanych produktów. Zmiana koszyka,
+ceny lub wariantu po otwarciu formularza wymaga ponownego potwierdzenia. Nie można
+sprzedać tej samej ostatniej sztuki dwóm klientom. Wypożyczalnia ma niezależne zasoby.
+
+Administrator otwiera **Zakupy → Zamówienia zakupu**. Historia jest tylko do odczytu;
+akcje prowadzą przez: przyjęte → przygotowanie → gotowe do odbioru / wysłane →
+zrealizowane. Wymagają uprawnień `orders.change_order` i `catalog.change_product`.
+Klient może anulować własne nowe zamówienie; obsługa także przygotowywane/gotowe do
+odbioru. Anulowanie przywraca produkty na stan tylko raz. Wysłanego/zakończonego
+zamówienia nie można anulować; zwroty zakupów pozostają osobnym przyszłym etapem.
+
+Na drugim komputerze po pobraniu kodu wykonaj:
+
+```powershell
+./.venv/Scripts/python.exe manage.py migrate
+```
+
+Migracja `orders/0001_initial.py` tworzy tabele zakupów, bez dodawania przykładowych
+zamówień. Nowe zależności nie są wymagane. Kod, migracje i tłumaczenia synchronizuje
+Git; danych kont i zamówień nie publikujemy w repozytorium.

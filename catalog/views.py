@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404, render
 
 from .models import Material, Product
 from .taxonomy import ALL_LABELS, SUBCATEGORIES
+from .skill_levels import LEVEL_GUIDES
 
 
 def home(request):
@@ -11,6 +12,7 @@ def home(request):
         is_active=True, featured_order__isnull=False,
     ).exclude(image_path="").order_by("featured_order", "pk")[:3]
     return render(request, "catalog/home.html", {
+        "skill_guides": LEVEL_GUIDES.items(),
         "featured_products": featured_products,
         "promotion_products": Product.objects.filter(is_active=True, sale_stock__gt=0, discount_percent__gt=0).order_by("discount_percent", "pk")[:3],
         "category_menus": [
@@ -26,6 +28,31 @@ def home(request):
             ("img/hero/panorama3.jpg", _("Narciarz w skoku na tle alpejskich szczytów")),
             ("img/hero/panorama4.jpg", _("Ośnieżona grań i trasa narciarska pośród chmur")),
         ],
+    })
+
+
+def skill_level(request, code):
+    from django.http import Http404
+    from rentals.models import RentalItem
+
+    if code not in LEVEL_GUIDES:
+        raise Http404
+    products = Product.objects.filter(is_active=True, skill_levels__code=code)
+    # Wydany sprzęt blokuje rezerwację także po planowanej dacie zwrotu.
+    items = RentalItem.objects.filter(
+        is_active=True, product__in=products, status=RentalItem.Status.AVAILABLE,
+    ).exclude(reservations__status="issued").select_related("product")
+    category = request.GET.get("category", "")
+    if category not in Product.Category.values:
+        category = ""
+    if category:
+        products = products.filter(category=category)
+        items = items.filter(product__category=category)
+    return render(request, "catalog/skill_level.html", {
+        "guide": LEVEL_GUIDES[code], "level_code": code,
+        "skill_guides": LEVEL_GUIDES.items(),
+        "products": products.filter(sale_stock__gt=0), "items": items,
+        "categories": Product.Category.choices, "selected_category": category,
     })
 
 

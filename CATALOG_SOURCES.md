@@ -1,5 +1,11 @@
 # Źródła cen i zdjęć katalogu demonstracyjnego
 
+Ogólne wskazówki doboru sprzętu według umiejętności w poradniku „Wybierz swoją trasę”
+porównano 18.11.2026 z [REI — How to Choose Downhill Skis](https://www.rei.com/learn/expert-advice/downhill-skis.html).
+Przypisania fikcyjnych modeli Szron są własną klasyfikacją katalogu demo, przechowywaną
+w `skill_levels` w JSON i w bazie. Nie pochodzą z certyfikacji producentów ani parametrów
+modeli widocznych na zdjęciach. Dobór uwzględnia także rozmiar, masę ciała, technikę i dyscyplinę.
+
 Sprawdzono: **31.10.2026**. Waluta: PLN. Ceny przepisano z konkretnych ofert,
 bez dodatkowych rabatów wymagających kodu. Mogą to być ceny promocyjne; nie są
 automatycznie aktualizowane. Ceny Contour 100 i Contour 110 odpowiadają widocznej cenie „od”.

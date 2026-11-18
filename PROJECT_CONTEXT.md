@@ -1,6 +1,6 @@
 # Kontekst projektu
 
-Ostatnia aktualizacja: 2026-11-05.
+Ostatnia aktualizacja: 2026-11-19.
 
 ## Cel i ustalenia
 
@@ -29,6 +29,8 @@ Praca odbywa się w VS Code z rozszerzeniem Codex na dwóch komputerach, z wykor
 
 ## Aktualny postęp
 
+- „Wybierz swoją trasę” ma trzy klikalne poziomy: początkujący, średniozaawansowany i zaawansowany. Strony poradnika opisują umiejętności i dobór sprzętu, pokazują listy zakupu oraz osobnych egzemplarzy wypożyczalni i pozwalają filtrować kategorię. Kliknięcia prowadzą do działających szczegółów, zakupu lub rezerwacji. Przypisania modeli są w bazie i edytowalne w administracji; całość działa po polsku i angielsku.
+
 - Działa podstawa wypożyczalni: osobna ewidencja `rentals.RentalItem`, zarządzanie w administracji oraz dwujęzyczny katalog `/wypozyczalnia/`. Lokalnie dodano 10 fikcyjnych egzemplarzy (4 pary nart, 4 deski, 2 kaski), z czego 9 na stanie i 1 do serwisu. Kategoria, model i rozmiar są wybierane z zależnych list rozwijanych, generowanych z widocznych egzemplarzy. Zdjęcie, nazwa i odnośnik szczegółów prowadzą do karty z opisem i parametrami modelu oraz przyciskiem rezerwacji; przejście zachowuje wybrane daty i filtry. Stawki dobowe i statusy są niezależne od sprzedaży. Działają rezerwacje z wyborem dat, kontrolą dostępności i zapisaniem ceny oraz podgląd i anulowanie w „Moich wypożyczeniach”. Działają również wydania i zwroty obsługiwane przez administratora, z historią pracowników i faktycznych dat oraz możliwością skierowania sprzętu do serwisu.
 
 - Strona działa po polsku i angielsku. Nagłówek sklepu i administracji zawiera flagi Polski / English; standardowe Django i18n zapamiętuje wybór w ciasteczku na rok i zachowuje stronę oraz filtry. Przetłumaczono interfejs, formularze, komunikaty, etykiety i teksty JavaScript oraz angielskie treści wszystkich 61 produktów i 15 materiałów. Nowe elementy wypożyczalni będą rozwijane od początku dwujęzycznie.
@@ -38,12 +40,12 @@ Praca odbywa się w VS Code z rozszerzeniem Codex na dwóch komputerach, z wykor
 - Strona główna ma pełną szerokość panoramy z czterema zdjęciami użytkownika, pokazem co 6 sekund i menu siedmiu kategorii. Pod panoramą pozostają wybrane oferty. Kategorie rozszerzono o wiązania, kaski, gogle i buty snowboardowe; zachowano `boots` dla butów narciarskich i dotychczasowe Akcesoria.
 - Pod panoramą, nad wyróżnionymi ofertami, działa centralna sekcja trzech promocji: Alpine 172 −10%, Halo S3 −15%, Roam 500 −20%. Rabat ma osobne pole, a wspólna cena po obniżce obowiązuje w katalogu, szczegółach, ulubionych, wyróżnieniach i koszyku.
 
-- Działa szkielet Django: `config` (konfiguracja), `accounts` (model użytkownika oparty na `AbstractUser`), `catalog` (produkty i ich obsługa) oraz `rentals` (egzemplarze wypożyczalni).
+- Działa szkielet Django: `config` (konfiguracja), `accounts` (model użytkownika oparty na `AbstractUser`), `catalog` (produkty i ich obsługa), `rentals` (egzemplarze wypożyczalni) oraz `orders` (zakupy i realizacja zamówień).
 - Działa połączenie z lokalnym PostgreSQL, migracje i komenda `seed_demo`, dodająca 61 fikcyjnych produktów bez nadpisywania późniejszych zmian. Wszystkie 29 podkategorii mają po 2 pozycje, a Akcesoria mają 3 oferty. Wszystkie oferty demo mają zdjęcia i ceny z udokumentowanych ofert referencyjnych.
 - Działa strona główna, katalog, wyszukiwanie po nazwie, opisie i konstrukcji oraz łączone filtry kategorii, podkategorii, rozmiaru i materiału. Wszystkie 61 ofert demo ma rozbudowane opisy i demonstracyjne parametry: rozmiar, materiały, konstrukcję, wymiary oraz masę z zakresem pomiaru. Ceny, parametry i stany sprzedażowe są odczytywane z bazy. Układ ma reguły CSS dla komputerów i telefonów.
 - Administrator może dodawać, edytować i ukrywać produkty przez panel Django. Pola produktu: nazwa, unikalny adres, kategoria, opis, cena, liczba sztuk na sprzedaż i widoczność. Cena i stan są zabezpieczone przed wartościami ujemnymi.
-- Działają wspólne logowanie i rejestracja klientów na własnym modelu użytkownika Django. Po zwykłym logowaniu konto z `is_staff` przechodzi do panelu administratora, a klient do profilu. Uprawnienia administracji nadal kontroluje Django. Profil ma Aktualne zamówienia, Historię zakupów i działający koszyk zapisany w PostgreSQL; zakładki zamówień i historii pokazują obecnie puste stany do czasu wdrożenia zamawiania.
-- Profil zawiera także Dane profilu (edycja imienia, nazwiska, e-maila i telefonu), prywatne Ulubione i zakładkę Zwroty z pustym stanem do czasu wdrożenia zamówień. Ulubione zapisuje się z katalogu lub szczegółów produktu. Stopka prowadzi do Regulaminu, Kontaktu i czterech fikcyjnych sklepów stacjonarnych w Gliwicach, Katowicach, Szczyrku i Białce Tatrzańskiej.
+- Działają wspólne logowanie i rejestracja klientów na własnym modelu użytkownika Django. Po zwykłym logowaniu konto z `is_staff` przechodzi do panelu administratora, a klient do profilu. Uprawnienia administracji nadal kontroluje Django. Profil ma Zamówienia i rezerwacje, Historię zakupów, Moje wypożyczenia i działający koszyk zapisany w PostgreSQL. Własne aktywne zakupy i rezerwacje są widoczne na wspólnym ekranie, a zakończone/anulowane rekordy w historii.
+- Profil zawiera także Dane profilu (edycja imienia, nazwiska, e-maila i telefonu), prywatne Ulubione i zakładkę Zwroty z informacją do czasu wdrożenia obsługi zwrotów zakupów. Ulubione zapisuje się z katalogu lub szczegółów produktu. Stopka prowadzi do Regulaminu, Kontaktu i czterech fikcyjnych sklepów stacjonarnych w Gliwicach, Katowicach, Szczyrku i Białce Tatrzańskiej.
 - Przygotowano instrukcję uruchomienia i odtworzenia środowiska na drugim komputerze w `README.md`, `.env.example`, przypięte wersje głównych zależności i skrypt `start.ps1`.
 - `TODO.md` pozostaje pusty zgodnie z ustaleniami.
 
@@ -53,7 +55,7 @@ Praca odbywa się w VS Code z rozszerzeniem Codex na dwóch komputerach, z wykor
 - `start.ps1` uruchamia przygotowaną bazę, jeśli jest zatrzymana, oraz stronę pod `http://127.0.0.1:8000/`. Na drugim komputerze można użyć zwykłej instalacji PostgreSQL i portu z własnego `.env`.
 - Nie utworzono stałego konta administratora strony. Użytkownik tworzy je przez `manage.py createsuperuser`, samodzielnie podając dane. Testy korzystają z tymczasowych kont w osobnej bazie.
 - Środowisko, pliki bazy i sekrety nie są współdzielone przez Git. Drugi komputer odtwarza strukturę przez migracje, katalog przez `seed_demo`, a egzemplarze wypożyczalni przez `seed_rental_demo`.
-- Działa dodawanie do koszyka ze szczegółów produktu, zmiana ilości i usuwanie. Koszyk nie rezerwuje sztuk ani nie zmniejsza stanu. Składanie zamówień sprzedażowych pozostaje kolejnym etapem. Rezerwacje wypożyczeń działają w aplikacji `rentals`. Egzemplarze wypożyczalni mają osobną ewidencję `rentals.RentalItem`, niezależną od stanu sprzedażowego.
+- Działa dodawanie do koszyka ze szczegółów produktu, zmiana ilości i usuwanie. Koszyk nie rezerwuje sztuk ani nie zmniejsza stanu. Działa demonstracyjne składanie zamówień sprzedażowych z formularzem danych/dostawy, aktualizacją magazynu i historią na koncie. Rezerwacje wypożyczeń działają w aplikacji `rentals`. Egzemplarze wypożyczalni mają osobną ewidencję `rentals.RentalItem`, niezależną od stanu sprzedażowego.
 
 ## Problemy i kwestie organizacyjne
 
@@ -61,6 +63,39 @@ Praca odbywa się w VS Code z rozszerzeniem Codex na dwóch komputerach, z wykor
 - Kontekst trafia na drugi komputer przez wysłanie i pobranie zmian w GitHub; nie synchronizuje się samą zmianą rozmowy.
 
 ## Ostatnia zmiana i weryfikacja
+
+### 2026-11-19 — kontrola i zatwierdzenie zmian do GitHub
+
+- Użytkownik zlecił commit i wysłanie do GitHub. Zakres obejmuje wszystkie opisane poniżej zmiany z 18.11: formularz i obsługę zakupów, widoczność rezerwacji na koncie, poradnik poziomów i ozdobne tła, migracje, wersje PL/EN oraz dokumentację.
+- Po udanym `git fetch origin` gałąź main była zgodna z origin/main (0/0) przed commitem. Wszystkie **188 testów na PostgreSQL** ponownie przeszło; kontrola Django, kompletności migracji, aktualności lokalnej bazy, zależności (`pip check`) oraz `git diff --check` poprawna. Zakres obejmuje procesy zakupu, rezerwacji, wydania i zwrotu w obu językach oraz testy współbieżnych operacji.
+- Przejrzano AGENTS.md i niniejszy kontekst; TODO pozostaje pusty. Zastany, przygotowany plik `.vscode/settings.json` zachowano poza zakresem commita. Pliki środowiska, bazy, kont i dane dostępowe pozostają lokalne. Ograniczenie kontroli wizualnej z poprzedniej sesji pozostaje aktualne.
+- Na drugim komputerze po pobraniu zmian należy wykonać `manage.py migrate`; migrują tabele zakupów i poziomy produktów. Git nie przenosi lokalnych kont, zamówień ani rezerwacji.
+
+### 2026-11-18 — ozdobne tła poziomów
+
+- Kafle „Wybierz swoją trasę” i nagłówki trzech poradników mają wspólny motyw gór, warstwic i przerywanego śladu na śniegu (`static/img/route-landscape.svg`). Zachowano osobne, jasne kolory poziomów i ciemny tekst. Jasny gradient pod napisami łagodzi ilustrację, a dekoracja pozostaje tłem bez przechwytywania kliknięć. Kafle mają delikatny cień, zaokrąglenie i wyróżnienie po najechaniu/fokusie; ograniczenie ruchu wyłącza przejście.
+- Wspólny CSS poziomów jest ładowany również na stronie głównej, z wersją `v=2`. Bez zmian w modelach, danych i procesach zakupów/rezerwacji. Sprawdzono HTTP 200 strony głównej, trzech poradników, aktualnego CSS i SVG, poprawność XML ilustracji, kontrolę Django oraz `git diff --check`. Nie przeprowadzano podglądu wizualnego w przeglądarce ani ponownie pełnych testów backendu dla tej zmiany wyglądu.
+- Kontekst uaktualniono; zasady AGENTS pozostają aktualne, TODO pusty. Bez commita i wysyłania na GitHub.
+
+### 2026-11-18 — poradnik poziomów „Wybierz swoją trasę”
+
+- Dotychczasowe kafle typów sprzętu zastąpiono poziomami i dodano publiczne strony `/trasy/beginner/`, `/trasy/intermediate/`, `/trasy/advanced/`: opisy umiejętności, charakter sprzętu, przełączanie poziomu, filtr kategorii i osobne sekcje kupna/wypożyczenia. Menu kategorii na panoramie pozostaje dostępne.
+- Dodano `SkillLevel` i `Product.skill_levels` (M2M), wybór oraz filtr w administracji produktu. Wpisy JSON mają jawne listy poziomów; parametry i nazwy nadal są fikcyjne. Poradnik rozróżnia technikę, rozmiar, kompatybilność i dyscyplinę; narty biegowe pozostają poza poradnikiem zjazdowym. Wspólna ochrona może należeć do wszystkich poziomów.
+- Migracje `catalog/0014` i `0015` wykonano lokalnie. Druga tworzy trzy poziomy i przypisuje tylko znane oferty ze zgodną nazwą, kategorią, typem i odciskiem opisu, bez istniejących przypisań. Nie zmienia cen, magazynu, kont ani historii. `seed_demo` ustawia poziomy nowych ofert i zachowuje edycje istniejących; `--refresh-skills` jawnie odświeża tylko te relacje. Zmodyfikowane kategorie pomija.
+- Lista kupna wymaga aktywnej oferty i dodatniego stanu sprzedaży; wypożyczenia widocznego, gotowego egzemplarza aktywnego modelu bez niezwróconego wydania. Brak stanu sprzedaży nie blokuje osobnego egzemplarza wypożyczalni. Przy wyborze dat istniejący proces ponownie sprawdza kolizje i cenę.
+- Wszystkie **188 testów PostgreSQL** przeszło, w tym 13 nowych: poziomy i linki, klasyfikacja, filtry/puste wyniki, ukrywanie, blokada wydanego sprzętu, oba języki, zachowanie edycji przez seed i migrację oraz pełne przejścia poradnik → zakup i poradnik → rezerwacja. Kontrole Django, migracji i `git diff --check` poprawne. Na uruchomionym serwerze sprawdzono 30 stron poziomów z filtrami PL/EN, docelowe szczegóły produktów/egzemplarzy oraz 35 zasobów statycznych — HTTP 200. Podgląd wizualny w przeglądarce pozostaje niedostępny w tej sesji.
+- Uzupełniono README, zasady i źródło ogólnych wskazówek doboru. TODO pozostaje pusty. Nie wykonano commita ani wysyłania do GitHub; zachowano wcześniejsze zmiany zamówień i przygotowane przez użytkownika ustawienia VS Code.
+
+### 2026-11-18 — widoczność rezerwacji i działający zakup produktów
+
+- Użytkownik zgłosił brak widoczności wypożyczonych/rezerwowanych produktów w zamówieniach i zlecił sprawdzenie, poprawki oraz interfejs zakupów. Początkowe 154 testy przeszły; nie odtworzono utraty rekordów. Znaleziono konkretną niespójność: domyślny ekran Aktualne zamówienia zawsze wyświetlał pusty szablon, a rezerwacje istniały wyłącznie w Moich wypożyczeniach. Wspólny ekran Zamówienia i rezerwacje pokazuje teraz własne aktywne zakupy oraz rezerwacje/wydania, a historia zakończone/anulowane rekordy. Pełna lista wypożyczeń pozostaje dostępna osobno, z odnośnikami do konkretnych rekordów. Test potwierdza widoczność po ukryciu produktu, wydaniu, zwrocie i ponownym logowaniu; cudze rekordy pozostają prywatne. Dodano `never_cache` do prywatnych list.
+- Dodano aplikację `orders`, modele Order/OrderLine i migrację `0001_initial`. Nowe zamówienia przechowują własne dane kontaktowe, dostawę i kopie cen/nazw/rozmiarów/zdjęć produktów. Formularz w `/zamowienie/` jest dostępny z koszyka: dane klienta, wybór odbioru/kuriera, adres lub salon, uwagi, podsumowanie i potwierdzenie. Układ dwóch kolumn z bocznym podsumowaniem przechodzi na jedną na wąskim ekranie. Po zakupie jest prywatne potwierdzenie i podgląd postępu.
+- Przyjęto wartości demonstracyjne: odbiór osobisty 0 zł, kurier za pobraniem 19,99 zł na terenie Polski, płatność przy odbiorze. Bez podłączenia rzeczywistych płatności, e-maili i wysyłki. Kwoty pochodzą z jednego źródła DELIVERY_FEES; JS przelicza grosze, backend Decimal. Formularz waliduje kontakt i warunkowo adres/sklep; dane nie nadpisują profilu.
+- Zapis przez `orders.services` blokuje konto i produkty po ID, sprawdza podpisane podsumowanie ważne 2 godziny, właściciela, ceny, warianty, ilości i magazyn, a następnie atomowo tworzy zamówienie, zmniejsza tylko magazyn sprzedaży i czyści własny koszyk. Wszystkie modyfikacje koszyka używają tej samej blokady konta. Unikalny token chroni przed duplikatami; powtórzenie starego potwierdzenia nie usuwa nowego koszyka. Zmiany podsumowania wymagają ponownego sprawdzenia. Historia zachowuje dane mimo zmian katalogu i ukrycia produktu.
+- Obsługa zakupów ma kontrolowane akcje: przygotowanie, gotowe do odbioru / wysłane, zrealizowane, anulowane. Wymaga uprawnień zmiany zamówień i produktów. Klient anuluje tylko własne nowe zamówienie; przywrócenie magazynu jest jednokrotne. Administracja nie pozwala tworzyć/edytować/usuwać historii. Prawdziwe zwroty zakupów pozostają poza tym etapem; opisy interfejsu i regulaminu dopasowano do stanu demonstracyjnego.
+- Wszystkie 175 testów PostgreSQL przeszło po zmianach, w tym regresja widoczności rezerwacji, pełne zakupy i potwierdzenie z CSRF oraz ponownym logowaniem, prywatność, zmiany cen i koszyka, brak częściowych zapisów, podpisy, ceny po rabacie, utrwalenie historii, anulowanie, uprawnienia i administracja oraz oba języki. Równoczesne testy potwierdzają ochronę ostatniej sztuki, podwójnego potwierdzenia i podwójnego zwrotu magazynu. Kontrola Django, kompletności migracji i aktualności bazy poprawna. Działająca strona oraz nowy CSS i JS zwracają HTTP 200; `git diff --check` poprawne. Skrypt formularza pobrany z działającego serwera sprawdzono w Node na zastępczych elementach: pola dostawy, dokładne kwoty PL/EN, blokadę ponownego kliknięcia i powrót do formularza.
+- Migrację wykonano lokalnie, bez tworzenia kont ani przykładowych zamówień w bazie użytkownika; testy mają osobną usuwaną bazę. Strona pozostaje uruchomiona na 127.0.0.1:8000. Podgląd przeglądarki zakończył się błędem narzędzia (wygasła kontynuacja), więc nie wykonano kontroli wizualnej nowego interfejsu. Nowe funkcje, komunikaty i administracja mają wersje PL/EN; `.po` i `.mo` zaktualizowano.
+- AGENTS.md, README i kontekst uzupełniono. TODO.md nadal pusty, zastany `.vscode/settings.json` zachowano. Nie wykonano commita ani wysyłania do GitHub. Na drugim komputerze potrzebne `manage.py migrate`; konta i rekordy lokalnych baz nie przenoszą się przez Git.
 
 ### 2026-11-05 — kontrola i przygotowanie wspólnej wersji do GitHub
 

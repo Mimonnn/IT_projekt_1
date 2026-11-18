@@ -1,14 +1,7 @@
-{% extends 'accounts/profile_base.html' %}{% load i18n %}
+{% extends 'accounts/profile_base.html' %}{% load i18n static %}
+{% block extra_styles %}{{ block.super }}<link rel="stylesheet" href="{% static 'css/checkout.css' %}?v=1">{% endblock %}
 {% block account_content %}
-{% if active_tab == 'orders' %}
-  <h2>{% translate "Aktualne zamówienia" %}</h2><div class="account-empty">
-    <p class="empty-title">{% translate "Nie masz jeszcze zamówień." %}</p>
-    <p>{% translate "Tutaj zobaczysz swoje zamówienia i stan ich realizacji, gdy udostępnimy składanie zamówień." %}</p>
-{% else %}
-  <h2>{% translate "Historia zakupów" %}</h2><div class="account-empty">
-    <p class="empty-title">{% translate "Twoja historia zakupów jest pusta." %}</p>
-    <p>{% translate "Tutaj pojawią się Twoje zakończone zakupy, gdy udostępnimy składanie zamówień." %}</p>
-{% endif %}
-  <a class="button" href="{% url 'catalog:list' %}">{% translate "Przeglądaj sprzęt" %} <span aria-hidden="true">→</span></a>
-</div>
+<div class="account-overview-heading"><div><p class="eyebrow">{% translate "WSZYSTKO W JEDNYM MIEJSCU" %}</p><h2>{% if active_tab == 'orders' %}{% translate "Twoje zamówienia i rezerwacje" %}{% else %}{% translate "Historia zakupów i rezerwacji" %}{% endif %}</h2></div><a class="text-link" href="{% url 'catalog:list' %}">{% translate "Przeglądaj sprzęt" %} ↗</a></div>
+<section class="account-order-group"><h3>{% translate "Zakupy" %}</h3>{% for order in orders %}<article class="order-overview-card"><div><p class="eyebrow">{{ order.number }} · {{ order.created_at|date:"Y-m-d" }}</p><h4>{% for line in order.lines.all %}{{ line.product_name }}{% if not forloop.last %}, {% endif %}{% endfor %}</h4><p>{{ order.get_delivery_method_display }}</p></div><div class="order-overview-meta"><span class="order-status status-{{ order.status }}">{{ order.get_status_display }}</span><strong>{{ order.total }} {% translate "zł" %}</strong><a class="text-link" href="{{ order.get_absolute_url }}">{% translate "Zobacz szczegóły" %} ↗</a></div></article>{% empty %}<div class="account-empty compact"><p class="empty-title">{% if active_tab == 'orders' %}{% if active_tab == 'history' %}{% translate "Twoja historia zakupów jest pusta." %}{% else %}{% translate "Nie masz jeszcze zamówień." %}{% endif %}{% else %}{% translate "Twoja historia zakupów jest pusta." %}{% endif %}</p><p>{% translate "Po zakupie produkty i status realizacji zobaczysz właśnie tutaj." %}</p></div>{% endfor %}</section>
+<section class="account-order-group"><div class="account-overview-heading"><h3>{% if active_tab == 'orders' %}{% translate "Rezerwacje i wypożyczenia" %}{% else %}{% translate "Historia rezerwacji" %}{% endif %}</h3><a class="text-link" href="{% url 'rentals:mine' %}">{% translate "Wszystkie moje wypożyczenia" %} ↗</a></div>{% for reservation in rental_reservations %}<article class="order-overview-card"><div><p class="eyebrow">{% translate "Rezerwacja" %} #{{ reservation.pk }}</p><h4>{{ reservation.product_name }}</h4><p>{{ reservation.display_size }} · {{ reservation.start_date|date:"Y-m-d" }} — {{ reservation.end_date|date:"Y-m-d" }}</p></div><div class="order-overview-meta"><span class="order-status">{{ reservation.get_status_display }}</span><strong>{{ reservation.total_price }} {% translate "zł" %}</strong><a class="text-link" href="{% url 'rentals:mine' %}#reservation-{{ reservation.pk }}">{% translate "Zobacz szczegóły" %} ↗</a></div></article>{% empty %}<p class="cart-note">{% translate "Nie ma rezerwacji w tej sekcji. Pełną listę znajdziesz w Moich wypożyczeniach." %}</p>{% endfor %}</section>
 {% endblock %}

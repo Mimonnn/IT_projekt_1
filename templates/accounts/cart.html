@@ -21,7 +21,7 @@
   {% endfor %}
   </div>
   <div class="cart-summary"><span>{% translate "Wartość produktów" %}</span><strong>{% blocktranslate with v0=total|floatformat:2 %}{{ v0 }} zł{% endblocktranslate %}</strong></div>
-  <div class="notice">{% translate "Możesz już zapisywać produkty w koszyku. Składanie zamówień udostępnimy w kolejnym etapie." %}</div>
+  <p><a class="button" href="{% url 'orders:checkout' %}">{% translate "Przejdź do zamówienia" %} ↗</a></p><p class="cart-note">{% translate "W następnym kroku wybierzesz dostawę i podasz dane do zamówienia." %}</p>
   <a class="text-link" href="{% url 'catalog:list' %}">{% translate "← Kontynuuj przeglądanie" %}</a>
 {% else %}
   <div class="account-empty"><p class="empty-title">{% translate "Twój koszyk jest pusty." %}</p><p>{% translate "Znajdź sprzęt na kolejny wyjazd i dodaj go do koszyka." %}</p><a class="button" href="{% url 'catalog:list' %}">{% translate "Przeglądaj sprzęt" %} <span aria-hidden="true">→</span></a></div>

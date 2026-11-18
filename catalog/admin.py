@@ -31,9 +31,9 @@ class ProductAdmin(admin.ModelAdmin):
     form = ProductAdminForm
     list_display = ("name", "category", "display_subcategory", "price", "discount_percent", "sale_stock", "is_active", "featured_order")
     list_editable = ("featured_order",)
-    list_filter = ("category", SubcategoryFilter, "materials", "size", "is_active")
+    list_filter = ("category", SubcategoryFilter, "materials", "skill_levels", "size", "is_active")
     search_fields = ("name", "description", "construction", "description_en", "construction_en")
-    filter_horizontal = ("materials",)
+    filter_horizontal = ("materials", "skill_levels")
     prepopulated_fields = {"slug": ("name",)}
 
     @admin.display(description=_("podkategoria"), ordering="subcategory")

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-05 00:23+0100\n"
+"POT-Creation-Date: 2026-11-18 17:22+0100\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -14,8 +14,8 @@ msgstr "Contact"
 msgid "Login"
 msgstr "Username"
 
-#: .\accounts\forms.py:21 .\templates\accounts\cart.html:14
-#: .\templates\catalog\product_detail.html:18
+#: .\accounts\forms.py:21 .\orders\models.py:97
+#: .\templates\accounts\cart.html:14 .\templates\catalog\product_detail.html:18
 msgid "Ilość"
 msgstr "Quantity"
 
@@ -23,19 +23,19 @@ msgstr "Quantity"
 msgid "Numer telefonu musi zawierać od 7 do 15 cyfr."
 msgstr "The telephone number must contain between 7 and 15 digits."
 
-#: .\accounts\forms.py:34
+#: .\accounts\forms.py:34 .\orders\forms.py:8 .\orders\models.py:33
 msgid "Imię"
 msgstr "First name"
 
-#: .\accounts\forms.py:34
+#: .\accounts\forms.py:34 .\orders\forms.py:9 .\orders\models.py:34
 msgid "Nazwisko"
 msgstr "Last name"
 
-#: .\accounts\forms.py:34
+#: .\accounts\forms.py:34 .\orders\forms.py:10 .\orders\models.py:35
 msgid "Adres e-mail"
 msgstr "Email address"
 
-#: .\accounts\forms.py:34
+#: .\accounts\forms.py:34 .\orders\forms.py:11 .\orders\models.py:36
 msgid "Numer telefonu"
 msgstr "Telephone number"
 
@@ -55,49 +55,49 @@ msgstr "user"
 msgid "użytkownicy"
 msgstr "users"
 
-#: .\accounts\views.py:40
+#: .\accounts\views.py:41
 msgid "Konto zostało utworzone. Witaj w Szron!"
 msgstr "Your account has been created. Welcome to Szron!"
 
-#: .\accounts\views.py:67
+#: .\accounts\views.py:78
 msgid "Dane profilu zostały zapisane."
 msgstr "Your profile details have been saved."
 
-#: .\accounts\views.py:83
+#: .\accounts\views.py:94
 #, python-format
 msgid "Zapisano w ulubionych: %(name)s."
 msgstr "Saved to favourites: %(name)s."
 
-#: .\accounts\views.py:91
+#: .\accounts\views.py:102
 msgid "Usunięto produkt z ulubionych."
 msgstr "The product has been removed from your favourites."
 
-#: .\accounts\views.py:113 .\accounts\views.py:139
+#: .\accounts\views.py:125 .\accounts\views.py:152
 msgid "Podaj poprawną, dodatnią liczbę sztuk."
 msgstr "Enter a valid positive quantity."
 
-#: .\accounts\views.py:118
+#: .\accounts\views.py:130
 msgid "Nie można dodać tylu sztuk. Sprawdź dostępność i ilość w koszyku."
 msgstr "You cannot add that many items. Check availability and the quantity already in your basket."
 
-#: .\accounts\views.py:125
+#: .\accounts\views.py:137
 #, python-format
 msgid "Dodano do koszyka: %(name)s."
 msgstr "Added to basket: %(name)s."
 
-#: .\accounts\views.py:141
+#: .\accounts\views.py:154
 msgid "Wybrana ilość produktu jest obecnie niedostępna."
 msgstr "The selected product quantity is currently unavailable."
 
-#: .\accounts\views.py:145
+#: .\accounts\views.py:158
 msgid "Zmieniono ilość w koszyku."
 msgstr "The basket quantity has been updated."
 
-#: .\accounts\views.py:157
+#: .\accounts\views.py:171
 msgid "Usunięto produkt z koszyka."
 msgstr "The product has been removed from your basket."
 
-#: .\catalog\admin.py:10 .\catalog\admin.py:39 .\catalog\models.py:47
+#: .\catalog\admin.py:10 .\catalog\admin.py:39 .\catalog\models.py:68
 msgid "podkategoria"
 msgstr "subcategory"
 
@@ -113,29 +113,40 @@ msgstr "Szron"
 msgid "Panel administratora"
 msgstr "Administration"
 
-#: .\catalog\context_processors.py:6 .\templates\catalog\product_list.html:12
+#: .\catalog\context_processors.py:6 .\templates\accounts\profile.html:5
+#: .\templates\accounts\profile.html:6 .\templates\catalog\skill_level.html:13
+#: .\templates\orders\checkout.html:14 .\templates\orders\checkout.html:21
+#: .\templates\orders\checkout.html:22 .\templates\orders\detail.html:7
+#: .\templates\orders\detail.html:8 .\templates\rentals\item_detail.html:13
+#: .\templates\rentals\item_list.html:26
+#: .\templates\rentals\my_reservations.html:10
+#: .\templates\rentals\reserve.html:6
+msgid "zł"
+msgstr "PLN"
+
+#: .\catalog\context_processors.py:7 .\templates\catalog\product_list.html:12
 msgid "Wszystkie podkategorie"
 msgstr "All subcategories"
 
-#: .\catalog\context_processors.py:7 .\templates\catalog\product_list.html:16
+#: .\catalog\context_processors.py:8 .\templates\catalog\product_list.html:16
 #: .\templates\rentals\item_list.html:13
 msgid "Wszystkie rozmiary"
 msgstr "All sizes"
 
-#: .\catalog\context_processors.py:8 .\templates\catalog\product_list.html:17
+#: .\catalog\context_processors.py:9 .\templates\catalog\product_list.html:17
 msgid "Wszystkie materiały"
 msgstr "All materials"
 
-#: .\catalog\context_processors.py:9 .\templates\rentals\item_list.html:12
+#: .\catalog\context_processors.py:10 .\templates\rentals\item_list.html:12
 #: .\templates\rentals\item_list.html:13
 msgid "brak w tej grupie"
 msgstr "not available in this group"
 
-#: .\catalog\context_processors.py:10 .\templates\catalog\home.html:27
+#: .\catalog\context_processors.py:11 .\templates\catalog\home.html:27
 msgid "Wstrzymaj pokaz"
 msgstr "Pause slideshow"
 
-#: .\catalog\context_processors.py:11
+#: .\catalog\context_processors.py:12
 msgid "Wznów pokaz"
 msgstr "Resume slideshow"
 
@@ -159,7 +170,7 @@ msgstr "Choose the type for this product category."
 msgid "identyfikator"
 msgstr "identifier"
 
-#: .\catalog\models.py:14 .\catalog\models.py:43
+#: .\catalog\models.py:14 .\catalog\models.py:64
 msgid "nazwa"
 msgstr "name"
 
@@ -171,177 +182,251 @@ msgstr "name (English)"
 msgid "materiał"
 msgstr "material"
 
-#: .\catalog\models.py:20 .\catalog\models.py:57
+#: .\catalog\models.py:20 .\catalog\models.py:78
 msgid "materiały"
 msgstr "materials"
 
-#: .\catalog\models.py:34
+#: .\catalog\models.py:32 .\catalog\skill_levels.py:6
+msgid "Początkujący"
+msgstr "Beginner"
+
+#: .\catalog\models.py:33 .\catalog\skill_levels.py:13
+msgid "Średniozaawansowany"
+msgstr "Intermediate"
+
+#: .\catalog\models.py:34 .\catalog\skill_levels.py:20
+msgid "Zaawansowany"
+msgstr "Advanced"
+
+#: .\catalog\models.py:36 .\catalog\models.py:40
+msgid "poziom zaawansowania"
+msgstr "skill level"
+
+#: .\catalog\models.py:41 .\catalog\models.py:79
+msgid "poziomy zaawansowania"
+msgstr "skill levels"
+
+#: .\catalog\models.py:55
 msgid "Narty"
 msgstr "Skis"
 
-#: .\catalog\models.py:35
+#: .\catalog\models.py:56
 msgid "Snowboardy"
 msgstr "Snowboards"
 
-#: .\catalog\models.py:36
+#: .\catalog\models.py:57
 msgid "Wiązania"
 msgstr "Bindings"
 
-#: .\catalog\models.py:37
+#: .\catalog\models.py:58
 msgid "Kaski"
 msgstr "Helmets"
 
-#: .\catalog\models.py:38
+#: .\catalog\models.py:59
 msgid "Gogle"
 msgstr "Goggles"
 
-#: .\catalog\models.py:39
+#: .\catalog\models.py:60
 msgid "Buty snowboardowe"
 msgstr "Snowboard boots"
 
-#: .\catalog\models.py:40
+#: .\catalog\models.py:61
 msgid "Buty narciarskie"
 msgstr "Ski boots"
 
-#: .\catalog\models.py:41
+#: .\catalog\models.py:62
 msgid "Akcesoria"
 msgstr "Accessories"
 
-#: .\catalog\models.py:44
+#: .\catalog\models.py:65
 msgid "adres produktu"
 msgstr "product URL"
 
-#: .\catalog\models.py:45
+#: .\catalog\models.py:66
 msgid "kategoria"
 msgstr "category"
 
-#: .\catalog\models.py:48
+#: .\catalog\models.py:69
 msgid "Typ sprzętu właściwy dla wybranej kategorii."
 msgstr "Equipment type for the selected category."
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:71
 msgid "opis"
 msgstr "description"
 
-#: .\catalog\models.py:51
+#: .\catalog\models.py:72
 msgid "opis (angielski)"
 msgstr "description (English)"
 
-#: .\catalog\models.py:52
+#: .\catalog\models.py:73
 msgid "konstrukcja (angielski)"
 msgstr "construction (English)"
 
-#: .\catalog\models.py:53
+#: .\catalog\models.py:74
 msgid "wymiary (angielski)"
 msgstr "dimensions (English)"
 
-#: .\catalog\models.py:54
+#: .\catalog\models.py:75
 msgid "masa dotyczy (angielski)"
 msgstr "weight applies to (English)"
 
-#: .\catalog\models.py:55 .\rentals\models.py:25
+#: .\catalog\models.py:76 .\orders\models.py:94 .\rentals\models.py:25
 msgid "rozmiar (angielski)"
 msgstr "size (English)"
 
-#: .\catalog\models.py:56 .\rentals\models.py:24
+#: .\catalog\models.py:77 .\orders\models.py:93 .\rentals\models.py:24
 msgid "rozmiar"
 msgstr "size"
 
-#: .\catalog\models.py:56
+#: .\catalog\models.py:77
 msgid "Z jednostką, np. 172 cm, M (55–59 cm) lub 27,0 MP."
 msgstr "Include a unit, for example 172 cm, M (55–59 cm) or 27.0 MP."
 
-#: .\catalog\models.py:58
+#: .\catalog\models.py:79
+msgid "Wybierz poziomy, dla których polecasz ten model. Brak wyboru ukrywa go w poradniku tras."
+msgstr "Select the levels you recommend this model for. Leave empty to hide it from the route guide."
+
+#: .\catalog\models.py:80
 msgid "konstrukcja i zastosowanie materiałów"
 msgstr "construction and use of materials"
 
-#: .\catalog\models.py:59
+#: .\catalog\models.py:81
 msgid "wymiary"
 msgstr "dimensions"
 
-#: .\catalog\models.py:59
+#: .\catalog\models.py:81
 msgid "Wpisz jednostki oraz rodzaj pomiaru."
 msgstr "Include units and explain what is being measured."
 
-#: .\catalog\models.py:60
+#: .\catalog\models.py:82
 msgid "masa (g)"
 msgstr "weight (g)"
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:83
 msgid "masa dotyczy"
 msgstr "weight applies to"
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:83
 msgid "Np. para nart z wiązaniami, jeden but lub komplet 8 śrub."
 msgstr "For example: a pair of skis with bindings, one boot or a set of eight screws."
 
-#: .\catalog\models.py:62
+#: .\catalog\models.py:84
 msgid "parametry demonstracyjne"
 msgstr "demo specifications"
 
-#: .\catalog\models.py:63
+#: .\catalog\models.py:85
 msgid "cena sprzedaży (zł)"
 msgstr "regular price (PLN)"
 
-#: .\catalog\models.py:65
+#: .\catalog\models.py:87
 msgid "rabat (%)"
 msgstr "discount (%)"
 
-#: .\catalog\models.py:65
+#: .\catalog\models.py:87
 msgid "0 wyłącza promocję. Rabat naliczany od ceny regularnej produktu."
 msgstr "0 disables the promotion. The discount is calculated from the product's regular price."
 
-#: .\catalog\models.py:66
+#: .\catalog\models.py:88
 msgid "liczba sztuk na sprzedaż"
 msgstr "stock available for sale"
 
-#: .\catalog\models.py:67
+#: .\catalog\models.py:89
 msgid "widoczny w katalogu"
 msgstr "visible in catalogue"
 
-#: .\catalog\models.py:69
+#: .\catalog\models.py:91
 msgid "zdjęcie produktu"
 msgstr "product photo"
 
-#: .\catalog\models.py:70
+#: .\catalog\models.py:92
 msgid "Ścieżka względem static/, np. img/snowboard1.jpg. Puste pole oznacza ilustrację kategorii."
 msgstr "Path relative to static/, for example img/snowboard1.jpg. Leave empty for a category illustration."
 
-#: .\catalog\models.py:73
+#: .\catalog\models.py:95
 msgid "Podaj ścieżkę w img/ do pliku jpg, jpeg, png lub webp, bez spacji."
 msgstr "Enter an img/ path to a jpg, jpeg, png or webp file without spaces."
 
-#: .\catalog\models.py:77
+#: .\catalog\models.py:99
 msgid "kolejność na stronie głównej"
 msgstr "homepage order"
 
-#: .\catalog\models.py:78
+#: .\catalog\models.py:100
 msgid "Puste: bez wyróżnienia. Niższa liczba: wcześniej. Wymagane zdjęcie; pokazujemy maksymalnie 3 produkty."
 msgstr "Empty: not featured. Lower numbers appear first. A photo is required; at most three products are shown."
 
-#: .\catalog\models.py:80 .\rentals\models.py:33 .\rentals\models.py:69
+#: .\catalog\models.py:102 .\orders\models.py:47 .\rentals\models.py:33
+#: .\rentals\models.py:69
 msgid "data dodania"
 msgstr "date added"
 
-#: .\catalog\models.py:84
+#: .\catalog\models.py:106 .\orders\models.py:91
 msgid "produkt"
 msgstr "product"
 
-#: .\catalog\models.py:85
+#: .\catalog\models.py:107
 msgid "produkty"
 msgstr "products"
 
-#: .\catalog\models.py:109
+#: .\catalog\models.py:131
 msgid "Wybierz podkategorię nart."
 msgstr "Choose a ski subcategory."
 
-#: .\catalog\models.py:109
+#: .\catalog\models.py:131
 msgid "Wybierz podkategorię produktu."
 msgstr "Choose a product subcategory."
 
-#: .\catalog\models.py:112
+#: .\catalog\models.py:134
 msgid "Ta podkategoria nie pasuje do wybranej kategorii."
 msgstr "This subcategory does not match the selected category."
+
+#: .\catalog\skill_levels.py:7
+msgid "Pierwsze skręty, wielka przyjemność"
+msgstr "First turns, great memories"
+
+#: .\catalog\skill_levels.py:8
+msgid "Uczysz się hamowania i skrętów albo wracasz na stok po dłuższej przerwie."
+msgstr "You are learning to stop and turn, or returning to the slopes after a longer break."
+
+#: .\catalog\skill_levels.py:9
+msgid "Ćwiczysz kontrolę prędkości, zatrzymywanie się i łączenie pierwszych skrętów. Wybierasz łagodne, przygotowane trasy i spokojne tempo, najlepiej podczas zajęć z instruktorem."
+msgstr "You are practising speed control, stopping and linking your first turns. Choose gentle groomed slopes and a relaxed pace, ideally with an instructor."
+
+#: .\catalog\skill_levels.py:10
+msgid "Szukaj łatwego w prowadzeniu sprzętu: nart trasowych, przewidywalnej deski all-mountain i wygodnych butów o łagodniejszym charakterze. W naszym katalogu to między innymi Alpine, Drift, Cloud i Flex. Kask i gogle dobierz do obwodu głowy, dopasowania i warunków światła."
+msgstr "Look for easy handling: piste skis, a predictable all-mountain snowboard and comfortable, forgiving boots. Examples in our catalogue include Alpine, Drift, Cloud and Flex. Choose your helmet and goggles for fit, head size and light conditions."
+
+#: .\catalog\skill_levels.py:14
+#| msgid "Precyzja w każdym skręcie"
+msgid "Więcej pewności w każdym skręcie"
+msgstr "More confidence in every turn"
+
+#: .\catalog\skill_levels.py:15
+msgid "Samodzielnie kontrolujesz prędkość i łączysz skręty na przygotowanych trasach."
+msgstr "You can control your speed and link turns independently on groomed slopes."
+
+#: .\catalog\skill_levels.py:16
+msgid "Pewnie hamujesz i zmieniasz kierunek. Doskonalisz pracę na krawędziach i dostosowujesz skręty do nachylenia stoku. Chcesz rozwijać technikę lub rozpocząć naukę freestyle w odpowiednio dobranym miejscu."
+msgstr "You stop and change direction confidently. You are improving your edge control and adapting your turns to the slope. You want to develop your technique or start learning freestyle in a suitable setting."
+
+#: .\catalog\skill_levels.py:17
+msgid "Sprawdź narty i deski all-mountain, a do nauki freestyle modele twin-tip oraz deski freestyle. Traverse, Drift, Pulse i Orbit to przykłady z naszego katalogu. Buty powinny dawać podparcie odpowiednie do Twojej techniki; modele Roam i Contour rozwijają tę część wyboru."
+msgstr "Explore all-mountain skis and snowboards, or twin-tip skis and freestyle boards for learning freestyle. Examples in our catalogue include Traverse, Drift, Pulse and Orbit. Boots should provide support suited to your technique; explore Roam and Contour models for these options."
+
+#: .\catalog\skill_levels.py:21
+msgid "Precyzja dopasowana do Twojego stylu"
+msgstr "Precision for your riding style"
+
+#: .\catalog\skill_levels.py:22
+msgid "Świadomie pracujesz na krawędziach i szukasz sprzętu do wybranej dyscypliny."
+msgstr "You use your edges deliberately and want equipment for your chosen discipline."
+
+#: .\catalog\skill_levels.py:23
+msgid "Panujesz nad tempem i torem jazdy na wymagających trasach. Szukasz precyzji w carvingu, rozwijasz freestyle lub masz doświadczenie i przygotowanie do konkretnej formy jazdy terenowej."
+msgstr "You control your speed and line on demanding slopes. You want precision for carving, to progress in freestyle, or have the experience and preparation needed for a particular type of backcountry riding."
+
+#: .\catalog\skill_levels.py:24
+msgid "Dobieraj sprzęt do zastosowania: Velocity i Race Pro do sportowej jazdy na trasie, Edge do carvingu, Powder, Glacier i Rift do freeride, a Ascend i Climb do skituringu. To różne dyscypliny: umiejętności na stoku nie zastępują przygotowania terenowego ani lawinowego."
+msgstr "Choose by discipline: Velocity and Race Pro for performance piste skiing, Edge for carving, Powder, Glacier and Rift for freeride, and Ascend and Climb for ski touring. These are different disciplines: slope skills do not replace backcountry or avalanche preparation."
 
 #: .\catalog\store_info.py:7
 msgid "Marta — doradczyni klienta"
@@ -527,25 +612,263 @@ msgstr "All snowboard boots"
 msgid "Wszystkie buty narciarskie"
 msgstr "All ski boots"
 
-#: .\catalog\views.py:17
+#: .\catalog\views.py:19
 msgid "Snowboard"
 msgstr "Snowboard"
 
-#: .\catalog\views.py:24
+#: .\catalog\views.py:26
 msgid "Ośnieżony stok i wyciągi wśród zimowego lasu"
 msgstr "A snowy slope and ski lifts in a winter forest"
 
-#: .\catalog\views.py:25
+#: .\catalog\views.py:27
 msgid "Narciarki podziwiające zimową panoramę gór"
 msgstr "Skiers admiring a winter mountain panorama"
 
-#: .\catalog\views.py:26
+#: .\catalog\views.py:28
 msgid "Narciarz w skoku na tle alpejskich szczytów"
 msgstr "A skier jumping in front of Alpine peaks"
 
-#: .\catalog\views.py:27
+#: .\catalog\views.py:29
 msgid "Ośnieżona grań i trasa narciarska pośród chmur"
 msgstr "A snowy ridge and ski run among the clouds"
+
+#: .\orders\admin.py:18
+msgid "Wartość"
+msgstr "Value"
+
+#: .\orders\admin.py:32
+msgid "Numer zamówienia"
+msgstr "Order number"
+
+#: .\orders\admin.py:57
+#, python-format
+msgid "Obsłużone zamówienia: %(count)s."
+msgstr "Orders processed: %(count)s."
+
+#: .\orders\admin.py:59
+msgid "Rozpocznij przygotowanie"
+msgstr "Start preparing"
+
+#: .\orders\admin.py:63
+msgid "Oznacz jako gotowe do odbioru"
+msgstr "Mark as ready for pickup"
+
+#: .\orders\admin.py:67
+msgid "Oznacz jako wysłane"
+msgstr "Mark as shipped"
+
+#: .\orders\admin.py:71
+msgid "Zakończ zamówienia"
+msgstr "Complete orders"
+
+#: .\orders\admin.py:75
+msgid "Anuluj i przywróć produkty na stan"
+msgstr "Cancel and restock products"
+
+#: .\orders\apps.py:8 .\templates\accounts\profile.html:5
+msgid "Zakupy"
+msgstr "Purchases"
+
+#: .\orders\forms.py:12 .\orders\models.py:37
+msgid "Sposób dostawy"
+msgstr "Delivery method"
+
+#: .\orders\forms.py:13 .\orders\models.py:38
+msgid "Sklep odbioru"
+msgstr "Pickup shop"
+
+#: .\orders\forms.py:14 .\orders\models.py:40
+msgid "Ulica i numer domu / mieszkania"
+msgstr "Street address and apartment number"
+
+#: .\orders\forms.py:15 .\orders\models.py:41
+msgid "Kod pocztowy"
+msgstr "Postal code"
+
+#: .\orders\forms.py:16 .\orders\models.py:42
+msgid "Miejscowość"
+msgstr "City"
+
+#: .\orders\forms.py:17 .\orders\models.py:43 .\templates\orders\detail.html:9
+msgid "Uwagi do zamówienia"
+msgstr "Order notes"
+
+#: .\orders\forms.py:18
+msgid "Potwierdzam zamówienie demonstracyjne."
+msgstr "I confirm this demo order."
+
+#: .\orders\forms.py:24
+msgid "Podaj prawidłowy numer telefonu."
+msgstr "Enter a valid phone number."
+
+#: .\orders\forms.py:32
+msgid "Uzupełnij adres dostawy."
+msgstr "Complete the delivery address."
+
+#: .\orders\forms.py:34
+msgid "Wpisz kod pocztowy w formacie 00-000."
+msgstr "Enter the postal code in the format 00-000."
+
+#: .\orders\forms.py:38
+msgid "Wybierz sklep odbioru."
+msgstr "Choose a pickup shop."
+
+#: .\orders\models.py:18 .\orders\models.py:83
+msgid "Przyjęte"
+msgstr "Accepted"
+
+#: .\orders\models.py:19
+msgid "W przygotowaniu"
+msgstr "Being prepared"
+
+#: .\orders\models.py:20
+msgid "Gotowe do odbioru"
+msgstr "Ready for pickup"
+
+#: .\orders\models.py:21
+msgid "Wysłane"
+msgstr "Shipped"
+
+#: .\orders\models.py:22
+msgid "Zrealizowane"
+msgstr "Completed"
+
+#: .\orders\models.py:23 .\rentals\models.py:56
+msgid "Anulowano"
+msgstr "Cancelled"
+
+#: .\orders\models.py:26
+msgid "Odbiór w sklepie"
+msgstr "Store pickup"
+
+#: .\orders\models.py:27
+msgid "Kurier za pobraniem"
+msgstr "Cash on delivery"
+
+#: .\orders\models.py:31 .\rentals\models.py:60
+msgid "klient"
+msgstr "customer"
+
+#: .\orders\models.py:32
+msgid "status zamówienia"
+msgstr "order status"
+
+#: .\orders\models.py:39
+msgid "adres sklepu odbioru"
+msgstr "pickup shop address"
+
+#: .\orders\models.py:44 .\templates\accounts\cart.html:23
+#: .\templates\orders\checkout.html:22 .\templates\orders\detail.html:8
+msgid "Wartość produktów"
+msgstr "Products total"
+
+#: .\orders\models.py:45
+msgid "Koszt dostawy"
+msgstr "Delivery fee"
+
+#: .\orders\models.py:46 .\templates\orders\checkout.html:22
+#: .\templates\orders\detail.html:8
+msgid "Razem"
+msgstr "Total"
+
+#: .\orders\models.py:48
+msgid "ostatnia zmiana"
+msgstr "last updated"
+
+#: .\orders\models.py:49
+msgid "data realizacji"
+msgstr "completion date"
+
+#: .\orders\models.py:50 .\rentals\models.py:70
+msgid "data anulowania"
+msgstr "cancellation date"
+
+#: .\orders\models.py:51
+msgid "status zmienił"
+msgstr "status updated by"
+
+#: .\orders\models.py:55
+msgid "zamówienie zakupu"
+msgstr "purchase order"
+
+#: .\orders\models.py:56
+msgid "zamówienia zakupu"
+msgstr "purchase orders"
+
+#: .\orders\models.py:83
+msgid "Przygotowanie"
+msgstr "Preparation"
+
+#: .\orders\models.py:83
+msgid "Odbiór"
+msgstr "Pickup"
+
+#: .\orders\models.py:83
+msgid "Wysyłka"
+msgstr "Shipping"
+
+#: .\orders\models.py:83
+msgid "Zakończone"
+msgstr "Complete"
+
+#: .\orders\models.py:92 .\rentals\models.py:65
+msgid "zapisana nazwa sprzętu"
+msgstr "saved equipment name"
+
+#: .\orders\models.py:96
+msgid "cena jednostkowa"
+msgstr "unit price"
+
+#: .\orders\models.py:101
+msgid "pozycja zamówienia"
+msgstr "order line"
+
+#: .\orders\models.py:102
+msgid "pozycje zamówienia"
+msgstr "order lines"
+
+#: .\orders\services.py:39
+msgid "Podsumowanie zamówienia wygasło lub jest nieprawidłowe. Sprawdź koszyk ponownie."
+msgstr "The order summary has expired or is invalid. Review your basket again."
+
+#: .\orders\services.py:51 .\templates\accounts\cart.html:27
+#: .\templates\orders\checkout.html:21
+msgid "Twój koszyk jest pusty."
+msgstr "Your basket is empty."
+
+#: .\orders\services.py:54
+msgid "Koszyk zmienił się. Sprawdź produkty i potwierdź ponownie."
+msgstr "Your basket has changed. Review the products and confirm again."
+
+#: .\orders\services.py:58
+#, python-format
+msgid "Produkt %(name)s jest niedostępny w wybranej ilości. Popraw koszyk."
+msgstr "Product %(name)s is unavailable in the selected quantity. Update your basket."
+
+#: .\orders\services.py:60
+msgid "Koszyk lub cena zmieniły się. Sprawdź aktualne podsumowanie i potwierdź ponownie."
+msgstr "Your basket or the price has changed. Review the updated summary and confirm again."
+
+#: .\orders\services.py:63
+msgid "Wybierz prawidłowy sposób dostawy."
+msgstr "Choose a valid delivery method."
+
+#: .\orders\services.py:104
+msgid "Nie można wykonać tej operacji przy obecnym statusie zamówienia."
+msgstr "This action is not available for the current order status."
+
+#: .\orders\views.py:25
+msgid "Dodaj produkty do koszyka, aby złożyć zamówienie."
+msgstr "Add products to your basket to place an order."
+
+#: .\orders\views.py:36
+#, python-format
+msgid "Zamówienie %(number)s zostało zapisane. Dziękujemy!"
+msgstr "Order %(number)s has been saved. Thank you!"
+
+#: .\orders\views.py:70
+msgid "Zamówienie zostało anulowane, a produkty wróciły na stan."
+msgstr "Your order has been cancelled and the products have been restocked."
 
 #: .\rentals\admin.py:43
 msgid "Anuluj zaznaczone rezerwacje"
@@ -654,17 +977,9 @@ msgstr "rental items"
 msgid "Zarezerwowano"
 msgstr "Reserved"
 
-#: .\rentals\models.py:56
-msgid "Anulowano"
-msgstr "Cancelled"
-
 #: .\rentals\models.py:58 .\templates\rentals\my_reservations.html:13
 msgid "Zwrócono"
 msgstr "Returned"
-
-#: .\rentals\models.py:60
-msgid "klient"
-msgstr "customer"
 
 #: .\rentals\models.py:61
 msgid "egzemplarz"
@@ -682,10 +997,6 @@ msgstr "return"
 msgid "zapisana stawka dobowa (zł)"
 msgstr "saved daily rate (PLN)"
 
-#: .\rentals\models.py:65
-msgid "zapisana nazwa sprzętu"
-msgstr "saved equipment name"
-
 #: .\rentals\models.py:66
 msgid "zapisany rozmiar"
 msgstr "saved size"
@@ -697,10 +1008,6 @@ msgstr "saved size (English)"
 #: .\rentals\models.py:68
 msgid "status rezerwacji"
 msgstr "reservation status"
-
-#: .\rentals\models.py:70
-msgid "data anulowania"
-msgstr "cancellation date"
 
 #: .\rentals\models.py:72
 msgid "data wydania"
@@ -774,15 +1081,15 @@ msgstr "The return has already been recorded with a different equipment status. 
 msgid "Przyjąć zwrot można tylko po wydaniu sprzętu."
 msgstr "A return can only be accepted after the equipment has been issued."
 
-#: .\rentals\views.py:79
+#: .\rentals\views.py:80
 msgid "Sprawdź cenę przed potwierdzeniem rezerwacji."
 msgstr "Check the price before confirming your reservation."
 
-#: .\rentals\views.py:89
+#: .\rentals\views.py:90
 msgid "Rezerwacja została zapisana. Znajdziesz ją w zakładce Moje wypożyczenia."
 msgstr "Your reservation has been saved. You can find it under My rentals."
 
-#: .\rentals\views.py:109
+#: .\rentals\views.py:111
 msgid "Rezerwacja została anulowana."
 msgstr "Your reservation has been cancelled."
 
@@ -847,28 +1154,24 @@ msgstr "Remove %(v0)s from basket"
 msgid "Usuń"
 msgstr "Remove"
 
-#: .\templates\accounts\cart.html:23
-msgid "Wartość produktów"
-msgstr "Products total"
+#: .\templates\accounts\cart.html:24
+msgid "Przejdź do zamówienia"
+msgstr "Proceed to checkout"
 
 #: .\templates\accounts\cart.html:24
-msgid "Możesz już zapisywać produkty w koszyku. Składanie zamówień udostępnimy w kolejnym etapie."
-msgstr "You can now save products in your basket. Placing orders will be available in a future update."
+msgid "W następnym kroku wybierzesz dostawę i podasz dane do zamówienia."
+msgstr "Next, choose delivery and enter your order details."
 
 #: .\templates\accounts\cart.html:25
 msgid "← Kontynuuj przeglądanie"
 msgstr "← Continue browsing"
 
 #: .\templates\accounts\cart.html:27
-msgid "Twój koszyk jest pusty."
-msgstr "Your basket is empty."
-
-#: .\templates\accounts\cart.html:27
 msgid "Znajdź sprzęt na kolejny wyjazd i dodaj go do koszyka."
 msgstr "Find equipment for your next trip and add it to your basket."
 
 #: .\templates\accounts\cart.html:27 .\templates\accounts\favorites.html:10
-#: .\templates\accounts\profile.html:12
+#: .\templates\accounts\profile.html:4
 msgid "Przeglądaj sprzęt"
 msgstr "Browse equipment"
 
@@ -941,30 +1244,55 @@ msgid "Utwórz konto"
 msgstr "Create account"
 
 #: .\templates\accounts\profile.html:4
-#: .\templates\accounts\profile_base.html:10
-msgid "Aktualne zamówienia"
-msgstr "Current orders"
+msgid "WSZYSTKO W JEDNYM MIEJSCU"
+msgstr "EVERYTHING IN ONE PLACE"
+
+#: .\templates\accounts\profile.html:4
+msgid "Twoje zamówienia i rezerwacje"
+msgstr "Your orders and reservations"
+
+#: .\templates\accounts\profile.html:4
+msgid "Historia zakupów i rezerwacji"
+msgstr "Purchase and reservation history"
+
+#: .\templates\accounts\profile.html:5 .\templates\accounts\profile.html:6
+#: .\templates\catalog\product_card.html:8
+#: .\templates\rentals\item_list.html:28
+msgid "Zobacz szczegóły"
+msgstr "View details"
+
+#: .\templates\accounts\profile.html:5
+msgid "Twoja historia zakupów jest pusta."
+msgstr "Your purchase history is empty."
 
 #: .\templates\accounts\profile.html:5
 msgid "Nie masz jeszcze zamówień."
 msgstr "You have no orders yet."
 
+#: .\templates\accounts\profile.html:5
+msgid "Po zakupie produkty i status realizacji zobaczysz właśnie tutaj."
+msgstr "After checkout, your products and order status will appear here."
+
 #: .\templates\accounts\profile.html:6
-msgid "Tutaj zobaczysz swoje zamówienia i stan ich realizacji, gdy udostępnimy składanie zamówień."
-msgstr "Your orders and their progress will appear here once ordering is available."
+msgid "Rezerwacje i wypożyczenia"
+msgstr "Reservations and rentals"
 
-#: .\templates\accounts\profile.html:8
-#: .\templates\accounts\profile_base.html:11
-msgid "Historia zakupów"
-msgstr "Purchase history"
+#: .\templates\accounts\profile.html:6
+msgid "Historia rezerwacji"
+msgstr "Reservation history"
 
-#: .\templates\accounts\profile.html:9
-msgid "Twoja historia zakupów jest pusta."
-msgstr "Your purchase history is empty."
+#: .\templates\accounts\profile.html:6
+msgid "Wszystkie moje wypożyczenia"
+msgstr "All my rentals"
 
-#: .\templates\accounts\profile.html:10
-msgid "Tutaj pojawią się Twoje zakończone zakupy, gdy udostępnimy składanie zamówień."
-msgstr "Your completed purchases will appear here once ordering is available."
+#: .\templates\accounts\profile.html:6
+#: .\templates\rentals\my_reservations.html:7
+msgid "Rezerwacja"
+msgstr "Reservation"
+
+#: .\templates\accounts\profile.html:6
+msgid "Nie ma rezerwacji w tej sekcji. Pełną listę znajdziesz w Moich wypożyczeniach."
+msgstr "No reservations in this section. Find the full list under My rentals."
 
 #: .\templates\accounts\profile_base.html:2
 msgid "Moje konto — Szron"
@@ -986,6 +1314,14 @@ msgstr "Hello,"
 msgid "Zakładki konta"
 msgstr "Account sections"
 
+#: .\templates\accounts\profile_base.html:10
+msgid "Zamówienia i rezerwacje"
+msgstr "Orders and reservations"
+
+#: .\templates\accounts\profile_base.html:11
+msgid "Historia zakupów"
+msgstr "Purchase history"
+
 #: .\templates\accounts\profile_base.html:12
 #: .\templates\rentals\my_reservations.html:3
 msgid "Moje wypożyczenia"
@@ -1001,6 +1337,7 @@ msgid "Ulubione"
 msgstr "Favourites"
 
 #: .\templates\accounts\profile_base.html:15 .\templates\base.html:24
+#: .\templates\orders\checkout.html:5
 msgid "Koszyk"
 msgstr "Basket"
 
@@ -1025,12 +1362,12 @@ msgid "Nie masz jeszcze zgłoszeń zwrotu."
 msgstr "You have no return requests yet."
 
 #: .\templates\accounts\returns.html:5
-msgid "Po uruchomieniu zamówień w tym miejscu wybierzesz zakup, zgłosisz zwrot i sprawdzisz postęp jego obsługi."
-msgstr "Once ordering is available, you will be able to select a purchase, request a return and track its progress here."
+msgid "Obecnie nie można wysłać zgłoszenia zwrotu zakupu."
+msgstr "Purchase return requests are not available yet."
 
 #: .\templates\accounts\returns.html:6
-msgid "Obecnie nie można wysłać zgłoszenia — sklep nie przyjmuje jeszcze zamówień."
-msgstr "You cannot submit a request yet — the shop does not accept orders at this stage."
+msgid "Zwroty zakupów będą kolejnym etapem. Zwrot wypożyczonego sprzętu obsługuje wypożyczalnia."
+msgstr "Purchase returns will be added later. Rental equipment returns are handled by the rental shop."
 
 #: .\templates\accounts\returns.html:7
 msgid "Pomoc i kontakt"
@@ -1064,7 +1401,7 @@ msgstr "Szron — home"
 msgid "Menu główne"
 msgstr "Main navigation"
 
-#: .\templates\base.html:19
+#: .\templates\base.html:19 .\templates\catalog\skill_level.html:6
 msgid "Strona główna"
 msgstr "Home"
 
@@ -1231,52 +1568,29 @@ msgstr "View product"
 msgid "ZNAJDŹ SWÓJ RYTM"
 msgstr "FIND YOUR RHYTHM"
 
-#: .\templates\catalog\home.html:50
+#: .\templates\catalog\home.html:50 .\templates\catalog\skill_level.html:2
+#: .\templates\catalog\skill_level.html:8
 msgid "Wybierz swoją trasę"
 msgstr "Choose your route"
 
 #: .\templates\catalog\home.html:50
-msgid "Na stok przygotuj się po swojemu."
-msgstr "Get ready for the slopes your way."
+msgid "Poznaj swój poziom i znajdź sprzęt dla siebie."
+msgstr "Find your level and discover equipment for you."
 
-#: .\templates\catalog\home.html:52
-msgid "01 / NARTY"
-msgstr "01 / SKIS"
-
-#: .\templates\catalog\home.html:52
-msgid "Precyzja w każdym skręcie"
-msgstr "Precision in every turn"
-
-#: .\templates\catalog\home.html:53
-msgid "02 / SNOWBOARDY"
-msgstr "02 / SNOWBOARDS"
-
-#: .\templates\catalog\home.html:53
-msgid "Swoboda na całym stoku"
-msgstr "Freedom across the slopes"
-
-#: .\templates\catalog\home.html:54
-msgid "03 / BUTY"
-msgstr "03 / BOOTS"
-
-#: .\templates\catalog\home.html:54
-msgid "Komfort od pierwszego zjazdu"
-msgstr "Comfort from your first run"
-
-#: .\templates\catalog\home.html:57
+#: .\templates\catalog\home.html:55
 msgid "JESZCZE WIĘCEJ MOŻLIWOŚCI"
 msgstr "EVEN MORE POSSIBILITIES"
 
-#: .\templates\catalog\home.html:57
+#: .\templates\catalog\home.html:55
 msgid "Własny sprzęt czy wypożyczenie?"
 msgstr "Own your equipment or rent it?"
 
-#: .\templates\catalog\home.html:57
-#| msgid "Wybierz sprzęt i poznaj stawkę za dobę wypożyczenia."
+#: .\templates\catalog\home.html:55
 msgid "Wybierz sprzęt, sprawdź dostępność i zarezerwuj termin wypożyczenia online."
 msgstr "Choose equipment, check availability and reserve your rental dates online."
 
-#: .\templates\catalog\home.html:57 .\templates\catalog\product_detail.html:28
+#: .\templates\catalog\home.html:55 .\templates\catalog\product_detail.html:28
+#: .\templates\catalog\skill_level.html:13
 #: .\templates\rentals\my_reservations.html:17
 msgid "Przejdź do wypożyczalni"
 msgstr "Browse rentals"
@@ -1290,6 +1604,7 @@ msgid "Cena regularna:"
 msgstr "Regular price:"
 
 #: .\templates\catalog\product_card.html:3
+#: .\templates\catalog\skill_level.html:13
 #: .\templates\rentals\item_list.html:22
 #, python-format
 msgid "Zobacz %(v0)s"
@@ -1313,11 +1628,6 @@ msgstr "Offer −%(v0)s%%"
 #, python-format
 msgid "Rozmiar: %(v0)s"
 msgstr "Size: %(v0)s"
-
-#: .\templates\catalog\product_card.html:8
-#: .\templates\rentals\item_list.html:28
-msgid "Zobacz szczegóły"
-msgstr "View details"
 
 #: .\templates\catalog\product_card.html:9
 #, python-format
@@ -1381,9 +1691,8 @@ msgid "Zaloguj się, aby zapisać w ulubionych"
 msgstr "Sign in to save favourites"
 
 #: .\templates\catalog\product_detail.html:28
-#| msgid "Składanie zamówień i rezerwacje udostępnimy w kolejnych etapach."
-msgid "Składanie zamówień udostępnimy w kolejnym etapie. Sprzęt możesz już rezerwować w wypożyczalni."
-msgstr "Ordering will be added in a later stage. You can already reserve equipment in the rental section."
+msgid "Dodaj produkt do koszyka, aby przejść do zamówienia. Sprzęt możesz już rezerwować w wypożyczalni."
+msgstr "Add a product to your basket to proceed to checkout. You can already reserve equipment in the rental section."
 
 #: .\templates\catalog\product_list.html:2
 msgid "Sprzęt zimowy — Szron"
@@ -1410,17 +1719,20 @@ msgid "Nazwa lub opis…"
 msgstr "Name or description…"
 
 #: .\templates\catalog\product_list.html:8
+#: .\templates\catalog\skill_level.html:11
 #: .\templates\rentals\item_list.html:11
 msgid "Kategoria"
 msgstr "Category"
 
 #: .\templates\catalog\product_list.html:8
+#: .\templates\catalog\skill_level.html:11
 #: .\templates\rentals\item_list.html:11
 msgid "Wszystkie kategorie"
 msgstr "All categories"
 
 #: .\templates\catalog\product_list.html:16
 #: .\templates\catalog\product_specs.html:6
+#: .\templates\catalog\skill_level.html:13
 #: .\templates\rentals\item_list.html:13 .\templates\rentals\item_list.html:25
 #: .\templates\rentals\my_reservations.html:8
 #: .\templates\rentals\reserve.html:6
@@ -1438,11 +1750,13 @@ msgid "Materiał"
 msgstr "Material"
 
 #: .\templates\catalog\product_list.html:18
+#: .\templates\catalog\skill_level.html:11
 #: .\templates\rentals\item_list.html:16
 msgid "Pokaż sprzęt ↗"
 msgstr "Show equipment ↗"
 
 #: .\templates\catalog\product_list.html:18
+#: .\templates\catalog\skill_level.html:11
 #: .\templates\rentals\item_list.html:16
 msgid "Wyczyść"
 msgstr "Clear filters"
@@ -1539,6 +1853,79 @@ msgstr "You save %(v0)s PLN"
 msgid "Zobacz ofertę"
 msgstr "View offer"
 
+#: .\templates\catalog\skill_level.html:7
+msgid "Poziomy zaawansowania"
+msgstr "Skill levels"
+
+#: .\templates\catalog\skill_level.html:8
+#| msgid "Wybierz sprzęt i ruszaj po swoje."
+msgid "Wybierz sprzęt do kupienia"
+msgstr "Shop equipment"
+
+#: .\templates\catalog\skill_level.html:8
+#| msgid "egzemplarz do wypożyczenia"
+msgid "Wybierz sprzęt do wypożyczenia"
+msgstr "Explore rental equipment"
+
+#: .\templates\catalog\skill_level.html:9
+msgid "Co oznacza ten poziom?"
+msgstr "What does this level mean?"
+
+#: .\templates\catalog\skill_level.html:9
+#| msgid "sprzęt wydał"
+msgid "Jaki sprzęt wybrać?"
+msgstr "Which equipment should you choose?"
+
+#: .\templates\catalog\skill_level.html:10
+msgid "Poziom to punkt wyjścia. Dobierz też rozmiar, masę ciała, styl jazdy i kompatybilność zestawu. Kask i gogle służą na każdym poziomie. Lista poniżej pokazuje aktualne przypisania modeli w sklepie."
+msgstr "Your level is a starting point. Also consider size, body weight, riding style and equipment compatibility. Helmets and goggles are for every level. The list below reflects the current model assignments in the shop."
+
+#: .\templates\catalog\skill_level.html:12
+msgid "TWÓJ WŁASNY ZESTAW"
+msgstr "YOUR OWN EQUIPMENT"
+
+#: .\templates\catalog\skill_level.html:12
+msgid "Sprzęt do kupienia"
+msgstr "Equipment to buy"
+
+#: .\templates\catalog\skill_level.html:12
+#| msgid "Dodaj produkty do koszyka, aby złożyć zamówienie."
+msgid "Otwórz produkt, wybierz ilość i dodaj do koszyka, aby złożyć zamówienie."
+msgstr "Open a product, choose a quantity and add it to your basket to place an order."
+
+#: .\templates\catalog\skill_level.html:12
+msgid "Obecnie nie ma dostępnych produktów w tej grupie. Spróbuj innej kategorii."
+msgstr "No products are currently available in this group. Try another category."
+
+#: .\templates\catalog\skill_level.html:13
+msgid "NA KILKA DNI NA ŚNIEGU"
+msgstr "A FEW DAYS ON THE SNOW"
+
+#: .\templates\catalog\skill_level.html:13
+#| msgid "egzemplarz do wypożyczenia"
+msgid "Sprzęt do wypożyczenia"
+msgstr "Equipment to rent"
+
+#: .\templates\catalog\skill_level.html:13
+msgid "Otwórz szczegóły i wybierz daty. Dostępność w Twoim terminie sprawdzimy przed potwierdzeniem rezerwacji."
+msgstr "Open the details and choose your dates. We will check availability for your dates before confirming the reservation."
+
+#: .\templates\catalog\skill_level.html:13
+#: .\templates\rentals\item_detail.html:13
+#: .\templates\rentals\item_list.html:26
+#: .\templates\rentals\my_reservations.html:10
+#: .\templates\rentals\reserve.html:6
+msgid "doba"
+msgstr "day"
+
+#: .\templates\catalog\skill_level.html:13
+msgid "Szczegóły i rezerwacja"
+msgstr "Details and reservation"
+
+#: .\templates\catalog\skill_level.html:13
+msgid "Obecnie nie ma gotowych egzemplarzy w tej grupie. Sprawdź pełną ofertę wypożyczalni lub zmień kategorię."
+msgstr "No ready-to-rent items are currently available in this group. Explore the full rental catalogue or change category."
+
 #: .\templates\catalog\stores.html:2
 msgid "Sklepy stacjonarne — Szron"
 msgstr "Our shops — Szron"
@@ -1616,16 +2003,16 @@ msgid "5. Zamówienia, płatności i wypożyczanie"
 msgstr "5. Orders, payments and rentals"
 
 #: .\templates\catalog\terms.html:11
-msgid "Składanie zamówień, płatności i dostawa nie są jeszcze dostępne. Można zapisywać demonstracyjne rezerwacje sprzętu na wybrane daty i anulować je w zakładce „Moje wypożyczenia”. Nie dochodzi do zawarcia rzeczywistej umowy zakupu ani wypożyczenia."
-msgstr "Ordering, payments and delivery are not yet available. You can save demo equipment reservations for selected dates and cancel them under “My rentals”. No real purchase or rental contract is formed."
+msgid "Można składać demonstracyjne zamówienia zakupowe i rezerwować wypożyczenia. Zamówienie zmniejsza lokalny stan sprzedaży. Dostępne są odbiór osobisty lub demonstracyjna dostawa kurierem za pobraniem. Nie pobieramy płatności online, nie wysyłamy paczek i nie zawieramy rzeczywistych umów. Statusy i historię sprawdzisz na swoim koncie."
+msgstr "You can place demo purchase orders and rental reservations. An order reduces local sale stock. Store pickup and demo cash-on-delivery shipping are available. We do not collect online payments, ship real parcels or enter into real contracts. Check statuses and history in your account."
 
 #: .\templates\catalog\terms.html:12
 msgid "6. Zwroty i zgłaszanie problemów"
 msgstr "6. Returns and reporting problems"
 
 #: .\templates\catalog\terms.html:12
-msgid "Zakładka „Zwroty” jest przygotowana do przyszłej obsługi zakupów. Obecnie nie można wysłać zgłoszenia zwrotu ani żądać zwrotu płatności w serwisie, ponieważ zamówienia i płatności nie działają. Kanały na stronie kontaktowej są przykładami, nie działającym działem reklamacji."
-msgstr "The Returns tab is ready for future purchases. Return requests and refund requests cannot be submitted because ordering and payments are not available. The contact channels are examples, not a working complaints service."
+msgid "Zwroty zakupionych produktów nie są jeszcze obsługiwane. Nowe zamówienie można anulować przed rozpoczęciem przygotowania, co przywraca produkty na stan. Zwrot wypożyczonego sprzętu rejestruje obsługa wypożyczalni. Dane kontaktowe są demonstracyjne."
+msgstr "Purchase returns are not yet supported. A new order can be cancelled before preparation starts, which restocks the products. Rental returns are recorded by rental staff. Contact details are demo data."
 
 #: .\templates\catalog\terms.html:13
 msgid "7. Dane profilu"
@@ -1651,23 +2038,146 @@ msgstr "9. Future development"
 msgid "Przed uruchomieniem rzeczywistej sprzedaży lub wypożyczalni regulamin wymaga uzupełnienia o prawdziwe dane sprzedawcy oraz właściwe warunki zamówień, płatności, dostaw, zwrotów, reklamacji i ochrony danych."
 msgstr "Before real sales or rentals are launched, these terms must be completed with the seller's actual details and appropriate provisions for orders, payments, delivery, returns, complaints and data protection."
 
+#: .\templates\orders\checkout.html:2
+msgid "Dokończ zamówienie — Szron"
+msgstr "Complete your order — Szron"
+
+#: .\templates\orders\checkout.html:5
+msgid "Etapy zamówienia"
+msgstr "Checkout steps"
+
+#: .\templates\orders\checkout.html:5
+msgid "Dane i dostawa"
+msgstr "Details and delivery"
+
+#: .\templates\orders\checkout.html:5
+msgid "Potwierdzenie"
+msgstr "Confirmation"
+
+#: .\templates\orders\checkout.html:6
+msgid "JESZCZE KROK DO TWOJEJ ZIMY"
+msgstr "ONE STEP CLOSER TO YOUR WINTER"
+
+#: .\templates\orders\checkout.html:6
+msgid "Dokończ zamówienie."
+msgstr "Complete your order."
+
+#: .\templates\orders\checkout.html:6
+msgid "Sprawdź sprzęt, wybierz dostawę i podaj dane do zamówienia."
+msgstr "Check your equipment, choose delivery and enter your order details."
+
+#: .\templates\orders\checkout.html:6
+msgid "Tryb demonstracyjny"
+msgstr "Demo mode"
+
+#: .\templates\orders\checkout.html:10
+msgid "Twoje dane"
+msgstr "Your details"
+
+#: .\templates\orders\checkout.html:10
+msgid "Dane dotyczą tego zamówienia. Twój profil pozostanie bez zmian."
+msgstr "These details apply to this order. Your profile will stay unchanged."
+
+#: .\templates\orders\checkout.html:13
+msgid "Dostawa po Twojemu"
+msgstr "Delivery your way"
+
+#: .\templates\orders\checkout.html:13
+msgid "Kurier dostarcza zamówienia na terenie Polski. Podane koszty są demonstracyjne."
+msgstr "Courier delivery is available within Poland. The displayed fees are demo values."
+
+#: .\templates\orders\checkout.html:14
+msgid "Odbierz osobiście w wybranym salonie Szron."
+msgstr "Collect your order at your chosen Szron shop."
+
+#: .\templates\orders\checkout.html:14
+msgid "Dostawa pod wskazany adres. Płatność kurierowi przy odbiorze."
+msgstr "Delivery to your address. Pay the courier on arrival."
+
+#: .\templates\orders\checkout.html:14
+msgid "Bezpłatnie"
+msgstr "Free"
+
+#: .\templates\orders\checkout.html:18
+msgid "Płatność i ostatnie szczegóły"
+msgstr "Payment and final details"
+
+#: .\templates\orders\checkout.html:18 .\templates\orders\detail.html:9
+msgid "Płatność przy odbiorze"
+msgstr "Payment on collection"
+
+#: .\templates\orders\checkout.html:18
+msgid "Nie podajesz danych karty. Ten projekt zapisuje zamówienie demonstracyjne i nie pobiera pieniędzy."
+msgstr "No card details are needed. This project saves a demo order and does not collect money."
+
+#: .\templates\orders\checkout.html:19
+msgid "Wróć do koszyka"
+msgstr "Back to basket"
+
+#: .\templates\orders\checkout.html:21
+msgid "TWÓJ SPRZĘT, TWÓJ PLAN"
+msgstr "YOUR EQUIPMENT, YOUR PLAN"
+
+#: .\templates\orders\checkout.html:21
+msgid "Podsumowanie"
+msgstr "Order summary"
+
+#: .\templates\orders\checkout.html:21 .\templates\orders\detail.html:7
+msgid "szt."
+msgstr "pcs"
+
+#: .\templates\orders\checkout.html:21
+msgid "Produkt niedostępny — popraw koszyk."
+msgstr "Product unavailable — update your basket."
+
+#: .\templates\orders\checkout.html:22 .\templates\orders\detail.html:8
+msgid "Dostawa"
+msgstr "Delivery"
+
+#: .\templates\orders\checkout.html:24
+msgid "Złóż zamówienie"
+msgstr "Place order"
+
+#: .\templates\orders\checkout.html:25
+msgid "Po potwierdzeniu znajdziesz zamówienie oraz jego status na swoim koncie."
+msgstr "After confirming, find your order and its status in your account."
+
+#: .\templates\orders\checkout.html:26
+#, python-format
+msgid "Koszt kuriera: %(fee)s zł. Odbiór osobisty: 0 zł. Po zmianie dostawy ostateczna kwota zostanie zapisana zgodnie z wybraną opcją."
+msgstr "Courier delivery: %(fee)s PLN. Store pickup: 0 PLN. The final amount will follow your selected delivery method."
+
+#: .\templates\orders\detail.html:4
+msgid "Dziękujemy. Zamówienie jest już u nas."
+msgstr "Thank you. We have your order."
+
+#: .\templates\orders\detail.html:4
+msgid "Zapisaliśmy je na Twoim koncie. Poniżej sprawdzisz wszystkie szczegóły."
+msgstr "We saved it in your account. All details are below."
+
+#: .\templates\orders\detail.html:5
+msgid "TWOJE ZAMÓWIENIE"
+msgstr "YOUR ORDER"
+
+#: .\templates\orders\detail.html:7
+msgid "Zamówiony sprzęt"
+msgstr "Your equipment"
+
+#: .\templates\orders\detail.html:9
+msgid "Dostawa i kontakt"
+msgstr "Delivery and contact"
+
+#: .\templates\orders\detail.html:10
+msgid "Anuluj zamówienie"
+msgstr "Cancel order"
+
+#: .\templates\orders\detail.html:11
+msgid "Wróć do zamówień"
+msgstr "Back to orders"
+
 #: .\templates\rentals\item_detail.html:6 .\templates\rentals\reserve.html:26
 msgid "Wróć do wypożyczalni"
 msgstr "Back to rentals"
-
-#: .\templates\rentals\item_detail.html:13
-#: .\templates\rentals\item_list.html:26
-#: .\templates\rentals\my_reservations.html:10
-#: .\templates\rentals\reserve.html:6
-msgid "zł"
-msgstr "PLN"
-
-#: .\templates\rentals\item_detail.html:13
-#: .\templates\rentals\item_list.html:26
-#: .\templates\rentals\my_reservations.html:10
-#: .\templates\rentals\reserve.html:6
-msgid "doba"
-msgstr "day"
 
 #: .\templates\rentals\item_detail.html:14
 msgid "Rozmiar egzemplarza"
@@ -1740,13 +2250,8 @@ msgid "Spróbuj zmienić kategorię, model lub rozmiar."
 msgstr "Try changing the category, model or size."
 
 #: .\templates\rentals\my_reservations.html:4
-#| msgid "Tutaj znajdziesz swoje rezerwacje sprzętu. Rezerwację możesz anulować do dnia odbioru włącznie."
 msgid "Tutaj znajdziesz swoje rezerwacje sprzętu. Rezerwację możesz anulować przed wydaniem sprzętu, do dnia odbioru włącznie."
 msgstr "Your equipment reservations are listed here. You can cancel before the equipment is issued, up to and including the pickup date."
-
-#: .\templates\rentals\my_reservations.html:7
-msgid "Rezerwacja"
-msgstr "Reservation"
 
 #: .\templates\rentals\my_reservations.html:12
 msgid "Wydano"
@@ -1784,11 +2289,50 @@ msgstr "The dates have changed. Check the price and availability again before co
 msgid "Potwierdź rezerwację"
 msgstr "Confirm reservation"
 
+#~ msgid "Na stok przygotuj się po swojemu."
+#~ msgstr "Get ready for the slopes your way."
+
+#~ msgid "01 / NARTY"
+#~ msgstr "01 / SKIS"
+
+#~ msgid "02 / SNOWBOARDY"
+#~ msgstr "02 / SNOWBOARDS"
+
+#~ msgid "Swoboda na całym stoku"
+#~ msgstr "Freedom across the slopes"
+
+#~ msgid "03 / BUTY"
+#~ msgstr "03 / BOOTS"
+
+#~ msgid "Komfort od pierwszego zjazdu"
+#~ msgstr "Comfort from your first run"
+
+#~ msgid "Aktualne zamówienia"
+#~ msgstr "Current orders"
+
+#~ msgid "19,99 zł"
+#~ msgstr "19.99 PLN"
+
+#~ msgid "Po uruchomieniu zamówień w tym miejscu wybierzesz zakup, zgłosisz zwrot i sprawdzisz postęp jego obsługi."
+#~ msgstr "Once ordering is available, you will be able to select a purchase, request a return and track its progress here."
+
+#~ msgid "Składanie zamówień, płatności i dostawa nie są jeszcze dostępne. Można zapisywać demonstracyjne rezerwacje sprzętu na wybrane daty i anulować je w zakładce „Moje wypożyczenia”. Nie dochodzi do zawarcia rzeczywistej umowy zakupu ani wypożyczenia."
+#~ msgstr "Ordering, payments and delivery are not yet available. You can save demo equipment reservations for selected dates and cancel them under “My rentals”. No real purchase or rental contract is formed."
+
+#~ msgid "Zakładka „Zwroty” jest przygotowana do przyszłej obsługi zakupów. Obecnie nie można wysłać zgłoszenia zwrotu ani żądać zwrotu płatności w serwisie, ponieważ zamówienia i płatności nie działają. Kanały na stronie kontaktowej są przykładami, nie działającym działem reklamacji."
+#~ msgstr "The Returns tab is ready for future purchases. Return requests and refund requests cannot be submitted because ordering and payments are not available. The contact channels are examples, not a working complaints service."
+
+#~ msgid "Możesz już zapisywać produkty w koszyku. Składanie zamówień udostępnimy w kolejnym etapie."
+#~ msgstr "You can now save products in your basket. Placing orders will be available in a future update."
+
+#~ msgid "Tutaj zobaczysz swoje zamówienia i stan ich realizacji, gdy udostępnimy składanie zamówień."
+#~ msgstr "Your orders and their progress will appear here once ordering is available."
+
+#~ msgid "Tutaj pojawią się Twoje zakończone zakupy, gdy udostępnimy składanie zamówień."
+#~ msgstr "Your completed purchases will appear here once ordering is available."
+
 #~ msgid "Rozwijamy także wypożyczalnię. Rezerwacje terminowe udostępnimy w kolejnym etapie."
 #~ msgstr "Our rental service is also in development. Date-based bookings will be available in a future update."
-
-#~ msgid "W przygotowaniu"
-#~ msgstr "Coming soon"
 
 #~ msgid "Składanie zamówień, płatności, dostawa i rezerwacje wypożyczeń nie są jeszcze dostępne. W tej wersji nie dochodzi do zawarcia umowy zakupu ani wypożyczenia. Zakładki zamówień i historii zakupów pokazują puste stany."
 #~ msgstr "Ordering, payments, delivery and rental bookings are not available yet. This version does not enter into purchase or rental agreements. The orders and purchase history tabs currently show empty states."

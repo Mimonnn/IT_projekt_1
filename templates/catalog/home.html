@@ -1,5 +1,5 @@
 {% extends 'base.html' %}{% load i18n %}{% load static %}
-{% block extra_styles %}<link rel="stylesheet" href="{% static 'css/ski-menu.css' %}?v=4">{% endblock %}
+{% block extra_styles %}<link rel="stylesheet" href="{% static 'css/ski-menu.css' %}?v=4"><link rel="stylesheet" href="{% static 'css/skill-levels.css' %}?v=2">{% endblock %}
 {% block content %}
 <section class="panorama" data-slideshow aria-label="{% translate "Zimowe krajobrazy" %}" aria-roledescription="{% translate "karuzela" %}">
   <div class="panorama-slides">
@@ -47,11 +47,9 @@
 </section>
 {% endif %}
 <section class="wrap section">
-  <div class="section-heading"><div><p class="eyebrow">{% translate "ZNAJDŹ SWÓJ RYTM" %}</p><h2>{% translate "Wybierz swoją trasę" %}</h2></div><p>{% translate "Na stok przygotuj się po swojemu." %}</p></div>
+  <div class="section-heading"><div><p class="eyebrow">{% translate "ZNAJDŹ SWÓJ RYTM" %}</p><h2>{% translate "Wybierz swoją trasę" %}</h2></div><p>{% translate "Poznaj swój poziom i znajdź sprzęt dla siebie." %}</p></div>
   <div class="category-grid">
-    <a href="{% url 'catalog:list' %}?category=skis"><span>{% translate "01 / NARTY" %}</span><strong>{% translate "Precyzja w każdym skręcie" %}</strong><span aria-hidden="true">↗</span></a>
-    <a href="{% url 'catalog:list' %}?category=snowboards"><span>{% translate "02 / SNOWBOARDY" %}</span><strong>{% translate "Swoboda na całym stoku" %}</strong><span aria-hidden="true">↗</span></a>
-    <a href="{% url 'catalog:list' %}?category=boots"><span>{% translate "03 / BUTY" %}</span><strong>{% translate "Komfort od pierwszego zjazdu" %}</strong><span aria-hidden="true">↗</span></a>
+    {% for code, guide in skill_guides %}<a class="route-surface route-{{ code }}" href="{% url 'catalog:skill_level' code %}"><span>0{{ forloop.counter }} / {{ guide.label }}</span><strong>{{ guide.headline }}</strong><span aria-hidden="true">↗</span></a>{% endfor %}
   </div>
 </section>
 <section class="rental-banner wrap"><div><p class="eyebrow">{% translate "JESZCZE WIĘCEJ MOŻLIWOŚCI" %}</p><h2>{% translate "Własny sprzęt czy wypożyczenie?" %}</h2><p>{% translate "Wybierz sprzęt, sprawdź dostępność i zarezerwuj termin wypożyczenia online." %}</p></div><a class="coming-soon" href="{% url 'rentals:list' %}">{% translate "Przejdź do wypożyczalni" %} ↗</a></section>

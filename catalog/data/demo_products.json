@@ -40,6 +40,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -79,6 +83,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -119,6 +127,9 @@
         "polyethylene",
         "steel",
         "carbon"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -158,6 +169,11 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -197,6 +213,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -236,6 +256,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -274,6 +297,11 @@
         "polyamide",
         "steel",
         "aluminium"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -312,6 +340,11 @@
         "polyamide",
         "aluminium",
         "eva"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -350,6 +383,11 @@
         "polyamide",
         "aluminium",
         "eva"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -388,6 +426,11 @@
         "polycarbonate",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -426,6 +469,11 @@
         "polycarbonate",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -464,6 +512,11 @@
         "abs",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -503,6 +556,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -542,6 +600,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -581,6 +644,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -620,6 +688,10 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -659,6 +731,10 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -698,6 +774,9 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -736,6 +815,10 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -774,6 +857,10 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -812,6 +899,10 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -849,6 +940,11 @@
       "materials": [
         "polyester",
         "polyurethane"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -886,6 +982,11 @@
       "materials": [
         "polyamide",
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -922,6 +1023,11 @@
       },
       "materials": [
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -961,6 +1067,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -1000,6 +1110,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1040,6 +1154,9 @@
         "polyethylene",
         "steel",
         "carbon"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1079,6 +1196,11 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1118,6 +1240,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1157,6 +1283,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1195,6 +1324,11 @@
         "polyamide",
         "steel",
         "aluminium"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1233,6 +1367,11 @@
         "polyamide",
         "aluminium",
         "eva"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1271,6 +1410,11 @@
         "polyamide",
         "aluminium",
         "eva"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1309,6 +1453,11 @@
         "polycarbonate",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1347,6 +1496,11 @@
         "polycarbonate",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1385,6 +1539,11 @@
         "abs",
         "eps",
         "polyester"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1424,6 +1583,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1463,6 +1627,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1502,6 +1671,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1541,6 +1715,10 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1580,6 +1758,10 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate"
       ]
     },
     {
@@ -1619,6 +1801,9 @@
         "polyurethane",
         "eva",
         "rubber"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1657,6 +1842,10 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1696,6 +1885,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1735,6 +1927,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1774,6 +1969,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1813,6 +2012,10 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -1851,7 +2054,8 @@
         "wood",
         "fiberglass",
         "polyethylene"
-      ]
+      ],
+      "skill_levels": []
     },
     {
       "product": {
@@ -1889,7 +2093,8 @@
         "wood",
         "fiberglass",
         "polyethylene"
-      ]
+      ],
+      "skill_levels": []
     },
     {
       "product": {
@@ -1928,6 +2133,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -1967,6 +2175,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2006,6 +2217,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2045,6 +2259,9 @@
         "fiberglass",
         "polyethylene",
         "steel"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2083,6 +2300,9 @@
         "aluminium",
         "steel",
         "polyamide"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2121,6 +2341,9 @@
         "aluminium",
         "steel",
         "polyamide"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2161,6 +2384,9 @@
         "polyester",
         "polyamide",
         "rubber"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2201,6 +2427,9 @@
         "polyester",
         "polyamide",
         "rubber"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2239,6 +2468,9 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2277,6 +2509,9 @@
         "polyurethane",
         "aluminium",
         "polyester"
+      ],
+      "skill_levels": [
+        "advanced"
       ]
     },
     {
@@ -2316,6 +2551,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     },
     {
@@ -2355,6 +2595,11 @@
         "polyurethane",
         "polyester",
         "silicone"
+      ],
+      "skill_levels": [
+        "beginner",
+        "intermediate",
+        "advanced"
       ]
     }
   ],

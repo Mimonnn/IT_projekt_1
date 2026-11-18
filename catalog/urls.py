@@ -3,6 +3,7 @@ from . import views
 
 app_name = "catalog"
 urlpatterns = [
+    path("trasy/<slug:code>/", views.skill_level, name="skill_level"),
     path("regulamin/", views.terms, name="terms"),
     path("kontakt/", views.contact, name="contact"),
     path("sklepy/", views.stores, name="stores"),

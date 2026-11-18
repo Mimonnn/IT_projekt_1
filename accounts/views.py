@@ -10,11 +10,12 @@ from django.db import transaction
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views.decorators.http import require_POST
+from django.views.decorators.cache import never_cache
 from django.views.decorators.debug import sensitive_post_parameters
 
 from catalog.models import Product
 from .forms import CartQuantityForm, LoginForm, ProfileForm, RegistrationForm
-from .models import CartItem, Favorite
+from .models import CartItem, Favorite, User
 
 
 class AccountLoginView(LoginView):
@@ -43,13 +44,23 @@ def register(request):
 
 
 @login_required
+@never_cache
 def orders(request):
-    return render(request, "accounts/profile.html", {"active_tab": "orders"})
+    from orders.models import Order
+    from rentals.models import Reservation
+    return render(request, "accounts/profile.html", {"active_tab": "orders",
+        "orders": Order.objects.filter(user=request.user).exclude(status__in=[Order.Status.COMPLETED, Order.Status.CANCELLED]).prefetch_related("lines"),
+        "rental_reservations": Reservation.objects.filter(user=request.user, status__in=[Reservation.Status.CONFIRMED, Reservation.Status.ISSUED])})
 
 
 @login_required
+@never_cache
 def history(request):
-    return render(request, "accounts/profile.html", {"active_tab": "history"})
+    from orders.models import Order
+    from rentals.models import Reservation
+    return render(request, "accounts/profile.html", {"active_tab": "history",
+        "orders": Order.objects.filter(user=request.user, status__in=[Order.Status.COMPLETED, Order.Status.CANCELLED]).prefetch_related("lines"),
+        "rental_reservations": Reservation.objects.filter(user=request.user, status__in=[Reservation.Status.RETURNED, Reservation.Status.CANCELLED])})
 
 
 @login_required
@@ -105,6 +116,7 @@ def cart(request):
 @require_POST
 @transaction.atomic
 def cart_add(request, slug):
+    User.objects.select_for_update(no_key=True).get(pk=request.user.pk)
     # Koszyk nie rezerwuje sztuk i nie zmienia magazynu.
     # Blokada serializuje dodawanie tej samej pozycji do koszyka.
     product = get_object_or_404(Product.objects.select_for_update(), slug=slug, is_active=True)
@@ -130,6 +142,7 @@ def cart_add(request, slug):
 @require_POST
 @transaction.atomic
 def cart_update(request, pk):
+    User.objects.select_for_update(no_key=True).get(pk=request.user.pk)
     item = get_object_or_404(CartItem.objects.filter(user=request.user), pk=pk)
     product = get_object_or_404(Product.objects.select_for_update(), pk=item.product_id)
     # Podczas czekania na blokadę inna karta mogła usunąć tę pozycję.
@@ -150,6 +163,7 @@ def cart_update(request, pk):
 @require_POST
 @transaction.atomic
 def cart_remove(request, pk):
+    User.objects.select_for_update(no_key=True).get(pk=request.user.pk)
     item = get_object_or_404(CartItem, pk=pk, user=request.user)
     # Każda modyfikacja koszyka blokuje najpierw ten sam produkt.
     get_object_or_404(Product.objects.select_for_update(), pk=item.product_id)

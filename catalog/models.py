@@ -27,6 +27,27 @@ class Material(models.Model):
         return localized_text(self, "name")
 
 
+class SkillLevel(models.Model):
+    class Code(models.TextChoices):
+        BEGINNER = "beginner", _("Początkujący")
+        INTERMEDIATE = "intermediate", _("Średniozaawansowany")
+        ADVANCED = "advanced", _("Zaawansowany")
+
+    code = models.CharField(_("poziom zaawansowania"), max_length=16, unique=True, choices=Code.choices)
+
+    class Meta:
+        ordering = ["pk"]
+        verbose_name = _("poziom zaawansowania")
+        verbose_name_plural = _("poziomy zaawansowania")
+        constraints = [models.CheckConstraint(condition=models.Q(code__in=["beginner", "intermediate", "advanced"]), name="skill_level_code_valid")]
+
+    def __str__(self):
+        return self.get_code_display()
+
+    def get_absolute_url(self):
+        return reverse("catalog:skill_level", kwargs={"code": self.code})
+
+
 class Product(models.Model):
     SkiSubcategory = SkiSubcategory
 
@@ -55,6 +76,7 @@ class Product(models.Model):
     size_en = models.CharField(_("rozmiar (angielski)"), max_length=80, blank=True)
     size = models.CharField(_("rozmiar"), max_length=80, blank=True, help_text=_("Z jednostką, np. 172 cm, M (55–59 cm) lub 27,0 MP."))
     materials = models.ManyToManyField(Material, blank=True, related_name="products", verbose_name=_("materiały"))
+    skill_levels = models.ManyToManyField(SkillLevel, blank=True, related_name="products", verbose_name=_("poziomy zaawansowania"), help_text=_("Wybierz poziomy, dla których polecasz ten model. Brak wyboru ukrywa go w poradniku tras."))
     construction = models.TextField(_("konstrukcja i zastosowanie materiałów"), blank=True)
     dimensions = models.CharField(_("wymiary"), max_length=240, blank=True, help_text=_("Wpisz jednostki oraz rodzaj pomiaru."))
     weight_g = models.PositiveIntegerField(_("masa (g)"), null=True, blank=True, validators=[MinValueValidator(1)])

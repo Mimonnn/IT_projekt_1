@@ -94,7 +94,7 @@ class BilingualSiteTests(TestCase):
         client = self.english_client()
         user = User.objects.create_user(username="bilingual-client")
         client.force_login(user)
-        for name, heading in [("orders","Current orders"),("history","Purchase history"),("returns","Returns"),("cart","Your basket"),("favorites","Favourite products"),("edit_profile","Profile details")]:
+        for name, heading in [("orders","Orders and reservations"),("history","Purchase history"),("returns","Returns"),("cart","Your basket"),("favorites","Favourite products"),("edit_profile","Profile details")]:
             response = client.get(reverse("accounts:"+name))
             self.assertContains(response, heading)
         response = client.post(reverse("accounts:cart_add", args=["narty-alpine-172"]), {"quantity":1}, follow=True)

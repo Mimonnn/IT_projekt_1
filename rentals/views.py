@@ -1,6 +1,7 @@
 from decimal import Decimal, InvalidOperation
 from urllib.parse import urlencode
 
+from django.views.decorators.cache import never_cache
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
@@ -93,6 +94,7 @@ def reserve(request, pk):
 
 
 @login_required
+@never_cache
 def my_reservations(request):
     reservations = Reservation.objects.filter(user=request.user)
     return render(request, "rentals/my_reservations.html", {"reservations": reservations, "active_tab": "rentals"})

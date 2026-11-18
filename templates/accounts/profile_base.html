@@ -7,7 +7,7 @@
   <p class="intro">{% translate "Witaj," %} <strong>{{ user.username }}</strong>.</p>
   <nav class="account-tabs" aria-label="{% translate "Zakładki konta" %}">
     <a href="{% url 'accounts:edit_profile' %}" {% if active_tab == 'profile' %}aria-current="page"{% endif %}>{% translate "Dane profilu" %}</a>
-    <a href="{% url 'accounts:orders' %}" {% if active_tab == 'orders' %}aria-current="page"{% endif %}>{% translate "Aktualne zamówienia" %}</a>
+    <a href="{% url 'accounts:orders' %}" {% if active_tab == 'orders' %}aria-current="page"{% endif %}>{% translate "Zamówienia i rezerwacje" %}</a>
     <a href="{% url 'accounts:history' %}" {% if active_tab == 'history' %}aria-current="page"{% endif %}>{% translate "Historia zakupów" %}</a>
     <a href="{% url 'rentals:mine' %}" {% if active_tab == 'rentals' %}aria-current="page"{% endif %}>{% translate "Moje wypożyczenia" %}</a>
     <a href="{% url 'accounts:returns' %}" {% if active_tab == 'returns' %}aria-current="page"{% endif %}>{% translate "Zwroty" %}</a>

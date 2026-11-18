@@ -20,7 +20,7 @@
       <a href="{% url 'catalog:list' %}" {% if request.resolver_match.namespace == 'catalog' and request.resolver_match.url_name == 'list' or request.resolver_match.namespace == 'catalog' and request.resolver_match.url_name == 'detail' %}aria-current="page"{% endif %}>{% translate "Sprzęt" %}</a>
       <a href="{% url 'rentals:list' %}" {% if request.resolver_match.namespace == 'rentals' and request.resolver_match.url_name != 'mine' %}aria-current="page"{% endif %}>{% translate "Wypożyczalnia" %}</a>
       {% if user.is_authenticated %}
-        <a href="{% url 'accounts:profile' %}" {% if request.resolver_match.namespace == 'accounts' or request.resolver_match.url_name == 'mine' %}aria-current="page"{% endif %}>{% translate "Moje konto" %}</a>
+        <a href="{% url 'accounts:profile' %}" {% if request.resolver_match.namespace == 'accounts' or request.resolver_match.namespace == 'orders' or request.resolver_match.url_name == 'mine' %}aria-current="page"{% endif %}>{% translate "Moje konto" %}</a>
         <a href="{% url 'accounts:cart' %}">{% translate "Koszyk" %}</a>
         {% if user.is_staff %}<a class="admin-link" href="{% url 'admin:index' %}">{% translate "Panel administratora" %} <span aria-hidden="true">↗</span></a>{% endif %}
         <form method="post" action="{% url 'accounts:logout' %}" class="nav-form">{% csrf_token %}<button class="nav-button" type="submit">{% translate "Wyloguj się" %}</button></form>
