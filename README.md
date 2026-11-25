@@ -191,6 +191,18 @@ Testy korzystają z PostgreSQL i tworzą oraz usuwają osobną bazę `test_szron
 nie uruchamiaj ich na bazie produkcyjnej ani na bazie z taką nazwą zawierającej ważne dane.
 Przy zmianie modeli twórz migracje przez `manage.py makemigrations` i dodawaj je do commita.
 
+Próbę prezentacji klienta i administratora można uruchomić osobno:
+
+```powershell
+./.venv/Scripts/python.exe manage.py test catalog.test_acceptance
+```
+
+Test tworzy lokalny serwer HTTP na losowym porcie `127.0.0.1` i używa osobnej bazy
+testowej. Sprawdza prawdziwe żądania, sesje i CSRF w PL/EN: rejestrację, profil,
+ulubione, zakup z odbiorem i kurierem, realizację przez administratora, rezerwację,
+wydanie, zwrot do serwisu, historię po ponownym logowaniu i prywatność zamówień.
+Nie zastępuje kontroli wizualnej w przeglądarce; JavaScript wymaga osobnego sprawdzenia.
+
 ## Język polski i angielski
 
 W nagłówku sklepu i administracji są przyciski z flagami „Polski” / „English”.

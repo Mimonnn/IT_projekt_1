@@ -1,6 +1,6 @@
 # Kontekst projektu
 
-Ostatnia aktualizacja: 2026-11-19.
+Ostatnia aktualizacja: 2026-11-25.
 
 ## Cel i ustalenia
 
@@ -63,6 +63,26 @@ Praca odbywa się w VS Code z rozszerzeniem Codex na dwóch komputerach, z wykor
 - Kontekst trafia na drugi komputer przez wysłanie i pobranie zmian w GitHub; nie synchronizuje się samą zmianą rozmowy.
 
 ## Ostatnia zmiana i weryfikacja
+
+### 2026-11-25 — commit końcowych testów
+
+- Użytkownik zlecił zatwierdzenie wykonanych zmian. Zakres: dwa scenariusze prezentacji przez rzeczywiste HTTP w `catalog/test_acceptance.py`, instrukcja w README i aktualizacja kontekstu. Nie zmieniano funkcji aplikacji podczas zatwierdzania.
+- Podstawą weryfikacji jest zakończony poniżej przebieg wszystkich 190 testów PostgreSQL. Po nim nie zmieniano kodu testów ani aplikacji; `git diff --check` poprawne. AGENTS pozostaje aktualny, TODO pusty. Zastany `.vscode/settings.json` pozostaje poza commitem. Dane baz, kont i środowiska nie trafiają do Git.
+
+### 2026-11-25 — aktualny raport dla prowadzącego
+
+- Na podstawie dostarczonego przez użytkownika PDF „Raport_IT_2 (1)” przygotowano angielski raport postępu w tej samej formie: trzy strony Letter, nazwiska autorów z pierwowzoru, Aptos, niebieskie nagłówki i wyjustowane akapity. Zaktualizowano zakupy, historię rezerwacji, poradnik poziomów, tła i wynik 190 testów, zachowując informację o ograniczeniu kontroli wizualnej oraz pozostałych brakach produktu.
+- Pliki `work/report_nov25/Raport_IT_3.docx` i `Raport_IT_3.pdf` są lokalne, w ignorowanym katalogu roboczym. PDF wyeksportowano z Microsoft Word; po poprawieniu podziału stron obejrzano obrazy wszystkich trzech stron. Standardowy renderer nie miał lokalnej instalacji LibreOffice, więc do weryfikacji użyto eksportu Word i Popplera. Bez zmian kodu aplikacji, commita i wysyłania do GitHub.
+
+### 2026-11-25 — końcowe sprawdzenie przed prezentacją
+
+- Na prośbę użytkownika sprawdzono całość przed prezentacją 26.11. Wszystkie **190 testów PostgreSQL przeszło** we wspólnym przebiegu (64,849 s). Kontrola Django z bazą, aktualności migracji, braku nieutworzonych migracji, zależności i `git diff --check` poprawna. Nie wykryto błędów funkcjonalnych wymagających zmiany aplikacji.
+- Oprócz 188 istniejących testów dodano dwa scenariusze `catalog/test_acceptance.py`, używające prawdziwego lokalnego serwera HTTP, ciasteczek i CSRF oraz osobnych sesji klienta i administratora. W obu językach przeszły: rejestracja bez uzyskania uprawnień, profil, ulubione, zakup z odbiorem i kurierem, koszty/promocja, opróżnienie koszyka, realizacja administracyjna, rezerwacja z datami i ceną, wydanie, zwrot do serwisu, historia po wylogowaniu/logowaniu i blokada dostępu innego konta. Testy korzystają wyłącznie z osobnej, usuwanej bazy; nie zmieniono danych użytkownika. README opisuje uruchomienie próby.
+- Szczególnie sprawdzono testami współbieżność zakupu ostatniej sztuki, ponowne potwierdzenie/anulowanie, nakładanie dat rezerwacji, niezwrócone wydanie, różnice uprawnień, POST/CSRF, nieprawidłowe dane, zmianę ceny/koszyka i utrzymanie historii. Przebiegi PL/EN obejmują także anulowanie rezerwacji i zwrot sprzętu na stan, a nie wyłącznie do serwisu.
+- Działająca strona: 109 publicznych stron/ofert/filtrów w każdym języku, 30 stron poradnika z filtrami PL/EN i odnośnikami do szczegółów, 50 zasobów statycznych oraz poprawna składnia 7 skryptów. Wszystkie sprawdzone strony/zasoby HTTP 200. Skrypty pobrane z serwera sprawdzono dodatkowo w Node na zastępczym DOM: zależne listy wypożyczalni, reset rozmiaru, blokada potwierdzenia po zmianie dat oraz dokładne kwoty dostawy, pola i ochrona przed powtórnym kliknięciem w zakupach. Są to kontrole zachowania skryptów, nie pełny test renderowania przeglądarki.
+- Ograniczenie: host przeglądarki zgłosił niedostępność, a próba dostępu do okna Chrome zakończyła się wygaśnięciem zgody narzędzia. Nie potwierdzono wizualnie układu, przewijania, podmenu, animacji ani wyglądu na telefonie. Nie deklarować ich jako sprawdzonych. Początkowa próba HTTP na `localhost` utknęła przy połączeniu; jawny adres IPv4 `127.0.0.1` rozwiązał problem uruchomienia nowego testu.
+- Odczyt lokalnej bazy potwierdził aktywne konto administracyjne, 60 widocznych ofert z dodatnim stanem oraz 9 gotowych egzemplarzy i 1 do serwisu; 8 egzemplarzy nie miało kolizji na dzień kontroli. Brak stanu jednej oferty i egzemplarz w serwisie są obsługiwanymi stanami, nie błędami. Bez zapisywania danych kont w dokumentacji i bez resetowania bazy. Strona pozostaje dostępna pod `http://127.0.0.1:8000/`.
+- Ograniczenia produktu pozostają: demonstracyjne zamówienia i płatność przy odbiorze, bez rzeczywistej płatności, wysyłki i e-maili; zwroty zakupów nie są zaimplementowane. Zwroty wypożyczonego sprzętu działają. AGENTS przejrzano, zasady bez zmian, TODO pusty. Nie wykonano commita ani wysyłania na GitHub; zastany indeks `.vscode/settings.json` zachowano.
 
 ### 2026-11-19 — kontrola i zatwierdzenie zmian do GitHub
 
